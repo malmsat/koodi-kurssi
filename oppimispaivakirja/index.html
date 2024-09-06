@@ -2,45 +2,111 @@
 <html lang="fi">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"
-    <title>Oppimispäiväkirjan linkit</title>
+    <title></title>
     <style>
- 
+
+        
+        body {
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        a {
+            color: rgb(255, 255, 255); /* Change to your preferred color */
+        }
+        a:visited {
+            color: rgb(130, 189, 181); /* Change to your preferred color */
+        }
+        a:hover {
+            color: rgb(226, 161, 210); /* Change to your preferred color */
+        }
+        a:activate {
+            color: rgb(228, 77, 190); /* Change to your preferred color */
+        }
+        
+        h1 {
+                font-size: 10rem;
+        }
+        h2 {
+                font-size: 3rem;
+        }
+        p {
+                font-size: 1.5rem;
+        }
+        .first_header {
+            text-align: center;
+            background: #000000;
+            color: #ffffff;
+            width: 100%;
+            height: 100%;
+        }
+
+        .body_text {
+            margin: 0 auto;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5); /* 50% opacity */
+            border-radius: 15px; /* Round the corners */
+            padding: 1%;
+            color: #ffffff;
+            width: 60%;
+        }
     </style>
 </head>
 
+
 <body>
-<ul>
-    <li>
-        <a href="viikko1.html">
-        Viikko 1
-        </a>
-    </li>
-    <li>
-        <a href="viikko2.html">
-        Viikko 2
-        </a>
-    </li>
-    <li>
-        <a href="viikko3.html">
-        Viikko 3
-        </a>
-    </li>
-    <li>
-        <a href="viikko4.html">
-        Viikko 4
-        </a>
-    </li>
-    <li>
-        <a href="viikko5.html">
-        Viikko 5
-        </a>
-    </li>
-    <li>
-        <a href="viikko6.html">
-        Viikko 6
-        </a>
-    </li>
-</ul>
+    <div class="first_header">
+    <h1>Koe: Koodi</h1>
+    </div>
+
+    <div class="body_text">
+    <h2>Oppimispäiväkirja</h2>
+        <p>
+            <a href="viikko1.html">
+            Viikko 1
+            </a>
+        </p>
+        <p>
+            <a href="viikko2.html">
+            Viikko 2
+            </a>
+        </p>
+        <p>
+            <a href="viikko3.html">
+            Viikko 3
+            </a>
+        </p>
+        <p>
+            <a href="viikko4.html">
+            Viikko 4
+            </a>
+        </p>
+        <p>
+            <a href="viikko5.html">
+            Viikko 5
+            </a>
+        </p>
+        <p>
+            <a href="viikko6.html">
+            Viikko 6
+            </a>
+        </p>
+    </div>
 </body>
 
 
