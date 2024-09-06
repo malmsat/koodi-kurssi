@@ -1,0 +1,154 @@
+<!-- Jokaisen HTML-tiedoston pitää alkaa doctype elementillä-->
+<!-- HTML elementti on HTML dokumentin juurielementti -->
+<!DOCTYPE html>  
+<!-- lang-elementti kertoo selaimelle sivun oletuskielen (mm. tavutuksen apuna, osaa oikeat merkit jne.)-->
+<html lang="fi">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"
+    <title>Viikko 1</title>
+    <style>
+        body {
+            background-color: #e0e88f;
+        }
+        img {
+            display:block;
+            max-width: 100%;
+            width: 50%;
+            height: 50%;
+            margin: 0 auto;
+            
+            /* margin: 0 auto on sama kuin
+            margin-top:0;
+            margin-bottom:0;
+            margin-left:auto;
+            margin-right:auto; 
+            */
+        }
+        /*class on atribuutti, jolla voidaan identifioida tiettykä elementtejä html:ssä
+        class merkitään pisteellä, tällä saadaan teksti kuvan ympärille, joka on block-elemnetissä*/
+        .inline-text-img {
+            display:inline;
+        }
+
+        p {
+            width:100%;
+            max-width: 800px;
+        }
+
+        div {
+            padding: 10%;
+        }
+        .bg1 {
+            background: linear-gradient(#42c72e,#e0e88f);
+        }
+
+        .bg2{
+            background: linear-gradient(#d16dc4,#e0e88f);
+            padding: 50px;
+        }
+        .bg3{
+            background: linear-gradient(#7a6dd1,#e0e88f);
+        }
+
+        #uniikki-id{
+            background: linear-gradient(#a10013,#e0e88f);
+        }
+    </style>
+</head>
+
+<body>
+    <!--div on yleiselementti, sen sisään voi laittaa kaikenlaisia juttuja. On kuin laatikko.-->
+    <div class="bg1">
+        <h1>Viikko 1</h1>
+        <h2>Opimispäiväkirja</h2>
+        <h3>HTML perusteet</h3>
+        <h>CSS (CASCADING STYLE SHEETS) koodi lukee vasemmalta oikealle, ylhäältä alas, eli alempana oleva koodi jää voimaan, jos määritellään samaa asiaa. Classit override yleisellä tasolla määritellyt ominaisuudet. id on kaikista korkeimmalla hierarkiassa.</h>
+    </div>
+    <!--<br> (break) attribuuttia ei ole pakko sulkea-->
+    <div class="bg2"><p>paljon asiaa paljon asiaa paljon asiaa paljon asiaa paljon asiaa paljon asiaa paljon asiaa paljon asiaa paljon asiaa paljon asiaa paljon asiaa paljon asiaa paljon asiaa paljon asiaa paljon asiaa paljon asiaa paljon asiaa paljon asiaa paljon asiaa paljon asiaa paljon asiaa paljon asiaa paljon asiaa paljon asiaa paljon asiaa paljon asiaa paljon asiaa paljon asiaa paljon asiaa paljon asiaa paljon asiaa paljon asiaa paljon asiaa paljon asiaa </p>
+    <p><b>Tässä on opittu HTML<br>alkeita</b>
+        <a href="https://hlotvonen.github.io/koe-koodi24/">
+         Kurssin kotisivut
+        </a>
+    </p></div>
+    <div class="bg1">
+    <button>
+        <a href="https://hlotvonen.github.io/koe-koodi24/">mene tästä internetin etusivulle</a>>
+    </button></div>
+
+    <div class=bg3 id="uniikki-id">
+        <p>helllooo</p>
+    </div>
+
+    <!-- unordered list (esim. navigaatio) -->
+    <ul>
+        <li>H1-H6 tagit on otsikoille</li>
+        <li>p tagit on <img src="./assets/img/test-img.jpg" class="inline-text-img"> leipätekstille</li>
+        <li>img tagi on kuville (muista lisätä src attribuutti), kuvatiedoston voi laittaa vaikka keskelle tekstiä. Asettelua voi muuttaa muuttamalla block elementiksi.</li>
+    </ul>
+
+    <!-- unordered list -->
+    <ol>
+        <h3>Mun lempi HTML elementit</h3>
+        <li> h1 elementti
+        <li> img elementti
+        <li> meta elementti
+    </ol>
+    <!--. tiedostopolun alussa kertoo, että nykyisen tiedostosijainnin alusta katsoo eteenpäin-->
+    
+</body>
+
+
+
+
+
+
+<!--
+
+<head>
+    <meta charset="UTF-8">
+    <title>Viikko 1 - Oppimispäiväkirja</title>
+    <script type="module" src="./assets/components/html-css-viewer.js"></script>
+    <style>
+      body {
+        background-color: rgb(224, 232, 143);
+      }
+    </style>
+</head>
+<body>
+    <h1>Viikko 1: Oppimispäiväkirja</h1>
+    <p>
+      Lataa koodiesimerkkejä varten tehty komponentti <a href="./assets/components/html-css-viewer.js">täältä</a> ja fontti <a href="./assets/fonts/FontWithASyntaxHighlighter-Regular.woff2">täältä</a>
+    </p>
+    <h2>Tällä viikolla opin:</h2>
+    <ul>
+        <li>
+          Sivujen (esimerkiksi tämän sivun) lähdekoodin voi nähdä esim. kirjoittamalla <code>view-source:</code> sivun URLin alkuun.
+        </li>
+        <li>[Asia 2]</li>
+        <li>[Asia 3]</li>
+    </ul>
+    Tässä on koodiesimerkki:
+    <html-css-viewer preview>
+      <template>
+        <style>
+          .example { 
+            color: red; 
+          }
+        </style>
+        <div class="example">
+          Hei, maailma!
+        </div>
+      </template>
+    </html-css-viewer>
+    
+    <h2>Reflektio:</h2>
+    <p>[Reflektoi oppimaasi, sekä pohdi viikon aikana käsiteltyjä asioita]</p>
+    
+    <nav>
+        <a href="viikkoX-1.html">← Edellinen viikko</a> |
+        <a href="viikkoX+1.html">Seuraava viikko →</a>
+    </nav>
+</body>
+</html>
+-->
