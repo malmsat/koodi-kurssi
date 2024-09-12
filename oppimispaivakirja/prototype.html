@@ -27,7 +27,8 @@
         right: 10px;
         font-size: 24px;
         font-weight: bold;
-        color: black;
+        color: rgb(255, 255, 255);
+        background-color: rgb(43, 83, 19);
     }
     
     .object {
@@ -42,13 +43,111 @@
     .object:hover {
         transform: scale(1.2);
     }
+
+    .win-message {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 48px;
+      color: green;
+      font-weight: bold;
+      display: none;  /*Initially hidden */
+      background: rgb(255, 255, 255);
+      width: 300px;
+      height: 100px;
+      text-align: center;
+      padding: 20px;
+      font-size: 24px;
+      border: 2px solid #000;
+      background-color: #f9f9f9;
+    }
+
+    /* Center the text box in the middle of the screen */
+    .centered-text-box {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 300px;
+      height: 100px;
+      text-align: center;
+      padding: 20px;
+      font-size: 24px;
+      border: 2px solid #000;
+      background-color: #f9f9f9;
+    }
+
+    /* Style the buttons below the text box */
+    .button-container {
+      position: absolute;
+      top: 65%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .button-container button {
+      margin: 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    /* Centered Play Again button style */
+    #playAgainButton {
+      transform: translate(-50%, 0);
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      display: none; /* Initially hidden */
+    }
+
+    #playAgainButton:hover {
+      background-color: #45a049;
+    }
+
+
+    /* Style for the return button */
+    .return-button {
+      padding: 10px 20px;
+      font-size: 1.2em;
+      background-color: #2196F3;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .return-button:hover {
+      background-color: #0b7dda;
+    }
 </style>
 
 </head>
 <body>
   <div id="container">
-    <div id="counter">Clicked: 0</div> <!-- Counter element -->
-  </div>
+    <div id="counter">Butterflies caught: 0/10</div> <!-- Counter element -->
+    <!-- Centered text box -->
+    <div id="text-box" class="centered-text-box">Welcome to the Sainsbury Mystery. Make your move.</div>
+    
+    <!-- Buttons for choices -->
+    <div class="button-container">
+      <button id="choice1">Walk the gardens</button>
+      <button id="choice2">Move to the main hall</button>
+      <button id="choice3">Check out the crypt</button>
+      <button id="returnButton" class="return-button">Return</button>
+    </div>
+    <!-- Predefined "You won" message, hidden initially -->
+    <div id="winMessage" class="win-message">You have won the game!
+      <!-- Play Again button -->
+      <button id="playAgainButton">Play Again</button>
+    </div>  
+
   <script src="./assets/components/script.js"></script>
 </body>
 </html>
