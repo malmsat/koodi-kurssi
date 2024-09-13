@@ -121,8 +121,8 @@ function resetGame() {
   playAgainButton.style.display = 'none'; // Hide the play again button
 
   // Remove any remaining butterflies
-  const butterflies = document.querySelectorAll('.object');
-  butterflies.forEach(butterfly => butterfly.remove());
+  //const butterflies = document.querySelectorAll('.object');
+  //butterflies.forEach(butterfly => butterfly.remove());
 
   // Start spawning butterflies again
   spawnInterval = setInterval(createObject, 2000);
