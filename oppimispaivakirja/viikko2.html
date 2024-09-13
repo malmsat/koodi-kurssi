@@ -1,8 +1,8 @@
 <!DOCTYPE html>  
 <html lang="fi">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viikko 2</title>
     <style>
         body {
             background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
@@ -143,66 +143,72 @@
 
 <body>
     <div class="black_header">
-        <h1>Viikko 1</h1>
+        <h1>Viikko 2</h1>
         <h2>Oppimispäiväkirja</h2>
-        <h2>HTML perusteet</h3>
+        <h2>CSS perusteet</h3>
     </div>
 
     <div class="body_container">
         <p class="body_title">Luentomuistiinpanot</p>
         
-        <p>Ensimmäiset luennot menivät käytännön asioiden selvittelyyn, keskusteluun ja luentoihin internetin ja nettisivujen perusteista. Minulla ei ollut aikaisemmin näistä hirveän hyvää käsitystä, mutta nyt ensimmäisen viikon jälkeen on jo niistä parempi fiilis. Sain ruksattua skill-puusta kaikenlaista yli ja ruksailusta tuli onnistunut olo, kun huomaa mitä kaikkea sitä tietää ja osaa. Lisäksi omana tavoitteena kurssille on mm. oppia tekemään samanlainen konfetti-efekti, joka tulee kun saa ruksattua jonkin skillin yli. Siitä tulee niin hyvä fiilis ja tekee mieli naksutella painikkeita edes takas.</p>
-        <p>Alla lista muistiinpanoista, jotka tein koodiin, mutta siirsin tähän koska ne oppi hahmottamaan aika nopeasti ja tulivat vaan tielle kun rupesi muokkaamaan koodia enemmän. Hyvä kuitenkin ehkä jossakin pitää ainakin aluksi kirjallisesti.</p>
+        <p>Toisella viikolla mentiin syvemmälle koodiin ja lähdettiin suunnittelemaan nettisivutehtävää. Käytiin myös läpi kuvien optimointia nettisivuja varten. Hauska esimerkki mahdollisimman vihreistä nettisivuista on lowtech magazine, joka toimii aurinkovoimalla ja vain silloin, kun aurinkoenergiaa on saatavilla/akuissa riittää virta.</p>
+
+        <p>Alla viikon aikana tehtyjä muistiinpanoja lähinnä itseä varten. Ja siksi myös aika vähän siistityssä muodossa.</p>
+
+        <p>Kuvien koon pienentämisestä nettisivuja varten:</p>
 
         <ul>
-            <li>CSS = CASCADING STYLE SHEETS. Koodi lukee vasemmalta oikealle, ylhäältä alas, eli alempana oleva koodi jää voimaan, jos määritellään samaa asiaa useampaan kertaan. Classit override yleisellä tasolla määritellyt ominaisuudet. Id on kaikista korkeimmalla hierarkiassa.</li>
-            <li>HTML kommentti on < !----> (väliin ei kuulu välilyöntiä, mutta muuten koodi piilottaa) ja CSS /* */</li>
-            <li>Class on atribuutti, jolla voidaan identifioida tiettykä elementtejä HTML:ssä, class merkitään pisteellä kun määritellään sen tyyliä CSS:llä.</li>
-            <li>Div on yleiselementti, ja sen sisään voi laittaa kaikenlaisia juttuja (esim. tekstiä ja kuvia). On kuin laatikko.</li>
-            <li>Lang-elementti kertoo selaimelle sivun oletuskielen (mm. tavutuksen apuna, osaa oikeat merkit jne.)</li>
-            <li>Br (break) attribuuttia ei suljeta</li>
-            <li>DOCTYPE html-elementti on HTML dokumentin juurielementti, HTML-tiedosto tarvitsee sellaisen tiedoston ihan alkuun.</li>
-            <li>Img-tagi on kuville (muista lisätä src attribuutti), kuvatiedoston voi laittaa vaikka keskelle tekstiä. Asettelua voi muuttaa muuttamalla block elementiksi.</li>
-            </ul>
+            <li>tinify, tinypng, tiny-img voit pienentää kuvien kokoa</li>
+            <li>fotarissa "save for web legacy" pienentää kuvan viemää tilaa</li>
+            <li>export png as 8bit (vähemmän värejä pienentää kuvan kokoa)
+            </li>
+            <li>webp tiedostomuoto vie suht vähän tilaa
+            </li>
+            <li>jos haluaa rastereilla tehdyn vähän tilaa vievän kuvan: image mode: grayscale, sitten bitmap ja valitse jokin moodi
+            </li>
+            <li>jos kuvassa on paljon pikselimössöä, jpeg muoto on parempi kuin png viedyn tilan suhteen 
+            </li>
+            <li>mode: indexed color (jos kuvassa vain muutamaa väriä), sen voi tallentaa fotarissa as smaller file
+            </li>
+            <li>svg tiedostomuoto = tosi pieniä vektorikuvia (voi tehdä illustrattorilla ja kopioida koodin! Sen voi liittää sellaisenaan koodin sekaan.)
+            </li>
+            <li>save as svg -> show code
+            </li>
+        </ul>
+            <p>Koodista:</p>
+
+            <ul>
+            <li>Asioiden keskittäminen HTML + CSS voi olla hankalaa. Tähän vinkkinä: text align, display flex ja flex direction (listojen keskittäminen) </li>
+            <li>Vaihtoehtoisesti: text-align:center; display: grid; place-items:center;</li>
+            <li>CSS= box-model, cascade, inheritance, specifity</li>
+            <li>cascade: tärkeysjärjestys. browser < element < class < id</li>
+            <li>MUTTA elementin sisällä olevat tarkennukset menevät edelle (nostetaan elementtien spesifisyyttä)</li>
+            <li>mitä spesifimmät ohjeet, sitä korkeammalla tärkeysjärjestyksessä</li>
+            <li>ID:n käyttöä ei yleensä suositella, koska sen yliajaminen myöhemmin on hankalaa</li>
+            <li>box-model: elementit paisuvat ulospäin, josa haluaa sisäänpäin marginaalia, lisää bodyyn margin:0; ja * {box-sizing:border-box;} (tähti valitsee kaikki elementit ja antaa niille tyylin)
+            </li>
+            <li>inheritance: tyylimäärittelystä periytyy parent to child ominaisuuksia</li>
+            <li>em -mittayksikköä voi käyttää esimerkiksi jos haluaa jonkin typografisen kaavan fonttien mittayksiköille. mm. gridien ja muiden kanssa voi olla kiva kun kaikki sopii yhteen.</li>
+            <li>CSS tricks on hyvä sivusto vinkeille</li>
+        </ul>
     </div>
 
     <div class="body_container">
-        <p class="body_title">Harjoituksia</p>
-        <!-- unordered list (esim. navigaatio) -->
-        <ul>
-            <li>Unordered list harjoitus</li>
-            <li>Otsikkotasoja on defaulttina H1-H6</li>
-            
-        </ul>
-
-        <!-- ordered list -->
-        <ol>
-            <li> Ordered list harjoitus</li>
-            <li> yks juttu
-            <li> kaks juttu
-            <li> kolme juttu
-        </ol>
-
-        <p>Tässä hieno linkki:
-        <a href="https://hlotvonen.github.io/koe-koodi24/">
-        Kurssin kotisivut
-        </a></p>
-        <p>Tässä epäilyttävä painike:
-        <button class="button">
-            <a href="https://hlotvonen.github.io/koe-koodi24/">mene tästä internetin etusivulle</a>>
-        </button>
-        </p>
-
-        <p>Alla musta jpg-tiedosto</p>
-        <!--. tiedostopolun alussa kertoo, että nykyisen tiedostosijainnin alusta katsoo eteenpäin-->
-        <img src="./assets/img/test-img.jpg" class="inline-text-img">
-        </p>
-    </div>
-    
-    <div class="black_header" id="footer-id">
-        <a href="viikko2.html">
-            Seuraava viikko
-            </a>
-    </div>
+        <p class="body_title">Tehtävästä</p>
+        <p>Ideointivaihe on yleensä yksi hauskimmista vaiheista missä tahansa tehtävässä, mutta samalla myös kuumottavin. Arkistomateriaalin selaaminen sai ekat päivät pään vähän pyörälle, mutta ideoita alkoi pikkuhiljaa syntyä. Inspiroiduin hienista eurooppalaisista linnoista, joissa voi tapahtua vaikka mitä mysteeristä. Varsinkin nyt kun syksy alkaa saapua ja se on parasta aikaa Agatha Christie -tyylisille englatilaisille yläluokan murhamysteereille.</p>
+        <p>Pelkkä mysteeri ei kuitenkaan innostanut, koska tehtävässä oli tarkoitus kokeilla kaikkea mielenkiintoista ja outoa. Päätin siis tehdä nettisivuista pelilliset, ja idea on oikeastaan harhauttaa nettisivulla kävijää pelin tavoitteesta. Ensimmäisellä silmäyksellä vaikutaa, että pelin tavoite on selvittää jonkin mysteeri, mutta pelin oikeana tarkoituksena onkin kerätä kymmenen perhosta. Pohdin myös mahdollisuutta eräänlaisesta vieraskirjasta ja roolipelittämisestä, koska lapsuudesta muistan kun eräs kamu osasi tehdä nettisivuja, joissa ikään kuin hoidettiin lemmikkejä niin, että alustalla kävijät kirjoittivat tarinoita siitä mitä tekivät lemmikkinsä kanssa. Mutta keskityn aluksi ainakin mysteeriin ja perhosiin.</p>
+        <p>Visuaalisesti haluan kokeilla kaikenlaisia vähän kummallisia juttuja, esim. että tekee luettavasta tekstistä jotenkin viiston, ikään kuin sitä olisi valokopioitu vähän vinosti paperista. Olisi kiva kokeilla myös jotain filttereitä, joka tekisi tekstiin jotain virheitä, mikä muistuttaisi painokoneen/kirjoituskoneen jälkeä. Haluaisin satukirjamaisen ja jollakin tavalla romanttisen tyylin nettisivujen ulkoasuun, koska se menisi yhteen arkistomateriaalin ja mysteeri tekstiseikkailun kanssa. Vähän mietityttää miten saan yhdistettyä arkistomateriaalia ja svg-kuvia, jotta sivut ei vie liikaa tilaa. Tämän kanssa täytyy ainakin tehdä testejä.</p>
+        <p>Rakensin perjantaiksi prototyypin tekstiseikkailusta ja perhospelistä, koska halusin ihan ensiksi selvittää onko idea toteutuskelpoinen. Sain kuin sainkin jotenkuten toimivan homman kasaan, joten sitä on nyt kiva lähteä työstämään visuaalisesti.</p>
+        <p>Prototyyppiä pääsee kurkkimaan 
+            <a href="https://jabbahut69.github.io/koodi-kurssi/oppimispaivakirja/prototype.html">
+            tästä.
+            </a></p>
+        <p>Chat-gpt:n avulla tehty härveli, mutta suoraan sitä ei voinut kopioida ja vähän kämänen vielä toiminnallisuudeltaan. Esimerkiksi return-toiminnolle chat-gpt ehdotti sen verran epämääräistä ratkaisua, että en halua käyttää sellaisenaan. Sain ehdotuksena, että tarina olisi erillisessä HTML-ikkunassa, koska sitten ei tarvitsisi rakentaa niin monimutkaista choice-puuta(?). Voisi tässä tapauksessa olla ihan hyvä. Sen verran prototyyppi toimii kuitenkin, että pääsen eteenpäin kehittelemään mysteerille jonkinlaista juonta/ideaa ja koristelemaan ulkoasua. Ehkä on vain eri huoneita, joissa voi ihmetellä asioita, ehkä voi jutella henkilöille? Kiinnostaisi myös opetella tekemään animaatioita svg-kuville ja saada perhonen räpyttelemään siipiä.</p>
+        </div>
+        <div class="black_header" id="footer-id">
+            <a href="viikko3.html">
+                Seuraava viikko
+                </a>
+        </div>
 </body>
 
