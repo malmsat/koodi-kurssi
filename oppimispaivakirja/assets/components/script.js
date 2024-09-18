@@ -91,7 +91,7 @@ function createObject() {
     clickCount++;
     counter.textContent = `Butterflies caught: ${clickCount}/10`;
 
-    if (clickCount === 10) {
+    if (clickCount === 1) {
       displayWinMessage();
       clearInterval(spawnInterval);
     }
@@ -106,10 +106,9 @@ function displayWinMessage() {
   winMessage.style.display = 'block';
 
   // Add "Play Again" button
-  playAgainButton.textContent = 'Play Again';
-  playAgainButton.style.display = 'block'; // Make the button visible
+  playAgainButton.style.display = 'block'; // Make it visible when needed
   playAgainButton.addEventListener('click', resetGame); // Add event listener to restart the game
-  document.body.appendChild(playAgainButton); // Add the button to the body
+  
 }
 
 // Function to reset the game
