@@ -47,6 +47,32 @@
         .grid-item-right {
             margin-top: 35px;
         }
+        /* Normal link state */
+        a {
+          color: rgb(0, 0, 0); /* Text color */
+          text-decoration: none; /* Removes underline */
+          font-weight: bold; /* Makes text bold */
+          font-size: 16;
+          transition: font-size 0.3s ease, color 0.3s ease; /* Smooth transition */
+        }
+
+        /* Visited link state */
+        a:visited {
+          color: rgb(117, 30, 189); /* Color after the link has been visited */
+        }
+
+        /* Hover state */
+        a:hover {
+          color: #1f3b2d; /* Text color on hover */
+          font-size: 20;
+        }
+
+        /* Active state (when clicked) */
+        a:active {
+          color: rgb(255, 0, 0); /* Text color when the link is being clicked */
+        }
+
+
     </style>
 </head>
 
