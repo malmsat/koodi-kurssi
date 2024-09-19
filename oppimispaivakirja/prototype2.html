@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid base</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #1f3b2d;
+            background-image: url(./assets/img/bg.png);
+        }
+        #container {
+          position: fixed; /* Stays on screen while scrolling */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            z-index: 1000; /* Ensure it's above all other content */
+            pointer-events: none; /* Ignore clicks on this layer if you don't want interaction */
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto 50% auto;
+            grid-template-rows: 25% 60% auto;
+            width: 100vw;
+            height: 100vh;
+        }
+        .grid-item {
+            display: flex;
+            border-radius: 10%;
+        }
+        .center {
+            background-color: #ffffff;
+            border: 5px solid #000;
+            border-radius: 10%;
+            padding: 0; /* Remove padding to fit the iframe perfectly */
+        }
+        .center iframe {
+            width: 100%;
+            height: 100%;
+            border-radius: 10%;
+            border: none; /* Remove iframe border */
+        }
+        /* Styling the overlapping title */
+        .title {
+            position: absolute;
+            top: 55%;
+            left: 52%;
+            transform: translate(-50%, -120%); /* Adjust position to overlap */
+            z-index: 1;
+            pointer-events: none; /* Makes title text non-interactive */
+        }
+        #counter {
+            position: absolute;
+            top: 20px;
+            right: 50px;
+            font-size: 20px;
+            font-weight: bold;
+            color: rgb(0, 0, 0);
+            background-color: #FFEFB5;
+            padding: 10px;
+            border-radius: 30%;
+            border: 5px solid #000000;
+        }
+    
+      .object {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+      
+      .object:hover {
+          transform: scale(1.2);
+      }
+
+      /* Custom scrollbar for WebKit browsers */
+      ::-webkit-scrollbar {
+          width: 12px; /* Width of the scrollbar */
+      }
+
+      ::-webkit-scrollbar-track {
+          background: #f1f1f1; /* Color of the track */
+      }
+
+      ::-webkit-scrollbar-thumb {
+          background-color: #888; /* Color of the thumb (scroll handle) */
+          border-radius: 30px; /* Rounded corners */
+          border: 3px solid #000000; /* Space around the thumb */
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+          background-color: #555; /* Color when hovering over the thumb */
+      }
+
+
+
+
+
+
+
+
+
+
+
+      
+    </style>
+
+    <script>
+        // Function to change the iframe source
+        function loadPage(pageUrl) {
+            const iframe = document.querySelector('.center iframe');
+            iframe.src = pageUrl; // Change iframe source to the provided URL
+        }
+    </script>
+
+</head>
+<body>
+  <div id="container">
+    <div class="butterfly">
+      <div class="butterfly__wing"></div>
+      <div class="butterfly__wing"></div>
+      <div class="butterfly__wing"></div>
+      <div class="butterfly__wing"></div>
+    </div>
+  </div>
+    <div class="grid-container">
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item">
+          <div id="counter">Butterflies caught: 0/10</div> <!-- Counter element -->
+        </div>
+        <div class="grid-item"></div>
+        <div class="grid-item center">
+            <!-- Title overlapping the embedded HTML -->
+            <img class= "title" src="./assets/img/title.svg" alt="Description of SVG image" height="650px">
+            <!-- Embedded HTML page using iframe -->
+            <iframe src="start.html"></iframe>
+        </div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+    </div>
+    <script src="./assets/components/butterfly-script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embedded Page with Links</title>
+    <style>
+        body {
+            font-family: crimson; /* FIrst letter or each page parchment? Tai img */
+            background-image: url(./assets/img/castle-bg1.jpg);
+            background-repeat: no-repeat; /* Do not repeat the image */
+            color: #000000;
+            background-color: #e3ded2;
+        }
+        h1 {
+            font-size: 28px;
+            color: #444;
+            text-align: center;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.2;
+            font-weight: bold;
+        }
+        .p-low {
+            margin-left: 95px;
+            width: 82%;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+            cursor: pointer; /* Make the link look clickable */
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: 25% 47% 25%;
+
+            height: 85vh;
+            margin-top: 470px;
+            margin-left: 95px;
+        }
+        .grid-item {
+        }
+        .grid-item-right {
+            margin-top: 35px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="grid-item">
+            <p>
+                This is the content of the embedded HTML page. You can add any text you like here, including descriptions, explanations, or any other information. Feel free to format this text as needed, and add more paragraphs, images, or even additional elements to enhance the content. This is the content of the embedded HTML page. You can add any text you like here, including descriptions, explanations, or any other information. Feel free to format this text as needed, and add more paragraphs, images, or even additional elements to enhance the content.
+            </p>
+        </div>
+        <div class="grid-item">
+            <p>
+                
+            </p>
+        </div>
+        <div class="grid-item-right">
+            <p>
+                This is the content of the embedded HTML page. You can add any text you like here, including descriptions, explanations, or any other information. Feel free to format this text as needed, and add more paragraphs, images, or even additional elements to enhance the content. This is the content of the embedded HTML page. You can add any text you like here, including descriptions, explanations, or any other information. 
+            </p>
+        </div>
+    </div>
+
+
+
+
+    <div>
+            <p class="p-low">
+                This is the content of the embedded HTML page. You can add any text you like here, including descriptions, explanations, or any other information. Feel free to format this text as needed, and add more paragraphs, images, or even additional elements to enhance the content. This is the content of the embedded HTML page. You can add any text you like here, including descriptions, explanations, or any other information. Feel free to format this text as needed, and add more paragraphs, images, or even additional elements to enhance the content.
+            </p>
+            <p class="p-low">
+                This is the content of the embedded HTML page. You can add any text you like here, including descriptions, explanations, or any other information. Feel free to format this text as needed, and add more paragraphs, images, or even additional elements to enhance the content. This is the content of the embedded HTML page. You can add any text you like here, including descriptions, explanations, or any other information. Feel free to format this text as needed, and add more paragraphs, images, or even additional elements to enhance the content. This is the content of the embedded HTML page. You can add any text you like here, including descriptions, explanations, or any other information. Feel free to format this text as needed, and add more paragraphs, images, or even additional elements to enhance the content. This is the content of the embedded HTML page. You can add any text you like here, including descriptions, explanations, or any other information. Feel free to format this text as needed, and add more paragraphs, images, or even additional elements to enhance the content.
+            </p>
+        </div>
+
+        <div>
+            <p class="p-low">
+                <a onclick="parent.loadPage('page1.html');">Load Page 1</a>
+            </p>
+            <p class="p-low">
+                <a onclick="parent.loadPage('page2.html');">Load Page 2</a> 
+        </p>
+        </div>
+    </div>
+</body>
+</html>
