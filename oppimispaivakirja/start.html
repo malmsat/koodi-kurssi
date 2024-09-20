@@ -9,8 +9,9 @@
             font-family: crimson; /* FIrst letter or each page parchment? Tai img */
             background-image: url(./assets/img/castle-bg1.jpg);
             background-repeat: no-repeat; /* Do not repeat the image */
+            background-size: 100vw;
             color: #000000;
-            background-color: #e3ded2;
+            background-color: #e4dfd2;
         }
         h1 {
             font-size: 28px;
@@ -25,6 +26,19 @@
         .p-low {
             margin-left: 95px;
             width: 82%;
+            z-index: 1;
+        }
+        .p-map {
+            width: 250px;
+            z-index: 1;
+            transform: translate(240%, -230%); /* Adjust position to overlap */
+        }
+        .ul-map {
+            list-style-type: none;
+            font-size: 16px;
+            line-height: 1.2;
+            font-weight: bold;
+            transform: translate(5%, -160%); /* Adjust position to overlap */
         }
         a {
             color: #007bff;
@@ -36,16 +50,17 @@
         }
         .grid-container {
             display: grid;
-            grid-template-columns: 25% 47% 25%;
+            grid-template-columns: 230px auto 230px;
 
-            height: 85vh;
-            margin-top: 470px;
+
+            margin-top: 500px;
             margin-left: 95px;
+            margin-right: 85px;
         }
         .grid-item {
         }
         .grid-item-right {
-            margin-top: 35px;
+            margin-top: 55px;
         }
         /* Normal link state */
         a {
@@ -56,6 +71,10 @@
           transition: font-size 0.3s ease, color 0.3s ease; /* Smooth transition */
         }
 
+        img {
+            margin-top: 30px;
+            margin-left: 60px;
+        }
         /* Visited link state */
         a:visited {
           color: rgb(117, 30, 189); /* Color after the link has been visited */
@@ -64,12 +83,32 @@
         /* Hover state */
         a:hover {
           color: #1f3b2d; /* Text color on hover */
-          font-size: 20;
+          font-size: 20px;
         }
 
         /* Active state (when clicked) */
         a:active {
           color: rgb(255, 0, 0); /* Text color when the link is being clicked */
+        }
+
+        /* Custom scrollbar for WebKit browsers */
+        *::-webkit-scrollbar {
+            width: 12px; /* Width of the scrollbar */
+        }
+
+        *::-webkit-scrollbar-track {
+            background: #e4dfd2; /* Color of the track */
+            border: 3px solid #000000; /* Space around the thumb */
+        }
+
+        *::-webkit-scrollbar-thumb {
+            background-color: #8d1212; /* Color of the thumb (scroll handle) */
+            border-radius: 30px; /* Rounded corners */
+            border: 3px solid #000000; /* Space around the thumb */
+        }
+
+        *::-webkit-scrollbar-thumb:hover {
+            background-color: #c87d7d; /* Color when hovering over the thumb */
         }
 
 
@@ -80,7 +119,8 @@
     <div class="grid-container">
         <div class="grid-item">
             <p>
-                This is the content of the embedded HTML page. You can add any text you like here, including descriptions, explanations, or any other information. Feel free to format this text as needed, and add more paragraphs, images, or even additional elements to enhance the content. This is the content of the embedded HTML page. You can add any text you like here, including descriptions, explanations, or any other information. Feel free to format this text as needed, and add more paragraphs, images, or even additional elements to enhance the content.
+                An archway carves an entrance to the Sainsbury grounds. Outsiders are rarely able to catch a glimpse of the true form of the castle due to the absurdely high walls surrounding it. You are one of the lucky ones, you think to yourself as you take a wary step inside.
+                Your invitation had arrived only a day before the unfortunate news of the sudden death of the young baron, the previous owner of the estate. Your appointment had, however, not been cancelled, so you decided to take the opportunity you had been awaiting for a long time. <i>I hope I'm not intruding the family in mourning.</i>
             </p>
         </div>
         <div class="grid-item">
@@ -90,31 +130,32 @@
         </div>
         <div class="grid-item-right">
             <p>
-                This is the content of the embedded HTML page. You can add any text you like here, including descriptions, explanations, or any other information. Feel free to format this text as needed, and add more paragraphs, images, or even additional elements to enhance the content. This is the content of the embedded HTML page. You can add any text you like here, including descriptions, explanations, or any other information. 
+                You had not been able to sleep well the night before due to your excitement, so you had got up and made your way to the castle much too early for your appointment. There is no one yet to receive you. You are too nervous to stay still, so you make way to the castle at your own accord. Fortunately, you had been able to acquire a map of the grounds from the university library to help you navigate to the best locations for you endeavor.
             </p>
         </div>
     </div>
 
 
-
-
+    </div>
+        <img src="./assets/img/map.jpg">
     <div>
-            <p class="p-low">
-                This is the content of the embedded HTML page. You can add any text you like here, including descriptions, explanations, or any other information. Feel free to format this text as needed, and add more paragraphs, images, or even additional elements to enhance the content. This is the content of the embedded HTML page. You can add any text you like here, including descriptions, explanations, or any other information. Feel free to format this text as needed, and add more paragraphs, images, or even additional elements to enhance the content.
-            </p>
-            <p class="p-low">
-                This is the content of the embedded HTML page. You can add any text you like here, including descriptions, explanations, or any other information. Feel free to format this text as needed, and add more paragraphs, images, or even additional elements to enhance the content. This is the content of the embedded HTML page. You can add any text you like here, including descriptions, explanations, or any other information. Feel free to format this text as needed, and add more paragraphs, images, or even additional elements to enhance the content. This is the content of the embedded HTML page. You can add any text you like here, including descriptions, explanations, or any other information. Feel free to format this text as needed, and add more paragraphs, images, or even additional elements to enhance the content. This is the content of the embedded HTML page. You can add any text you like here, including descriptions, explanations, or any other information. Feel free to format this text as needed, and add more paragraphs, images, or even additional elements to enhance the content.
-            </p>
-        </div>
-
-        <div>
-            <p class="p-low">
-                <a onclick="parent.loadPage('page1.html');">Load Page 1</a>
-            </p>
-            <p class="p-low">
-                <a onclick="parent.loadPage('page2.html');">Load Page 2</a> 
+    <div class="p-low">
+        <ul class="ul-map">
+            <li><a onclick="parent.loadPage('page1.html');">1. Place</a> </li>
+            <li><a onclick="parent.loadPage('page2.html');">2. Place</a> </li>
+            <li>3. Place</li>
+            <li>4. Place</li>
+            <li>5. Place</li>
+            <li>6. Place</li>
+            <li>7. Place</li>
+            <li>8. Place</li>
+        </ul>
+    <div class="p-map">
+        <h2>Map of Castle Sainsbury</h2>
+        <p>
+            You had not been able to sleep well the night before due to your excitement, so you had got up and made your way to the castle much too early for your appointment. There is no one yet to receive you. You are too nervous to stay still, so you make way to the castle at your own accord. Fortunately, you had been able to acquire a map of the grounds from the university library to help you navigate to the best locations for you endeavor.
         </p>
-        </div>
     </div>
+
 </body>
 </html>
