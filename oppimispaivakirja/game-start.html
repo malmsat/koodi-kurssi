@@ -13,15 +13,15 @@
             color: #000000;
             background-color: #e4dfd2;
         }
-        h1 {
-            font-size: 28px;
-            color: #444;
-            text-align: center;
+        h2 {
+            font-size: 14px;
+            color: #000000;
+            text-align: left;
+            font-weight: bold;
         }
         p {
             font-size: 16px;
             line-height: 1.2;
-            font-weight: bold;
         }
         .p-low {
             margin-left: 95px;
@@ -29,30 +29,22 @@
             z-index: 1;
         }
         .p-map {
+            position: absolute;
             width: 250px;
             z-index: 1;
-            transform: translate(240%, -230%); /* Adjust position to overlap */
+            transform: translate(240%, -180%); /* Adjust position to overlap */
         }
         .ul-map {
+            position: absolute;
             list-style-type: none;
             font-size: 16px;
             line-height: 1.2;
             font-weight: bold;
-            transform: translate(5%, -160%); /* Adjust position to overlap */
-        }
-        a {
-            color: #007bff;
-            text-decoration: none;
-            cursor: pointer; /* Make the link look clickable */
-        }
-        a:hover {
-            text-decoration: underline;
+            transform: translate(5%, -140%); /* Adjust position to overlap */
         }
         .grid-container {
             display: grid;
             grid-template-columns: 230px auto 230px;
-
-
             margin-top: 500px;
             margin-left: 95px;
             margin-right: 85px;
@@ -69,6 +61,7 @@
           font-weight: bold; /* Makes text bold */
           font-size: 16;
           transition: font-size 0.3s ease, color 0.3s ease; /* Smooth transition */
+          cursor: pointer; /* Make the link look clickable */
         }
 
         img {
@@ -77,12 +70,12 @@
         }
         /* Visited link state */
         a:visited {
-          color: rgb(117, 30, 189); /* Color after the link has been visited */
+          color: rgb(0, 0, 0); /* Color after the link has been visited */
         }
 
         /* Hover state */
         a:hover {
-          color: #1f3b2d; /* Text color on hover */
+          color: #000000; /* Text color on hover */
           font-size: 20px;
         }
 
@@ -119,8 +112,10 @@
     <div class="grid-container">
         <div class="grid-item">
             <p>
-                An archway carves an entrance to the Sainsbury grounds. Outsiders are rarely able to catch a glimpse of the true form of the castle due to the absurdely high walls surrounding it. You are one of the lucky ones, you think to yourself as you take a wary step inside.
-                Your invitation had arrived only a day before the unfortunate news of the sudden death of the young baron, the previous owner of the estate. Your appointment had, however, not been cancelled, so you decided to take the opportunity you had been awaiting for a long time. <i>I hope I'm not intruding the family in mourning.</i>
+                An archway carves an entrance to the Sainsbury grounds. Outsiders are rarely able to catch a glimpse of the castle's true form due to the absurdely high walls surrounding it. You are one of the lucky ones, you think to yourself as you take a wary step inside.
+            </p>
+            <p>
+                Your invitation had arrived only a day before the unfortunate news of the sudden death of the young baron, the previous owner of the estate. Your appointment had, however, not been cancelled, so you decided to take the opportunity you had been awaiting for a long time. It seems a much worse idea now than when you confidently left your house that morning. 
             </p>
         </div>
         <div class="grid-item">
@@ -130,7 +125,10 @@
         </div>
         <div class="grid-item-right">
             <p>
-                You had not been able to sleep well the night before due to your excitement, so you had got up and made your way to the castle much too early for your appointment. There is no one yet to receive you. You are too nervous to stay still, so you make way to the castle at your own accord. Fortunately, you had been able to acquire a map of the grounds from the university library to help you navigate to the best locations for you endeavor.
+                Could it be you are intruding the family in mourning? And such an important family at that.
+            </p>
+            <p>
+                You had not been able to sleep well the night before due to your excitement, so you had got up and made your way to the castle much too early. There is no one yet to receive you. You are too nervous to stay still, so you make way to the castle at your own accord. Fortunately, you had been able to acquire a map of the grounds from the university library. <i>Where will you head first?</i>
             </p>
         </div>
     </div>
@@ -141,21 +139,25 @@
     <div>
     <div class="p-low">
         <ul class="ul-map">
-            <li><a onclick="parent.loadPage('page1.html');">1. Place</a> </li>
-            <li><a onclick="parent.loadPage('page2.html');">2. Place</a> </li>
-            <li>3. Place</li>
-            <li>4. Place</li>
-            <li>5. Place</li>
-            <li>6. Place</li>
-            <li>7. Place</li>
-            <li>8. Place</li>
+            <li><a onclick="parent.loadPage('game-outercourt.html');">1. Outer Court</a> </li>
+            <li><a onclick="parent.loadPage('game-chapel.html');">2. Chapel</a> </li>
+            <li><a onclick="parent.loadPage('game-gardens.html');">3. The Gardens</a> </li>
+            <li><a onclick="parent.loadPage('game-courtyard.html');">4. Courtyard</a> </li>
+            <li><a onclick="parent.loadPage('game-greathall.html');">5. Great Hall</a> </li>
+            <li><a onclick="parent.loadPage('game-towers.html');">6. Towers</a> </li>
+            <li><a onclick="parent.loadPage('game-study.html');">7. The Study</a> </li>
+            <li><a onclick="parent.loadPage('game-port.html');">8. The Sally-Port</a> </li>
+            <li><a onclick="parent.loadPage('game-dungeons.html');">9. Keep and Dungeons</a> </li>
         </ul>
-    <div class="p-map">
-        <h2>Map of Castle Sainsbury</h2>
-        <p>
-            You had not been able to sleep well the night before due to your excitement, so you had got up and made your way to the castle much too early for your appointment. There is no one yet to receive you. You are too nervous to stay still, so you make way to the castle at your own accord. Fortunately, you had been able to acquire a map of the grounds from the university library to help you navigate to the best locations for you endeavor.
-        </p>
-    </div>
+        <div class="p-map">
+            <h2>MAP OF CASTLE SAINSBURY</h2>
+            <p class="first-p">
+                The Sainsburies have lived in the Sainsbury castle for generations. The castle was first built somewhere in the 16th century, but has been expanded and renovetad several times since.
+            </p>
+            <p>
+                The main entrance lies on the Northern side of tha castle. It leads to the Outer Court, which makes way to the more intimate spaces of the castle. You will find the old Sally Port to the West.
+            </p>
+        </div>
 
 </body>
 </html>

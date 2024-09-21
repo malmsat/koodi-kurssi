@@ -5,8 +5,8 @@
 
 const container = document.getElementById('container');
 const counter = document.getElementById('counter');
-//const winMessage = document.getElementById('winMessage');
-//const playAgainButton = document.createElement('button'); // Create the Play Again button
+const winMessage = document.getElementById('winMessage');
+const playAgainButton = document.createElement('button'); // Create the Play Again button
 let clickCount = 0;
 let spawnInterval;
 let butterflyCount = 0;
@@ -90,7 +90,7 @@ function createObject() {
     clickCount++;
     counter.textContent = `Butterflies caught: ${clickCount}/10`;
 
-    if (clickCount === 1) {
+    if (clickCount === 10) {
       displayWinMessage();
       clearInterval(spawnInterval);
     }
@@ -105,9 +105,10 @@ function displayWinMessage() {
   winMessage.style.display = 'block';
 
   // Add "Play Again" button
+  playAgainButton.textContent = 'Play Again';
   playAgainButton.style.display = 'block'; // Make it visible when needed
   playAgainButton.addEventListener('click', resetGame); // Add event listener to restart the game
-  
+  document.body.appendChild(playAgainButton); // Add the button to the body
 }
 
 // Function to reset the game
@@ -119,14 +120,14 @@ function resetGame() {
   playAgainButton.style.display = 'none'; // Hide the play again button
 
   // Remove any remaining butterflies
-  //const butterflies = document.querySelectorAll('.object');
-  //butterflies.forEach(butterfly => butterfly.remove());
+  const butterflies = document.querySelectorAll('.object');
+  butterflies.forEach(butterfly => butterfly.remove());
 
   // Start spawning butterflies again
-  spawnInterval = setInterval(createObject, 2000);
+  spawnInterval = setInterval(createObject, 10000);
 }
 
-// Start spawning objects every 2 seconds
-spawnInterval = setInterval(createObject, 2000);
+// Start spawning objects every 10 seconds
+spawnInterval = setInterval(createObject, 10000);
 
 

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embedded Page with Links</title>
+    <style>
+        body {
+            font-family: crimson; /* FIrst letter or each page parchment? Tai img */
+            background-image: url(./assets/img/outercourt1.jpg);
+            background-repeat: no-repeat; /* Do not repeat the image */
+            background-size: 100vw;
+            color: #000000;
+            background-color: #e4dfd2;
+        }
+        h2 {
+            font-size: 14px;
+            color: #000000;
+            text-align: left;
+            font-weight: bold;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.2;
+            text-indent: 10px;
+        }
+        .first-p {
+            font-size: 16px;
+            line-height: 1.2;
+            text-indent: 0px;
+        }
+        .list-p {
+            width: 600px;
+        }
+        summary {
+            font-weight: bold;
+            transition: font-size 0.3s ease, color 0.3s ease; /* Smooth transition */
+        }
+        details summary {
+            cursor: pointer; /* Changes the cursor to a pointer */
+        }
+        details summary:hover {
+            font-size: 20px; /* Change text color on hover */
+        }
+        .p-low {
+            margin-left: 95px;
+            width: 82%;
+            z-index: 1;
+        }
+        .p-map {
+            position: absolute;
+            width: 250px;
+            z-index: 1;
+            transform: translate(240%, -180%); /* Adjust position to overlap */
+        }
+        .ul-map {
+            position: absolute;
+            list-style-type: none;
+            font-size: 16px;
+            line-height: 1.2;
+            font-weight: bold;
+            transform: translate(5%, -140%); /* Adjust position to overlap */
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: 500px auto;
+            margin-top: 530px;
+            margin-left: 170px;
+            margin-right: 85px;
+        }
+
+        .grid-item {
+        }
+
+        .grid-item-right {
+            margin-top: 55px;
+        }
+
+        a {
+          color: rgb(0, 0, 0);
+          text-decoration: none;
+          font-weight: bold;
+          font-size: 16;
+          transition: font-size 0.3s ease, color 0.3s ease;
+          cursor: pointer;
+        }
+
+        img {
+            margin-top: 30px;
+            margin-left: 60px;
+        }
+
+        a:visited {
+          color: rgb(0, 0, 0);
+        }
+
+        a:hover {
+          color: #000000;
+          font-size: 20px;
+        }
+
+        a:active {
+          color: rgb(87, 21, 21); 
+        }rgb(77, 11, 11)rgb(99, 7, 7)rgb(100, 4, 4)
+
+        /* Custom scrollbar for WebKit browsers */
+        ::-webkit-scrollbar {
+            width: 12px; 
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #e4dfd2; 
+            border: 3px solid #000000; 
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #8d1212; 
+            border-radius: 30px; 
+            border: 3px solid #000000; 
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #c87d7d; 
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="grid-container">
+        <div class="grid-item">
+        <h2>THE OUTER COURT</h2>
+            
+            <p class="first-p">
+                You journey through the grounds the breezy air urging you to keep a steady brisk pace. As it happens, the weather is as cold and humid as it is often said to be in the British Isles. You are greeted by a sight of a rather disgruntled-looking old man holding a rake and squinting at the bright morning sky. You notice he is staring at a large bird circling the trenches. <i>He must be the groundskeeper.</i>
+            </p>
+            <details>
+                <summary>Talk to the groundskeeper</summary>
+                <div class="list-p">
+                    <p>
+                        "Ohoy there!" you wave at the old chap.  
+                    </p>
+                    <p>
+                        "Ay, a rather nippy weather to be prowling about the grounds," the man says, raising an eyebrow. "Who might you be?" 
+                    </p>
+                    <p>
+                        "I received a letter of invitation to arrive here today, although I'm terribly early for my appointment, as it turns out." You search your jacket hastily for the said letter to show the man. He is, however, reluctant to accept it. 
+                    </p>
+                    <p>
+                        "Yer not from the police, are ye?" he asks.
+                    </p>
+                    <p>
+                        "What? The police? No—I'm from the department of entomology, at the University. You see, I was invited to—" 
+                    </p>
+                    <p>
+                        The man interrupts you, "Oh, the scientist. Yes, yes." The man relaxes his expression. "I had forgot about the whole thing with so much going on. Do you need me to show you the grounds?" 
+                    </p>
+                    <p>
+                        "Oh, that's alright." you answer quickly. "There is a police investigation going on?" You can't help your curiosity. 
+                    </p>
+                    <p>
+                        The man eyes you under his brows, "They have been coming here asking questions ever since our young master passed and those jewels disappered. I'm sure you've heard about it."
+                    </p>
+                    <p>
+                        "Indeed, I have, yes." you tell the man. "I'm sorry for what's happened." 
+                    </p>
+                    <p>
+                        The old man nods, "Ay, terrible business. He was a fine youg man, the baron." 
+                    </p>
+                    <p>
+                        The groundskeeper makes to return to whatever he had been doing. It is your cue the conversation is over. <i>So, there is an ongoing police investigation. How interesting.</i>
+                    </p>
+                </div>
+              </details>
+              <details>
+                <summary>Look at the bird</summary>
+                <div class="list-p">
+                    <p>
+                        As someone well versed in the local wildlife, you are astonished to recognize the bird as non other than a vulture. Not a bird you would usually spot in the area. And species with a famously ominous reputation at that. The only thing that might attract such a large scavenger bird would be a carcass, wouldn't it? But a well kept estate such as this would not have let a rotting carcass be left on the grounds for long. At least one that was found...
+                    </p>
+                </div>
+              </details>
+              <details>
+                <summary>Check out the trenches</summary>
+                <div class="list-p">
+                    <p>
+                        You peer into the deep muddy trenches and are met with a grisly smell wafting in the air.<i> "Now that's something you don't smell every day."</i> You try to make out what the source might be but cannot distinguish anything from the freshly turned bottom, other than a pair of footprints.
+                    </p>
+                    <p>
+                        Not all of the ground is equally trampled. Someone has been walking in and out of the deepest part of the pit, and it looks, with difficulty. You can't think of any good reason someone would have wanted to walk there voluntarily, especially with the strange smells. 
+                    </p>
+                </div>
+              </details>
+        </div>
+    </div>
+        <img src="./assets/img/map.jpg">
+    <div>
+    <div class="p-low">
+        <ul class="ul-map">
+            <li><a onclick="parent.loadPage('game-outercourt.html');">1. Outer Court</a> </li>
+            <li><a onclick="parent.loadPage('game-chapel.html');">2. Chapel</a> </li>
+            <li><a onclick="parent.loadPage('game-gardens.html');">3. The Gardens</a> </li>
+            <li><a onclick="parent.loadPage('game-courtyard.html');">4. Courtyard</a> </li>
+            <li><a onclick="parent.loadPage('game-greathall.html');">5. Great Hall</a> </li>
+            <li><a onclick="parent.loadPage('game-towers.html');">6. Towers</a> </li>
+            <li><a onclick="parent.loadPage('game-study.html');">7. The Study</a> </li>
+            <li><a onclick="parent.loadPage('game-port.html');">8. The Sally Port</a> </li>
+            <li><a onclick="parent.loadPage('game-dungeons.html');">9. Keep and Dungeons</a> </li>
+        </ul>
+    <div class="p-map">
+        <h2>MAP OF CASTLE SAINSBURY</h2>
+        <p class="first-p">
+            The Sainsburies have lived in the Sainsbury castle for generations. The castle was first built somewhere in the 16th century, but has been expanded and renovetad several times since.
+        </p>
+        <p>
+            The main entrance lies on the Northern side of tha castle. It leads to the Outer Court, which makes way to the more intimate spaces of the castle. You will find the old Sally Port to the West.
+        </p>
+    </div>
+
+</body>
+</html>

@@ -20,7 +20,6 @@ r<!DOCTYPE html>
             left: 0;
             width: 100vw;
             height: 100vh;
-            display: flex;
             z-index: 1000; /* Ensure it's above all other content */
             pointer-events: none; /* Ignore clicks on this layer if you don't want interaction */
         }
@@ -50,9 +49,7 @@ r<!DOCTYPE html>
         /* Styling the overlapping title */
         .title {
             position: absolute;
-            top: 63%;
-            left: 52%;
-            transform: translate(-50%, -120%); /* Adjust position to overlap */
+            transform: translate(-2%, -75%); /* Adjust position to overlap */
             z-index: 1;
             pointer-events: none; /* Makes title text non-interactive */
         }
@@ -68,7 +65,48 @@ r<!DOCTYPE html>
             border-radius: 30%;
             border: 5px solid #000000;
         }
-    
+        .win-message {
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+            width: 120vh;
+            height: 50vh;
+            margin-top: 1.5%;
+            display: none; /*Initially hidden*/
+            background-color: #e4dfd2;
+            text-align: center;
+            padding: 10%;
+            font-size: 40px;
+            border: 5px solid #000;
+            border-radius: 30%;
+
+        }
+        button {
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, 0);
+            padding: 10px 20px;
+            font-family: crimson;
+            font-size: 18px;
+            font-weight: bold;
+            display: none; /* Hidden initially */
+            color: #000;
+            background-color: #FFEFB5;
+            cursor: pointer;
+            border: 3px solid #000;
+            border-radius: 30%;
+            z-index: 1001;
+            transition: font-size 0.3s ease, color 0.3s ease; /* Smooth transition */
+        }
+        button:hover {
+            font-size: 30;
+
+        }
+        .centered-flex {
+            display: flex;
+            justify-content: center; /* Centers items horizontally */
+            align-items: center;
+        }
       .object {
             width: 50px;
             height: 50px;
@@ -93,7 +131,19 @@ r<!DOCTYPE html>
 
 </head>
 <body>
-  <div id="container"></div>
+  <div id="container">
+        <div class="centered-flex"> 
+            <div id="winMessage" class="win-message">
+                <p>
+                    Congratulations,
+                </p>
+                <p>
+                    you have won the game!
+                </p>
+            </div>
+        </div>
+    </div>
+
     <div class="grid-container">
         <div class="grid-item"></div>
         <div class="grid-item"></div>
@@ -105,7 +155,7 @@ r<!DOCTYPE html>
             <!-- Title overlapping the embedded HTML -->
             <img class= "title" src="./assets/img/title.svg" alt="Description of SVG image" height="650px">
             <!-- Embedded HTML page using iframe -->
-            <iframe src="start.html"></iframe>
+            <iframe src="game-start.html"></iframe>
         </div>
         <div class="grid-item"></div>
         <div class="grid-item"></div>
