@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embedded Page with Links</title>
+    <style>
+        body {
+            font-family: crimson; /* FIrst letter or each page parchment? Tai img */
+            background-image: url(./assets/img/gardens1.jpg);
+            background-repeat: no-repeat; /* Do not repeat the image */
+            background-position: right top; /* Aligns the background image to the top-right */
+            background-size: 55vw;
+            color: #000000;
+            background-color: #e4dfd2;
+        }
+        h2 {
+            font-size: 14px;
+            color: #000000;
+            text-align: left;
+            font-weight: bold;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.2;
+            text-indent: 10px;
+        }
+        .first-p {
+            font-size: 16px;
+            line-height: 1.2;
+            text-indent: 0px;
+        }
+        .list-p {
+            width: 600px;
+        }
+        summary {
+            font-weight: bold;
+            transition: font-size 0.3s ease, color 0.3s ease; /* Smooth transition */
+        }
+        details summary {
+            cursor: pointer; /* Changes the cursor to a pointer */
+        }
+        details summary:hover {
+            font-size: 20px; /* Change text color on hover */
+        }
+        .p-low {
+            margin-left: 95px;
+            width: 82%;
+            z-index: 1;
+        }
+        .p-map {
+            position: absolute;
+            width: 250px;
+            z-index: 1;
+            transform: translate(240%, -180%); /* Adjust position to overlap */
+        }
+        .ul-map {
+            position: absolute;
+            list-style-type: none;
+            font-size: 16px;
+            line-height: 1.2;
+            font-weight: bold;
+            transform: translate(5%, -140%); /* Adjust position to overlap */
+        }
+        .div-upper {
+            width: 270px;
+            margin-top: 130px;
+            margin-left: 100px;
+        }
+        .div-lower {
+            width: 500px;
+            margin-top: 10px;
+            margin-left: 100px;
+        }
+        .grid-item-right {
+            margin-top: 55px;
+        }
+
+        a {
+          color: rgb(0, 0, 0);
+          text-decoration: none;
+          font-weight: bold;
+          font-size: 16;
+          transition: font-size 0.3s ease, color 0.3s ease;
+          cursor: pointer;
+        }
+
+        img {
+            margin-top: 30px;
+            margin-left: 60px;
+        }
+
+        a:visited {
+          color: rgb(0, 0, 0);
+        }
+
+        a:hover {
+          color: #000000;
+          font-size: 20px;
+        }
+
+        a:active {
+          color: rgb(87, 21, 21); 
+        }rgb(77, 11, 11)rgb(99, 7, 7)rgb(100, 4, 4)
+
+        /* Custom scrollbar for WebKit browsers */
+        ::-webkit-scrollbar {
+            width: 12px; 
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #e4dfd2; 
+            border: 3px solid #000000; 
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #8d1212; 
+            border-radius: 30px; 
+            border: 3px solid #000000; 
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #c87d7d; 
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="div-upper">
+        <h2>THE GARDENS</h2>
+        <p class="first-p">
+            You are keen to visit the castle gardens. Estates such as the Sainsbury Castle can afford to acquire and manage various exotic flora, making it the perfect breeding ground for rare insects, such as the <i>Argynnis adippe</i> you had specifically come to look for. 
+        </p>
+    </div>
+    <div class="div-lower">
+        <p>
+            The gardens are situated by the castle walls and consist of a greenhouse and an outside shrubbery. You let out a thrilled sigh at the sight of colorful plantlife lining the tall stoney walls. Climbing rose bushes sneak around the windowsills of the lower floors and lush tangled vegetation of the greenhouse remind you of exciting illustrations of jungles in faraway lands you have only ever seen in botany books. A gardener is tending to the impressive hibiscus flowers inside the greenhouse and you catch a glimpse of a yellow-winged butterfly quite possibly an <i>Argynnis adippe</i>.
+        </p>
+        <details>
+            <summary>Talk to the gardener</summary>
+            <div class="list-p">
+                <p>
+                    "Good morning sir, wonderful work with the flowers." you say to a surprised-looking gardener.
+                </p>
+                <p>
+                    "Good morning. Who is it I have the pleasure of meeting?" the gardener asks wiping off the sweat on his forehead.
+                </p>
+                <p>
+                    "Indeed, I have the invitation here. I was sent from the University, here for the butterflies—" you ramble on looking for the invitation in your jacket pocket.
+                </p>
+                <p>
+                    "I see. I thought you might be one of those policemen we have had the pleasure of visiting for the past few weeks. I've had to answer all kinds of silly questions over and over." the gardener shakes his head at the notion. "But I'll tell you this much, it wasn't miss Chatsworth who done it."
+                </p>
+                <p>
+                    You stop the search for the letter and look up at the gardener surprised. "Who's done what?"
+                </p>
+                <p>
+                    "People say all kinds of nonsense about miss Chatsworth. You must have read in the papers? The governess who disappeared." 
+                </p>
+                <p>
+                    "Well, I guess now that you mention it—"
+                </p>
+                <p>
+                    "But I'm telling you, something happened to her. She would <i>NOT</i> have run off like that, not a chance." The gardener crosses his arms. "And she is <i>NOT</i> a thief, let alone a murderer!" The look on the gardener's face is defiant, as if he thought you believed the opposite.
+                </p>
+                <p>
+                    "You must have known her well?" you ask.
+                </p>
+                <p>
+                    "I sure did. She did not make a fuss about herself. An intelligent, kind soul she was. And everyone knew it." the gardener says his voice cracking slightly.
+                </p>
+                <p>
+                    "I'm sure the truth will come out." you try to reassure the gardener.
+                </p>
+                <p>
+                    He nods in response his eyes tearing up. You bow to the gardener to make your leave. <i>Best not to stir things any further in here.</i>
+                </p>
+            </div>
+            </details>
+            <details>
+            <summary>Marvel at the climbing roses</summary>
+            <div class="list-p">
+                <p>
+                    Considering the recent weather, the roses are doing well. <i>The local insects must be thrilled to be living here,</i> you think to yourself. You let your gaze climb up the wall with the flowers to the windows at the top. According to the map, that is where the bedchambers of the Sainsbury residents are located. <i>They must have a lovely view of the garden and courtyard from this side.</i>
+                </p>
+            </div>
+            </details>
+            <details>
+            <summary>Study the butterflies</summary>
+            <div class="list-p">
+                <p>
+                    You follow a flicker of a yellow wing to the bushy flowering sweet peas. "Ah!" you exclaim as you realize it is not the <i>Argynnis adippe</i>, but a more common <i>Colias croceus</i>. Disappointed as you are you start digging carefully into the bushes, hoping to turn your luck. There have been sightings of <i>Argynnis adippe</i> on the Sainsbury grounds, so you only have to be patient. 
+                </p>
+                <p>
+                    A speck of yellow light is reflected somewhere on the ground deep behind the bushes. It excites you for a moment, but you soon realize it cannot possibly be a butterfly. So what could it be?
+                </p>
+                <p>
+                    You push the leaves aside a little impatiently and are shocked to find a neckleace of huge Canary Diamonds gleaming at you. It seems like such a strange thing you are at a loss what to do. <i>I have to be very careful if this has anything to do with all that has been going on.</i> It is usually best practice to not get involved in crimes committed by or at individuals in high positions. Not just your career and reputation, but your own safety could be jeopardized if things go south. 
+                </p>
+                <p>
+                    You back away from the diamonds thinking you need time to figure out what to do and not act rashly.
+                </p>
+            </div>
+        </details>
+    </div>
+        <img src="./assets/img/map.jpg">
+    <div>
+    <div class="p-low">
+        <ul class="ul-map">
+            <li><a onclick="parent.loadPage('game-outercourt.html');">1. Outer Court</a> </li>
+            <li><a onclick="parent.loadPage('game-chapel.html');">2. Chapel</a> </li>
+            <li><a onclick="parent.loadPage('game-gardens.html');">3. The Gardens</a> </li>
+            <li><a onclick="parent.loadPage('game-courtyard.html');">4. Courtyard</a> </li>
+            <li><a onclick="parent.loadPage('game-greathall.html');">5. Great Hall</a> </li>
+            <li><a onclick="parent.loadPage('game-towers.html');">6. Towers</a> </li>
+            <li><a onclick="parent.loadPage('game-study.html');">7. The Study</a> </li>
+            <li><a onclick="parent.loadPage('game-port.html');">8. The Sally Port</a> </li>
+            <li><a onclick="parent.loadPage('game-dungeons.html');">9. Keep and Dungeons</a> </li>
+        </ul>
+    <div class="p-map">
+        <h2>MAP OF CASTLE SAINSBURY</h2>
+        <p class="first-p">
+            The Sainsburies have lived in the Sainsbury castle for generations. The castle was first built somewhere in the 16th century, but has been expanded and renovetad several times since.
+        </p>
+        <p>
+            The main entrance lies on the Northern side of tha castle. It leads to the Outer Court, which makes way to the more intimate spaces of the castle. You will find the old Sally Port to the West.
+        </p>
+    </div>
+
+</body>
+</html>

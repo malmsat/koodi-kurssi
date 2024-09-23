@@ -3,32 +3,232 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page 2</title>
+    <title>Embedded Page with Links</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #fee;
-            color: #333;
+            font-family: crimson; /* FIrst letter or each page parchment? Tai img */
+            background-repeat: no-repeat; /* Do not repeat the image */
+            background-size: 50vw;
+            color: #000000;
+            background-color: #e4dfd2;
         }
-        h1 {
-            font-size: 28px;
-            color: #444;
-            text-align: center;
+        h2 {
+            font-size: 14px;
+            color: #000000;
+            text-align: left;
+            font-weight: bold;
         }
         p {
-            font-size: 18px;
-            line-height: 1.6;
-            text-align: justify;
-            max-width: 600px;
-            margin: 20px auto;
+            font-size: 16px;
+            line-height: 1.2;
+            text-indent: 10px;
+        }
+        .first-p {
+            font-size: 16px;
+            line-height: 1.2;
+            text-indent: 0px;
+        }
+        .list-p {
+            width: 600px;
+        }
+        details {
+            min-width: 500px;
+        }
+        summary {
+            font-weight: bold;
+            transition: font-size 0.3s ease, color 0.3s ease; /* Smooth transition */
+        }
+        details summary {
+            cursor: pointer; /* Changes the cursor to a pointer */
+        }
+        details summary:hover {
+            font-size: 20px; /* Change text color on hover */
+        }
+        .summary-div{
+            margin-top: 50px;
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+        .p-low {
+            margin-left: 95px;
+            width: 82%;
+            z-index: 1;
+        }
+        .p-map {
+            position: absolute;
+            width: 250px;
+            z-index: 1;
+            transform: translate(240%, -180%); /* Adjust position to overlap */
+        }
+        .ul-map {
+            position: absolute;
+            list-style-type: none;
+            font-size: 16px;
+            line-height: 1.2;
+            font-weight: bold;
+            transform: translate(5%, -140%); /* Adjust position to overlap */
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: 500px auto;
+            margin-top: 30px;
+        }
+
+        .grid-item {
+            margin-top: 170px;
+            margin-left: 80px;
+            margin-right: 50px;
+        }
+
+        .grid-item-right {
+            margin-top: 55px;
+        }
+
+        a {
+          color: rgb(0, 0, 0);
+          text-decoration: none;
+          font-weight: bold;
+          font-size: 16;
+          transition: font-size 0.3s ease, color 0.3s ease;
+          cursor: pointer;
+        }
+
+        img {
+            margin-top: 30px;
+            margin-left: 60px;
+        }
+
+        a:visited {
+          color: rgb(0, 0, 0);
+        }
+
+        a:hover {
+          color: #000000;
+          font-size: 20px;
+        }
+
+        a:active {
+          color: rgb(87, 21, 21); 
+        }rgb(77, 11, 11)rgb(99, 7, 7)rgb(100, 4, 4)
+
+        /* Custom scrollbar for WebKit browsers */
+        ::-webkit-scrollbar {
+            width: 12px; 
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #e4dfd2; 
+            border: 3px solid #000000; 
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #8d1212; 
+            border-radius: 30px; 
+            border: 3px solid #000000; 
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #c87d7d; 
         }
     </style>
 </head>
+
 <body>
-    <h1>Page 2</h1>
-    <p>
-        This is the content of Page 2. You can add more content here, such as text, images, or other elements.
-    </p>
+
+    <div class="grid-container">
+        <div>
+            <img src="./assets/img/crypt1.jpg">
+        </div>  
+        <div class="grid-item">
+        <h2>THE CHAPEL</h2>
+            
+            <p class="first-p">
+                The Sainsbury Castle is rumored to have a most interesting Chapel. It is said the crypt contains the remains of St. Bede the Venerable, a renowned monk and scholar, but you have yet to have heard any real evidence for the claim. Regardless, the architecture alone makes the building worth a visit. 
+            </p>
+            <p>
+                The ancient wooden door creaks as you open it to reveal the dim-lit room. Some candles are burning by the altar, slightly flickering for the draft. You marvel at the decorative carvings on the stone walls and the intricate statues depicting knights and lords of the olden days. It is not an inviting space, per say. The stuffy air and long dark shadows give the room a feel of unease. 
+            </p>
+            <p>
+                You are startled by a sound of fabric being ruffled by the seats next to the altar. There is a short figure dressed in all black blending so well in the shadows you have to do a double take to make sure you are looking at an actual person. It is a young lady you shortly recognize as the youngest sister of the late Baron of Sainsbury form pictures you have seen in the magazines.
+            </p>
+        </div>
+        <div class="summary-div">
+            <details>
+                <summary>Talk to the young miss Sainsbury</summary>
+                <div class="list-p">
+                    <p>
+                        You feel it would be impolite not to announce yourself now that you are both aware of each other. "Good morning. I apologize for the intrusion."
+                    </p>
+                    <p>
+                        The young lady turns to you her face stern with heavy eyebags under her eyes making her look much older than in the pictures you had seen. "Who are you?" she asks.
+                    </p>
+                    <p>
+                        You search your pockets for the invitation. "I'm from the University, department of entomology. I was invited to—"
+                    </p>
+                    <p>
+                        "Alright." The young miss turns away back to staring at the altar.
+                    </p>
+                    <p>
+                        A heavy silence fills the chapel. "My condolences for your loss. I will be on my way." you say and take a step towards the door.
+                    </p>
+                    <p>
+                        "No, you should finish whatever you came here to do. I was about to leave anyway." Miss Sainsbury stands up looking down and starts to make her way to the door. You think it's quite striking someone her age is praying at the chapel at such early hours of the day. She must be truely devastated for the death of her brother.
+                    </p>
+                    <p>
+                        You want to help somehow but can't think of anything to say. "It will get better." you blurt out as miss Sainsbury walks past you. She looks at you tiredly. You instantly regret saying anything. 
+                    </p>
+                    <p>
+                        "What if I was to blame? Then would it get easier, too?" she asks, but it doesn't really sound like a question.
+                    </p>
+                    <p>
+                        "It is quite normal to feel that way, but how could any of it possibly be your fault?" You smile weakly at the young miss. You know how it feels like to lose a loved one, so you understand how she might feel. Being so young, too.
+                    </p>
+                    <p>
+                        "Tsk." miss Sainsbury snorts at you and leaves the chapel.
+                    </p>
+                </div>
+              </details>
+              <details>
+                <summary>Study the tombs</summary>
+                <div class="list-p">
+                    <p>
+
+                    </p>
+                </div>
+              </details>
+              <details>
+                <summary>Pay your respects at the altar</summary>
+                <div class="list-p">
+                    <p>
+
+                    </p>
+                </div>
+              </details>
+        </div>
+    </div>
+        <img src="./assets/img/map.jpg">
+    <div>
+    <div class="p-low">
+        <ul class="ul-map">
+            <li><a onclick="parent.loadPage('game-outercourt.html');">1. Outer Court</a> </li>
+            <li><a onclick="parent.loadPage('game-chapel.html');">2. Chapel</a> </li>
+            <li><a onclick="parent.loadPage('game-gardens.html');">3. The Gardens</a> </li>
+            <li><a onclick="parent.loadPage('game-courtyard.html');">4. Courtyard</a> </li>
+            <li><a onclick="parent.loadPage('game-greathall.html');">5. Great Hall</a> </li>
+            <li><a onclick="parent.loadPage('game-towers.html');">6. Towers</a> </li>
+            <li><a onclick="parent.loadPage('game-study.html');">7. The Study</a> </li>
+            <li><a onclick="parent.loadPage('game-port.html');">8. The Sally Port</a> </li>
+            <li><a onclick="parent.loadPage('game-dungeons.html');">9. Keep and Dungeons</a> </li>
+        </ul>
+    <div class="p-map">
+        <h2>MAP OF CASTLE SAINSBURY</h2>
+        <p class="first-p">
+            The Sainsburies have lived in the Sainsbury castle for generations. The castle was first built somewhere in the 16th century, but has been expanded and renovetad several times since.
+        </p>
+        <p>
+            The main entrance lies on the Northern side of tha castle. It leads to the Outer Court, which makes way to the more intimate spaces of the castle. You will find the old Sally Port to the West.
+        </p>
+    </div>
+
 </body>
 </html>
