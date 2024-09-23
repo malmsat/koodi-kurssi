@@ -153,37 +153,110 @@
         <p class="body_title">Luentomuistiinpanot</p>
         
         <p>
-            Kolmannella viikolla opittiin paljon siitä miten elementit voidaan asetella nettisivuille. Aloitimme flexboxeista, jotka sopivat erityisesti pienempien elementtien asetteluun. Tämän jälkeen siirryimme grideihin, joilla voi tehdä isompia layoutteja. Näitä tuli aika paljon harjoiteltua kolmannella viikolla luennolla pelattujen pelien lisäksi, koska oman nettisivun visiossa asiat eivät ole aivan suorassa ja nätisti allekkain aseteltuna. Piti siis osata soveltaa gridien ja flexboxien eri toimintoja, jotta saisin asioita päällekäin, limittäin, eri tasoihin, offset toisistaa jne.
+            Kolmannella viikolla opittiin paljon siitä miten elementit voidaan asetella nettisivuille. Aloitimme flexboxeista, jotka sopivat erityisesti pienempien elementtien asetteluun. Tämän jälkeen siirryimme grideihin, joilla voi tehdä isompia layoutteja. Näitä tuli aika paljon harjoiteltua kolmannella viikolla luennolla pelattujen pelien lisäksi, koska oman nettisivun visiossa asiat eivät ole aivan suorassa ja nätisti allekkain aseteltuna. Piti siis osata soveltaa gridien ja flexboxien eri toimintoja, jotta saisin asioita päällekäin, limittäin, eri tasoihin, offset toisistaan jne.
         </p>
         <p>
-            
+            Opimme myös erilaisia shortcut keys, joilla koodaaminen vscodella helpottuu. Nämä eivät tule vielä luonnostaan, ja kestää ehkä hetken että lihasmuisti oppii käyttämään niitä. Erittäin hyödyllisiä kylläkin.
         </p>
+        <p>
+            Paljon muitakin enemmän ja vähemmän sekalaisia vinkkejä jäi mieleen ja muistiinpanoihin. Niitä tässä alhaalla enemmän.
+        </p>
+        <h2>
+            Itselle otetut luentomuistiinpanot
+        </h2>
         <ul>
             <li>
                 flexissä main ja cross akselit, joden suuntaa voi muuttaa. Sen mukaan menee elementtien asettelu. (flex direction: column/row)
             </li>
             <li>
-                
+                justify-content:center; /space-around (jokaisen ympärille tilaa) /space evenly /space between /end /start (muuttaa main axis asettelua)
             </li>
-        </ul>
-            <p>Koodista:</p>
-
-        <ul>
-            <li>Asioiden keskittäminen HTML + CSS voi olla hankalaa. Tähän vinkkinä: text align, display flex ja flex direction (listojen keskittäminen) </li>
+            <li>
+                align-items:center; (muuttaa cross axis asettelua)
+            </li>
+            <li>
+                rem (root element mitta), fonttikoko on selaimessa automaattisesti 16 px
+            </li>
+            <li>
+                flex ominaisuus menee vain suoraan diviin jossa se määritellään, mutta ei lapsille. lapsille pitää määritellä uudestaan flexiksi
+            </li>
+            <li>
+                flex-grow:1; (kasvata elementin/elementtien kokoa jäljelle olevan tilan mukaisesti)
+            </li>
+            <li>
+                flex-basis sama kuin with mutta akselin mukaisesti
+            </li>
+            <li>
+                flex-wrap: (jos ei mahdu sille riville, menee seuraavalle)
+            </li>
+            <li>
+                align-content:start; (wrappaavat elementit alkuun)
+            </li>
+            <li>
+                grid-template-column: 100px 1fr;   (side column on 100 px ja muu sisältö täyttää muun tilan)
+            </li>
+            <li>
+                grid-template-rows: auto 1fr auto; (auto ottaa palkin sisällön ja tekee sen mukaan koon)
+            </li>
+            <li>
+                grid-template-rows: repeat(6, 100px); (toistaa kuusi 100 pikselin kokoista riviä)
+            </li>
+            <li>
+                z-index määrittää millä tasolla elemntti on
+            </li>
+            <li>
+                overflow mahdollistaa, että elementin sisältöä voi rullata
+            </li>
+            <li>
+                developer-toolissa voi valita värin miltä tahansa nettisivulta, hyödyllinen värien kanssa
+            </li>
+            <li>
+                kun haluat yhdistää CSS tiedoston HTML tiedostoon: < link rel="stylesheet" href="./assets/css/mun-css-tiedosto.css">
+            </li>
+            <li>
+                tällä yhdistetää JS HTML tiedostoon < scrip src="">< /script>
+            </li>
+            <li>
+                on eri presettejä, joilla voi nollata tai asettaa parempia aloitusasetuksia kun HTML:ssä on valmiiksi. CSS remedy: preset, miltä aloitustyylit näyttäisivät jos ne keksittäisiin nyt. CSS normalize tekee niin että kaikki selaimet näyttää nettisivut samalla tavalla. Muista, että alimmaisena lisätty css on se jonka määreet jää voimaan jos on samoja määrittelyjä
+            </li>
+            <li>
+                vscodessa -> "view" ja "two columns" voi lisätä ikkunoita vierekkäin, toisessa voi olla html ja toisessa css
+            </li>
+            <li>
+                "render whitespace" voi lisätä välilyönteihin pisteet jotta näkyy paremmin (viewistä)
+            </li>
+            <li>
+                Jos haluaa lisätä sivun sisäisiä linkkejä: < a href="#listan-loppu">Listan loppu< /a>, lisää class-kohtaan/lisäksi elementtiin id="listan-loppu">
+            </li>
+            <li>
+                target="_blank" linkin sisään, niin avaa uudessa välilehdessä
+            </li>
+            <li>
+                transform: scaleX(-1) flippaa objectin, - rotateY(45deg) kiertää
+            </li>
         </ul>
     </div>
 
     <div class="body_container">
         <p class="body_title">Tehtävästä</p>
         <p>
-            Ideointivaihe on yleensä yksi hauskimmista vaiheista missä tahansa tehtävässä, mutta samalla myös kuumottavin. Arkistomateriaalin selaaminen sai ekat päivät pään vähän pyörälle, mutta ideoita alkoi pikkuhiljaa syntyä. Inspiroiduin hienista eurooppalaisista linnoista, joissa voi tapahtua vaikka mitä mysteeristä. Varsinkin nyt kun syksy alkaa saapua ja se on parasta aikaa Agatha Christie -tyylisille englatilaisille yläluokan murhamysteereille.
+            Kolmas viikko meni sivun layoutin miettimisessä ja testailussa. Tein kokonaan uuden HTML-tiedoston, johon lisäsin haluamani osat pikkuhiljaa päällekäin. Tämä oli todella hyödyllistä, koska jouduin kertaamaan ja opettelemaan lukemaan koodia tarkemmin, että mikä tekikään mitä ja miten se JS toimikaan. Ekassa prototyypissä oli muutama bugihomma, ja nyt sain kaiken toimimaan. Tekninen toteutus toimii siis tällä hetkellä. 
         </p>
-        <p>Prototyyppiä pääsee kurkkimaan 
-            <a href="https://jabbahut69.github.io/koodi-kurssi/oppimispaivakirja/prototype.html">
+        <p>
+            Mitä nyt lisäksi voisi vielä teknisen toteutuksen suhteen kokeillan, olisi lisätä animaatio perhosille ja mahdollisesti käyttäjälle jonkinlaisen "notepadin", jolla tämä voi ottaa muistiinpanoja linnassa tapahtuneen mysteerin selvittämiseksi. Muistiinanot eivät tallennu mihinkään, mutta ehkä loisi hauskaa etsivätunnelmaa?
+        </p>
+        <p>
+            Sain palaset asettumaan oikeille paikoilleen niin isoilla kun pienemmillä tietokoneen ruuduilla, mutta pienemmillä ei vieläkään ole mitenkään optimaalinen. Tätä pitää myös hieman miettiä. Ehkä haasteena myös mobiililaitteet. Periaatteessa en tiedä onko omasta mielestä tarkoituksenmukaista, että perhosennappaus-mysteeripeliä voisi sellaisenaan pelata kännykällä, mutta voisihan siihenkin mahdollisuuteen tutustua.
+        </p>
+        <p>Sivua voi tarkastella
+            <a href="https://jabbahut69.github.io/koodi-kurssi/oppimispaivakirja/game.html">
             tästä.
             </a></p>
         <p>
-            Yhdistelmä
+            Nyt perhosia spawnaa 10 sekunnin välein, jotta huomio ei kíinnity niihin heti ensimmäiseksi. Ensimmäisestä prototyypistä poikkeavasti nykyisessä pelissä seikkaillaan eri HTML-tiedostojen sisällä, ja peli ei yritä muistaa edellisiä tehtyjä valintoja. Sainsburyn linnassa navigoidaan jokaisen HTML-tiedoston alla löytyvän kartan avulla.
+        </p>
+        <p>
+            Huvitin itseäni suunnittelemalla ihan oikean mysteerin ja juonen Sainsburyn linnaan. Tarinan on tarkoitus toimia harhautuksena perhosten sieppaamiselle, mutta mysteeri toiminee harhautuksena paremmin jos se ihan oikeasti simuloisi jonkinlaista juonta. Kirjoittamiseen menee tosin yllättävän paljon aikaa, joten ei välttämättä tule mikään mestariteos. Varsinkin kun se ei voi edetä lineaarisesti, vaan sivulla kävijä voi käydä huoneita läpi missä järjestyksessä haluaa. Tuo lisähaastetta mielenkiintoisen jutun kirjoittamiselle, mutta kuitenkin ihan hauska haaste.
         </p>
         </div>
         <div class="black_header" id="footer-id">
