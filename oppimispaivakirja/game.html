@@ -5,8 +5,15 @@ r<!DOCTYPE html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Sainsbury Mystery</title>
     <style>
+        @font-face {
+            font-family: 'Libre Baskerville';
+            src: url('./assets/fonts/LibreBaskerville-Regular.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
         body {
-            font-family: crimson;
+            font-family: "libre baskerville";
             margin: 0;
             display: flex;
             justify-content: center;
@@ -26,7 +33,7 @@ r<!DOCTYPE html>
         .grid-container {
             display: grid;
             grid-template-columns: auto 1070px auto;
-            grid-template-rows: 20% auto 50px;
+            grid-template-rows: 10% auto 50px;
             width: 100vw;
             height: 100vh;
         }
@@ -49,7 +56,7 @@ r<!DOCTYPE html>
         /* Styling the overlapping title */
         .title {
             position: absolute;
-            transform: translate(-2%, -75%); /* Adjust position to overlap */
+            transform: translate(0%, -49%); /* Adjust position to overlap */
             z-index: 1;
             pointer-events: none; /* Makes title text non-interactive */
         }
@@ -57,7 +64,7 @@ r<!DOCTYPE html>
             position: absolute;
             top: 20px;
             right: 50px;
-            font-size: 16px;
+            font-size: 14px;
             font-weight: bold;
             color: rgb(0, 0, 0);
             background-color: #FFEFB5;

@@ -5,8 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Embedded Page with Links</title>
     <style>
+        @font-face {
+            font-family: 'Libre Baskerville';
+            src: url('./assets/fonts/LibreBaskerville-Regular.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
         body {
-            font-family: crimson; /* FIrst letter or each page parchment? Tai img */
+            font-family: libre baskerville; /* FIrst letter or each page parchment? Tai img */
             background-image: url(./assets/img/outercourt1.jpg);
             background-repeat: no-repeat; /* Do not repeat the image */
             background-size: 100vw;
@@ -20,8 +27,8 @@
             font-weight: bold;
         }
         p {
-            font-size: 16px;
-            line-height: 1.2;
+            font-size: 14px;
+            line-height: 1.4;
             text-indent: 10px;
         }
         .first-p {
@@ -101,7 +108,7 @@
 
         a:active {
           color: rgb(87, 21, 21); 
-        }rgb(77, 11, 11)rgb(99, 7, 7)rgb(100, 4, 4)
+        }
 
         /* Custom scrollbar for WebKit browsers */
         ::-webkit-scrollbar {
