@@ -103,7 +103,7 @@ left:3mm;
     0 0 90px rgb(255, 0, 0),
     0 0 100px rgb(255, 0, 0),
     0 0 150px rgb(255, 0, 0);
-    transform: perspective(70px) rotateX(15deg) scale(2) translateZ(0) rotateY(10deg);
+    transform: perspective(90px) rotateX(25deg) scale(3) translateZ(0) rotateY(30deg);
 }
 .neon2 {
   color: #fff;
