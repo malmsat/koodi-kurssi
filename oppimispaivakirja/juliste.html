@@ -5,13 +5,51 @@
     <style>
       body {
         transform-origin:0 0;
-        scale: 0.2; /* POISTA SCALE PAINOVERSIOON TAI KUN HALUAT KATSOA OIKEASSA KOOSSA: */
-
+         /* POISTA SCALE PAINOVERSIOON TAI KUN HALUAT KATSOA OIKEASSA KOOSSA: */
+        
       }
       .bg {
         width:100%;
         height:100%;
         background:rgb(0, 0, 0);
+      }
+      .noise {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background:  url(./assets/img/pixel-texture.png);
+        opacity: 60%;
+        z-index: 3;
+        scale: 5;
+      }
+      .gradient-effect {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right, rgb(224, 224, 224) 35%, red 52%, rgb(116, 116, 189) 54%, rgba(0, 0, 0, 0.562)60%), black 80%;
+        z-index: 2;
+        opacity: 50%;
+        transform: perspective(700px) rotateX(-15deg) scale(2) translateZ(0) rotateY(-15deg);
+        margin-left: -16%;
+        margin-top: 30%;
+      }
+      p {
+        position: absolute;
+        width: 100%;
+        margin-top: 65%;
+        margin-left: 25%;
+        color: aliceblue;
+        opacity: 70%;
+      }
+      .blur-text {
+        position: absolute;
+        width: 100%;
+        margin-top: 51.06%;
+        margin-left: 40%;
+        max-width: 25%;
+        color: aliceblue;
+        z-index: 2;
+        text-shadow: 2px 1px aliceblue;
       }
     </style>
   </head>
@@ -24,12 +62,124 @@
       <div class="cropmark bottomright"></div>
       <div class="poster-content">
         <!-- JULISTEEN SISÄLTÖ NÄIDEN KAHDEN KOMMENTIN VÄLIIN -->
+        <div class="gradient-effect"></div>
         <div class="reunat"></div>
-        <div class="circle"></div>
+        <div class="blur-text">
+          <p>
+            how to make this css pyramid you ask? .pyramid {
+              position: absolute;
+              margin-top: 60%;
+              margin-left: 50%;
+              width: 200px;
+              height: 200px;
+              transform-style: preserve-3d;
+              transform: rotateY(326deg) rotateX(2deg) rotateZ(359deg);
+              z-index: 5;
+            }
+            
+            .side {
+              width: 0;
+              height: 0;
+              position: absolute;
+              opacity: 0.7;
+              border: 100px solid transparent;
+              border-bottom: 200px solid rgb(247, 0, 0);
+              border-top: 0px;
+            }
+            
+            .one {
+              transform: rotateX(30deg);
+              transform-origin: 0 0;
+            }
+            
+            .two {
+              transform-origin: 100px 0;
+              transform: rotateY(90deg) rotateX(-30deg);
+              border-bottom-color: purple;
+            }
+            
+            .three {
+              transform-origin: 100px 0;
+              transform: rotateY(270deg) rotateX(-30deg);
+              border-bottom-color: hotpink;
+            }
+            
+            .four {
+              transform-origin: 100px 0;
+              transform: rotateY(0) rotateX(-30deg);
+              border-bottom-color: yellow;
+            }
+            
+            .base {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              transform: translateY(73px) rotateX(90deg);
+              border: 0;
+              background: blue;
+            }
+            <span style="color:blue">https://dev.to/dailydevtips1/creating-a-3d-pyramid-shape-in-css-3m6</span>
+        </div>
+        <div class="circle">
+          <p>
+            how to make this css pyramid you ask? .pyramid {
+              position: absolute;
+              margin-top: 60%;
+              margin-left: 50%;
+              width: 200px;
+              height: 200px;
+              transform-style: preserve-3d;
+              transform: rotateY(326deg) rotateX(2deg) rotateZ(359deg);
+              z-index: 5;
+            }
+            
+            .side {
+              width: 0;
+              height: 0;
+              position: absolute;
+              opacity: 0.7;
+              border: 100px solid transparent;
+              border-bottom: 200px solid rgb(247, 0, 0);
+              border-top: 0px;
+            }
+            
+            .one {
+              transform: rotateX(30deg);
+              transform-origin: 0 0;
+            }
+            
+            .two {
+              transform-origin: 100px 0;
+              transform: rotateY(90deg) rotateX(-30deg);
+              border-bottom-color: purple;
+            }
+            
+            .three {
+              transform-origin: 100px 0;
+              transform: rotateY(270deg) rotateX(-30deg);
+              border-bottom-color: hotpink;
+            }
+            
+            .four {
+              transform-origin: 100px 0;
+              transform: rotateY(0) rotateX(-30deg);
+              border-bottom-color: yellow;
+            }
+            
+            .base {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              transform: translateY(73px) rotateX(90deg);
+              border: 0;
+              background: blue;
+            }
+            <span style="color:rgb(90, 90, 255)">https://dev.to/dailydevtips1/creating-a-3d-pyramid-shape-in-css-3m6</span>
+          </p>
+        </div>
         <div class="bottom-gradient"></div>
         <div class="top-gradient"></div>
-        <div class="pixelart"></div>
-        <div class="pixelart1"></div>
+
         <div class="pyramid">
             <div class="base"></div>
             <div class="side one"></div>
@@ -39,6 +189,7 @@
           </div>
           <div><h1 class="neon">hello?</h1></div>
           <div><h1 class="neon1">hello?</h1></div>
+          <div><h1 class="neon2">hello?</h1></div>
           <div class="noise"></div>
           <div class="bg"></div>
         <!-- JULISTEEN SISÄLTÖ NÄIDEN KAHDEN KOMMENTIN VÄLIIN -->
