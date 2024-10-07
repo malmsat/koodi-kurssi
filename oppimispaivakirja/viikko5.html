@@ -1,0 +1,202 @@
+<!DOCTYPE html>  
+<html lang="fi">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viikko 5</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            } 
+        }
+        a {
+            color: rgb(255, 255, 255); 
+        }
+        a:visited {
+            color: rgb(130, 189, 181); 
+        }
+        a:hover {
+            color: rgb(226, 161, 210); 
+        }
+        a:activate {
+            color: rgb(228, 77, 190); 
+        }
+        img {
+            display:block;
+            max-width: 100%;
+            width: 50%;
+            height: 50%;
+            margin: 0 auto;
+            
+            /* margin: 0 auto on sama kuin
+            margin-top:0;
+            margin-bottom:0;
+            margin-left:auto;
+            margin-right:auto; 
+            */
+        }
+
+        .black_header {
+            text-align: center;
+            background: #000000;
+            color: #ffffff;
+            width: 100%;
+            height: 100%;
+            padding-top: 10%;
+            padding-bottom: 10%;
+        }
+
+        h1 {
+                font-size: 10rem;
+        }
+        h2 {
+                font-size: 1.5rem;
+        }
+        .body_title {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        .body_container {
+            text-align: left;
+            color: #000000;
+            width: 100%;
+            height: 100%;
+            padding: 5%;
+            width: 60%;
+            border: 2px solid #000000;
+            margin: 0 auto;
+            border-radius: 50px;
+            margin-top: 80px;
+        }
+
+        .inline-text-img {
+            display:inline;
+        }
+
+        p {
+            font-size: 1.2rem;
+        }
+        li {
+            font-size: 1.2rem;
+        }
+        #footer-id{
+            margin-top: 50px;
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+        .button {
+            background-color: #131313; /* Background color */
+            color: white; /* Text color */
+            padding: 10px 20px; /* Padding */
+            border: none; /* Remove default border */
+            border-radius: 5px; /* Rounded corners */
+            font-size: 1.2rem; /* Font size */
+            cursor: pointer; /* Pointer cursor on hover */
+
+        }
+
+        .button:hover {
+            background-color: #000000; /* Darker background on hover */
+        }
+
+        .button:active {
+            background-color: #8b1c50; /* Even darker on click */
+        }
+
+        .button:disabled {
+            background-color: #bdc3c7; /* Gray color when disabled */
+            cursor: not-allowed; /* Cursor changes to indicate unclickable */
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-30px);
+            }
+            60% {
+                transform: translateY(-15px);
+            }
+        }
+
+        .button {
+            animation: bounce 1s infinite; /* Bounce animation */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="black_header">
+        <h1>Viikko 5</h1>
+        <h2>Oppimispäiväkirja</h2>
+        <h2>Juliste</h3>
+    </div>
+
+    <div class="body_container">
+        <p class="body_title">Prosessista</p>
+        
+        <p>
+            Viidennellä viikolla olin vielä keskiviikon pois, mutta sain loppuviikosta aloitettua julistetta ja perjantaina olin jo sen verran pitkällä, että sain kysyttyä ongelmakohdista luennolla, mikä auttoi julisteen valmiiksi saamisessa ajoissa. Vielä pdf-tiedoston luomisen kanssa onnistuin panikoimaan, mutta sekin selvisi lopulta.
+        </p>
+        <p>
+            Aloitin julisteen tekemisen googlailemalla erilaisia CSS efektejä ja tutkin mitä kaikkea telegramissa oli linkattuna. Ilman suurempia suunnitelmia rupesin lisäämään julistepohjaan kaikenlaista löytämääni pikselitaide-generaattorista 3D muotoihin ja grainy grain -efektiin. Koodissa on jäljellä osa kokeiluista kun en raaski deletoida niitä. Ulos julisteesta jäi star wars -tyylinen teksti, matrix-tyylinen gridi ja pikselitaidehommat.
+        </p>
+        <p>
+            Homma lähti uusiin sfääreihin siinä vaiheessa kun opin kääntelemään elementtejä 3D tilassa. Minulla oli otsikkona laser-efektinen teksti vivaldi-fontilla, jota vääntelin niin nurin kurin kuin vain mahdollista, ja sain hauskoja vauhdikkaita kiemuraisia valoviivoja aikaiseksi. Lisäsin ylipäätään kaikkialle niin paljon gradientteja kuin vain mahdollista. Vasemmalta oikealle menee valkoisesta mustaksi muuttuva gradientti, joka saa ainakin selaimessa aikaiseksi hieman kuluneen näköistä pintaa etenkin kun sen yhdistää grainy grain-gradienttiin. Ylhäällä ja alhaalla olevat mustat gradientit toivottavasti korostavat tätä ja tekevät ehkä efektiä, että julistepaperi olisi hieman kaareutunut. Keskellä menee punainen ja sininen gradientti, jota on hieman väännetty 3D tilassa. Pieni vääristymä on mielestäni hauska siinä.
+        </p>
+        <p>
+            Keskellä on hieno pyramidi, jonka löysin netistä. Julisteessa ainoa jollakin tavalla luettava teksti on pyramidin alapuolella. Tekstissä on ohjeet pyramidin tekemiseen.
+        </p>
+        <p>
+            Vaikka kokeilinkin aika paljon erilaisia juttuja, halusin julisteeseen mahdollisimman yksinkertaisen rakenteen. Ajattelin, että perusmuodot ilman gradientteja tasapainottavat muuten aika tekstuurista ja vilkasta pintaa. Myös mustat reunat mielestäni rauhoittavat kokonaisuutta.
+        </p>
+        <p>
+            Hieman tahattomasti julisteen väreiksi jäi perus punainen ja sininen. Niillä oli helppo kokeilla kaikkea ja lopulta kiinnyin niihin enkä enää halunnut muuttaa. Vähän nyt mietityttää tuleeko väreistä liian mieleen amerikan lippu, mutta ehkä se ei tule heti mieleen kun julistetta katsoo.
+        </p>
+        <p>
+            Juliste näyttää mielenkiintoisella tavalla erilaiselta selaimessa ja pdf-tiedostossa. Preferoin selaimen versiota, mutta ei pdf-versiokaan mikään ihan kamala ole.
+        </p>
+        <p>
+            Julisteen tekeminen koodaamalla ja kokeilemalla oli oikeastaan aika hauskaa. Muutenkin koodilla tekeminen on kivaa ja haluan oppia siitä lisää. Saa nähdä teenkö vielä tulevaisuudessa juuri tällä tekniikalla jotain, mutta jos vain malttaa uskaltaa niin uskon että voi tulla tosi omaperäistä jälkeä. Koodilla visuaalisten juttujen tekeminen on vierasta maaperää, joten se vaatii itseltä enemmän malttia ja uskallusta vielä tässä vaiheessa. Toisaalta yleensä asiat jotka vaativat enemmän ovat myös palkitsevia. 
+        </p>
+    </div>
+
+    <div class="body_container">
+        <p class="body_title">Linkit</p>
+        <p>
+            Juliste eteni hyvin ja sain tehtyä loppuun asti. Nettisivut kaipaavat vielä enemmän työtä.
+        </p>
+        <p>Julistetta voi tarkastella
+            <a href="https://jabbahut69.github.io/koodi-kurssi/oppimispaivakirja/juliste.html">
+            tästä.
+            </a></p>
+            <p>Nettisivua voi tarkastella
+                <a href="https://jabbahut69.github.io/koodi-kurssi/oppimispaivakirja/game.html">
+                tästä.
+                </a></p>
+        </div>
+
+        <div class="black_header" id="footer-id">
+            <a href="viikko5.html">
+                Seuraava viikko
+                </a>
+        </div>
+</body>
+

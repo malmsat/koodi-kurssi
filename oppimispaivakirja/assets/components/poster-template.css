@@ -189,8 +189,8 @@ h1 {
 
 .pyramid {
   position: absolute;
-  margin-top: 60%;
-  margin-left: 50%;
+  margin-top: 62%;
+  margin-left: 49%;
   width: 200px;
   height: 200px;
   transform-style: preserve-3d;
@@ -216,19 +216,19 @@ h1 {
 .two {
   transform-origin: 100px 0;
   transform: rotateY(90deg) rotateX(-30deg);
-  border-bottom-color: purple;
+  border-bottom-color: red;
 }
 
 .three {
   transform-origin: 100px 0;
   transform: rotateY(270deg) rotateX(-30deg);
-  border-bottom-color: hotpink;
+  border-bottom-color: yellow;
 }
 
 .four {
   transform-origin: 100px 0;
   transform: rotateY(0) rotateX(-30deg);
-  border-bottom-color: yellow;
+  border-bottom-color: hotpink;
 }
 
 .base {
@@ -318,8 +318,8 @@ h1 {
 
 .circle {
   position: absolute;
-  margin-top: 51%;
-  margin-left: 40%;
+  margin-top: 53%;
+  margin-left: 39%;
   width: 800px; /* Equal width */
   height: 800px; /* Equal height */
   border: 2px solid;
