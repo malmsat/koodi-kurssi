@@ -12,6 +12,20 @@
             font-style: normal;
             font-display: swap;
         }
+        @font-face {
+            font-family: 'Libre Baskerville';
+            src: url('./assets/fonts/LibreBaskerville-Bold.woff2') format('woff2');
+            font-weight: bold;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Libre Baskerville';
+            src: url('./assets/fonts/LibreBaskerville-Italic.woff2') format('woff2');
+            font-weight: normal;
+            font-style: italic;
+            font-display: swap;
+        }
         body {
             font-family: libre baskerville; /* FIrst letter or each page parchment? Tai img */
             background-image: url(./assets/img/outercourt1.jpg);
@@ -28,18 +42,22 @@
         }
         p {
             font-size: 14px;
-            line-height: 1.4;
-            text-indent: 10px;
+            line-height: 1.6;
+            text-indent: 17px;
+            margin: 0;
         }
         .first-p {
-            font-size: 16px;
-            line-height: 1.2;
+            font-size: 14px;
+            line-height: 1.6;
             text-indent: 0px;
+            margin: 0;
         }
         .list-p {
             width: 600px;
         }
         summary {
+            margin-top: 10px;
+            margin-bottom: 10px;
             font-weight: bold;
             transition: font-size 0.3s ease, color 0.3s ease; /* Smooth transition */
         }
@@ -145,34 +163,34 @@
                 <summary>Talk to the groundskeeper</summary>
                 <div class="list-p">
                     <p>
-                        "Ohoy there!" you wave at the old chap.  
+                        <q>Ohoy there!</q> you wave at the old chap.  
                     </p>
                     <p>
-                        "Ay, a rather nippy weather to be prowling about the grounds," the man says, raising an eyebrow. "Who might you be?" 
+                        <q>Ay, a rather nippy weather to be prowling about the grounds,</q> the man says, raising an eyebrow. <q>Who might you be?</q> 
                     </p>
                     <p>
-                        "I received a letter of invitation to arrive here today, although I'm terribly early for my appointment, as it turns out." You search your jacket hastily for the said letter to show the man. He is, however, reluctant to accept it. 
+                        <q>I received a letter of invitation to arrive here today, although I'm terribly early for my appointment, as it turns out.</q> You search your jacket hastily for the said letter to show the man. He is, however, reluctant to accept it. 
                     </p>
                     <p>
-                        "Yer not from the police, are ye?" he asks.
+                        <q>Yer not from the police, are ye?</q> he asks.
                     </p>
                     <p>
-                        "What? The police? No—I'm from the department of entomology, at the University. You see, I was invited to—" 
+                        <q>What? The police? No—I'm from the department of entomology, at the University. You see, I was invited to—</q> 
                     </p>
                     <p>
-                        The man interrupts you, "Oh, the scientist. Yes, yes." The man relaxes his expression. "I had forgot about the whole thing with so much going on. Do you need me to show you the grounds?" 
+                        The man interrupts you, <q>Oh, the scientist. Yes, yes.</q> The man relaxes his expression. <q>I had forgot about the whole thing with so much going on. Do you need me to show you the grounds?</q>
                     </p>
                     <p>
-                        "Oh, that's alright." you answer quickly. "There is a police investigation going on?" You can't help your curiosity. 
+                        <q>Oh, that's alright.</q> you answer quickly. <q>There is a police investigation going on?</q> You can't help your curiosity. 
                     </p>
                     <p>
-                        The man eyes you under his brows, "They have been coming here asking questions ever since our young master passed and those jewels disappered. I'm sure you've heard about it."
+                        The man eyes you under his brows, <q>They have been coming here asking questions ever since our young master passed and those jewels disappered. I'm sure you've heard of it.</q>
                     </p>
                     <p>
-                        "Indeed, I have, yes." you tell the man. "I'm sorry for what's happened." 
+                        <q>Indeed, I have, yes.</q> you tell the man. <q>I'm sorry for what's happened.</q>
                     </p>
                     <p>
-                        The old man nods, "Ay, terrible business. He was a fine youg man, the baron." 
+                        The old man nods, <q>Ay, terrible business. He was a fine youg man, the baron.</q>
                     </p>
                     <p>
                         The groundskeeper makes to return to whatever he had been doing. It is your cue the conversation is over.
@@ -183,7 +201,7 @@
                 <summary>Look at the bird</summary>
                 <div class="list-p">
                     <p>
-                        As someone well versed in the local wildlife, you are astonished to recognize the bird as non other than a vulture. Not a bird you would usually spot in the area. And species with a famously ominous reputation at that. The only thing that might attract such a large scavenger bird would be a carcass, wouldn't it? But a well kept estate such as this would not have let a rotting carcass be left on the grounds for long. At least one that was found...
+                        As someone well versed in the local wildlife, you are astonished to recognize the bird as non other than a vulture. Not a bird you would usually spot in the area and species with a famously ominous reputation. The only thing that might attract such a large scavenger bird would be a carcass, wouldn't it? But a well kept estate such as this would not have let a rotting carcass be left on the grounds for long. At least one that was found...
                     </p>
                 </div>
               </details>

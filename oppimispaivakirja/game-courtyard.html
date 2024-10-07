@@ -12,11 +12,26 @@
             font-style: normal;
             font-display: swap;
         }
+        @font-face {
+            font-family: 'Libre Baskerville';
+            src: url('./assets/fonts/LibreBaskerville-Bold.woff2') format('woff2');
+            font-weight: bold;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Libre Baskerville';
+            src: url('./assets/fonts/LibreBaskerville-Italic.woff2') format('woff2');
+            font-weight: normal;
+            font-style: italic;
+            font-display: swap;
+        }
         body {
             font-family: libre baskerville; /* FIrst letter or each page parchment? Tai img */
             background-image: url(./assets/img/courtyard1.jpg);
             background-repeat: no-repeat; /* Do not repeat the image */
-            background-size: 100vw;
+            background-size: 80vw;
+            background-position-y: 20px;
             color: #000000;
             background-color: #e4dfd2;
         }
@@ -27,19 +42,23 @@
             font-weight: bold;
         }
         p {
-            font-size: 16px;
-            line-height: 1.2;
-            text-indent: 10px;
+            font-size: 14px;
+            line-height: 1.6;
+            text-indent: 17px;
+            margin: 0;
         }
         .first-p {
-            font-size: 16px;
-            line-height: 1.2;
+            font-size: 14px;
+            line-height: 1.6;
             text-indent: 0px;
+            margin: 0;
         }
         .list-p {
-            width: 600px;
+            width: 700px;
         }
         summary {
+            margin-top: 10px;
+            margin-bottom: 10px;
             font-weight: bold;
             transition: font-size 0.3s ease, color 0.3s ease; /* Smooth transition */
         }
@@ -70,12 +89,13 @@
             transform: translate(5%, -140%); /* Adjust position to overlap */
         }
         .div-container {
-            margin-top: 530px;
-            margin-left: 420px;
-            margin-right: 40px;
+            margin-top: 450px;
+            margin-left: 340px;
+            margin-right: 100px;
         }
-        .grid-item-right {
-            margin-top: 55px;
+        .div-container-lower {
+            margin-top: 20px;
+            margin-left: 200px;
         }
 
         a {
@@ -103,7 +123,7 @@
 
         a:active {
           color: rgb(87, 21, 21); 
-        }rgb(77, 11, 11)rgb(99, 7, 7)rgb(100, 4, 4)
+        }
 
         /* Custom scrollbar for WebKit browsers */
         ::-webkit-scrollbar {
@@ -131,36 +151,67 @@
 
     <div class="div-container">
     <h2>THE COURTYARD</h2>
-        
         <p class="first-p">
-            The brother eating a sandwich of red herrings
+            Arrival at the courtyard reveals the whereabouts of the brand new owner of the estate. You see the second son of the Sainsburies having their breakfast sandwich while standing in front of the grand main doors leading to the Great Hall, at least according to your map. Lord Sainsbury keeps peeking at his pocket watch with the effect of not noticing how the filling of his sandwich is slowly dripping on the ground. 
         </p>
+    </div>
+    <div class="div-container-lower">
         <details>
             <summary>Talk to the young master</summary>
             <div class="list-p">
                 <p>
-                    "Ohoy there!" you wave at the old chap.  
+                    At first you feel hesitant to approach such a famous figure of the community, but you are here on official business, so there is no need to be bashful. <q>Good morning, Lord Sainsbury. It is a pleasure to finally meet you.</q> You hold out your hand to shake Lord Sainsbury's.  
+                </p>
+                <p>
+                    <q>Good, you are here. The pleasure is all mine.</q> Lord Sainsbury moves the sandwich to the hand holding his pocket watch and gives you a firm but slightly greasy handshake. <q>Apologies for running late with my breakfast. There is much to be done and I find myself short on time...</q>
+                </p>
+                <p>
+                    <q>Oh no, no, it's all on me. I arrived early today.</q> You wipe your hand on your jacket.
+                </p> 
+                <p>
+                    <q>Indeed? I was sure I had booked our meeting to be held around this hour. I need to go through the documents before ten to make it to the meeting with the London representatives.</q>
+                </p>
+                <p>
+                    <q>The ah, documents?</q> You had no idea you were supposed to bring some kind of documents with you. Anxiety kicks in as you imagine yourself being thrown out of the castle having missed some kind of a detail.
+                </p>
+                <p>
+                    <q>Yes, the documents on all the holdings of the estate's properties. You have them, right? Why else would I have called you here? We discussed this on the phone just yesterday.</q>
+                </p>
+                <p><i>There has to be some kind of a mistake here.</i> You try to find words to explain yourself to the now distressed-looking Lord Sainsbury. <q>But I'm here for the butterflies, it was the University that sent me-</q></p>
+                <p>
+                    <q>Ah, so you are not the holdings representative?</q>
+                </p>
+                <p>
+                    <q>I'm afraid not.</q> 
+                </p>
+                <p>Lord Sainsbury lets out a strained laugh. <q>My mistake. As you can see, I'm a bit on edge today, well recently - having to manage a castle like this for the first time is no easy task.</q></p>
+                <p>
+                    You nod in agreement. <i>I guess he wasn't expecting to inherit an enormous castle any time soon.</i>
+                </p>
+                <p>
+                    <q>Butterflies, you say?</q> Lord Sainsbury takes a large bite out of his sandwich now much more relaxed and a tone of curiosity in his voice.
+                </p>
+                <p>
+                    <q>Indeed, there are a number of rare species sighted on the grouds. The University is keen to learn more about them and the records kept by the estate.</q>
+                </p>
+                <p>
+                    <q>I wish I had time to accompany you with this butterfly business. Nice creatures they are. You know, I once saw a butterfly the size of -</q> Lord Sainsbury is interrupted with the sound of approaching footsteps. You turn around to see a stern-faced bureaucrat in a top hat holding a heavy-looking briefcase most evidently filled to the brim with the aforementioned documents.
+                </p>
+                <p>
+                    Lord Sainsbury groans. <q>Wish me luck.</q> He musters on a polite smile and goes to meet the bureaucrat.
                 </p>
             </div>
             </details>
             <details>
-            <summary>something</summary>
+            <summary>Take in the surroundings</summary>
             <div class="list-p">
                 <p>
-                    
+                    The grandeur of the castle is emplefied in the courtyard with tall walls surrounding you in every direction. It makes your head spin just looking up and counting the floors on the towers. You imagine all the people and historical events the castle has seen. More than one person of the royal family has attended balls and dinner parties on the estate just this year. <i>Some would kill just to live in a place like this.</i>
                 </p>
             </div>
             </details>
-            <details>
-            <summary>something</summary>
-            <div class="list-p">
-                <p>
-                    
-                </p>
-            </div>
-            </details>
-
     </div>
+    
         <img src="./assets/img/map.jpg">
     <div>
     <div class="p-low">
