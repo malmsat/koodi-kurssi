@@ -26,7 +26,17 @@ r<!DOCTYPE html>
             font-style: italic;
             font-display: swap;
         }
+        @font-face {
+            font-family: 'Oooh Baby';
+            src: url('./assets/fonts/OoohBaby-Regular.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+
         body {
+            cursor: url('./assets/img/cursor-img.png'), auto;
             font-family: "libre baskerville";
             margin: 0;
             display: flex;
@@ -34,6 +44,36 @@ r<!DOCTYPE html>
             align-items: center;
             background-color: #1f3b2d;
             background-image: url(./assets/img/bg.png);
+        }
+
+        .editable {
+            font-family: 'Oooh Baby'; /* Change font here */
+            font-size: 19px;
+            background-color: #e4dfd2;
+            border: 5px solid #000;
+            border-radius: 60px;
+            padding: 25px;
+            padding-top: 40px;
+            font-size: 14px;
+            width: 300px;
+            height: 400px;
+            margin-left: 20px;
+            background-image: url('./assets/img/note-bg.png');
+            background-position: top;
+            background-size: 100%;
+            background-repeat: no-repeat;
+
+
+        }
+        .joo {
+            overflow: auto; /* Enable scrolling when content overflows */
+            box-sizing: border-box;
+            max-height: 380px;
+            width: 257px;
+            border: none;
+            margin-right: -5px;
+            outline: none;
+            font-size: 17px;
         }
         #container {
             position: fixed; /* Stays on screen while scrolling */
@@ -54,6 +94,12 @@ r<!DOCTYPE html>
         .grid-item {
             display: flex;
             border-radius: 10%;
+        }
+        .grid-item-textinput {
+            display: flex;
+            border-radius: 10%;
+            width: 300px;
+            align-items: center;
         }
         .center {
             background-color: #ffffff;
@@ -140,6 +186,25 @@ r<!DOCTYPE html>
       .object:hover {
           transform: scale(1.2);
       }
+              /* Custom scrollbar for WebKit browsers */
+              ::-webkit-scrollbar {
+            width: 12px; 
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #e4dfd2; 
+            border: 3px solid #000000; 
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #8d1212; 
+            border-radius: 30px; 
+            border: 3px solid #000000; 
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #c87d7d; 
+        }
     </style>
 
     <script>
@@ -178,12 +243,19 @@ r<!DOCTYPE html>
             <!-- Embedded HTML page using iframe -->
             <iframe src="game-start.html"></iframe>
         </div>
-        <div class="grid-item"></div>
+        <div class="grid-item-textinput">
+            <div class="editable">
+                <div class="joo" contenteditable="true">
+                    <p>Write your notes here...</p>
+                </div>
+            </div>
+        </div>
         <div class="grid-item"></div>
         <div class="grid-item"></div>
         <div class="grid-item"></div>
     </div>
     <script src="./assets/components/butterfly-script.js"></script>
+    
 </body>
 </html>
 
