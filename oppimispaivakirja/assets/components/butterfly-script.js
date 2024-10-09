@@ -13,7 +13,7 @@ let butterflyCount = 0;
 
 // Butterfly png
 let butterflyImg = new Image(); 
-butterflyImg.src = './assets/img/butterfly.png';
+//butterflyImg.src = './assets/img/butterfly-body.png';
 
 // Function to generate random position within the container
 function getRandomPosition() {

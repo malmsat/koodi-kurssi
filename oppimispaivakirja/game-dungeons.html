@@ -71,8 +71,9 @@
             font-size: 20px; /* Change text color on hover */
         }
         .summary-div{
-            margin-left: 200px;
+            margin-left: 270px;
             margin-right: 200px;
+            margin-top: -40px;
         }
         .p-low {
             margin-left: 95px;
@@ -138,23 +139,24 @@
         }
 
         /* Custom scrollbar for WebKit browsers */
-        ::-webkit-scrollbar {
-            width: 12px; 
+        *::-webkit-scrollbar {
+            width: 14px; /* Width of the scrollbar */
         }
 
-        ::-webkit-scrollbar-track {
-            background: #e4dfd2; 
-            border: 3px solid #000000; 
+        *::-webkit-scrollbar-track {
+            background: #e4dfd2; /* Color of the track */
+            border: 3px solid #000000; /* Space around the thumb */
+            border-radius: 30px; /* Rounded corners */
         }
 
-        ::-webkit-scrollbar-thumb {
-            background-color: #8d1212; 
-            border-radius: 30px; 
-            border: 3px solid #000000; 
+        *::-webkit-scrollbar-thumb {
+            background-color: #E5B6D6; /* Color of the thumb (scroll handle) */
+            border-radius: 30px; /* Rounded corners */
+            border: 3px solid #000000; /* Space around the thumb */
         }
 
-        ::-webkit-scrollbar-thumb:hover {
-            background-color: #c87d7d; 
+        *::-webkit-scrollbar-thumb:hover {
+            background-color: #000000; /* Color when hovering over the thumb */
         }
     </style>
 </head>
@@ -163,7 +165,7 @@
 
     <div class="grid-container">
         <div>
-            <img src="./assets/img/keep1.jpg">
+            <img src="./assets/img/keep1.png">
         </div>  
         <div class="grid-item">
         <h2>THE KEEP AND DUNGEONS</h2>
@@ -172,7 +174,10 @@
                 When an opportunity to visit an old castle's dungeons arise, one does not refrain. Shivering as the local ghost stories are, you risk the possibility of meeting a specter to sneak a look at the infamous prison cells. <i>If only these walls could talk.</i>
             </p>
             <p>
-                To your startlement, soft whispering echoes from the walls as you ponder the fates of the poor souls once serving their punishment at the very room. You discover the source as not a phantom, but a pair of maids locked in a secretive conversation a few pillars over. They haven't noticed you yet.
+                The air feels thick and musty in the underground halls. It's almost sticking to your skin. The ceiling hangs low, and the room is lit by stained oil lamps well beyond their best years. The atmosphere contrasts heavily to the opulent castle and the open grounds outside.
+            </p>
+            <p>
+                To your startlement, a soft whispering echoes from the walls as you ponder the fates of the poor souls once serving their punishment at the very room. You discover the source as not a phantom, but a pair of maids locked in a secretive conversation a few pillars over. They haven't noticed you yet.
             </p>
         </div>
         <div class="summary-div">
@@ -180,20 +185,33 @@
                 <summary>Eavesdrop on the maids</summary>
                 <div class="list-p">
                     <p>
-                        
+                        You creep close enough to barely be able to hear a low insisting voice of one of the maids. <q>... it just doesn't add up, I'm telling you. She was not the kind of person to go around stealing jewels.</q>
                     </p>
-                </div>
-              </details>
-              <details>
-                <summary>Examine the dungeons</summary>
-                <div class="list-p">
                     <p>
-
+                        <q>Well, you never know with people, do you? Why else would she have disappeared in the dead of night? Money does curious things to people, it does.</q> the other one answers.
+                    </p>
+                    <p>
+                        <q>But think about how it all came to light. It was Lady Sainsbury who blamed it on miss Chatsworth and they didn't exactly get along.</q>
+                    </p>
+                    <p>
+                        You can hear the second maid sighing. <q>But miss Chatsworth <i>was</i> the only person to go to Lady Sainsbury's room that evening besides the Lady herself. That much is clear to everyone. And now miss Chatsworth's run off somewhere.</q>
+                    </p>
+                    <p>
+                        <q>I guess it is quite suspicious...</q> The maids fall silent. 
+                    </p>
+                    <p>
+                        <q>Is that a dead rat?</q>
+                    </p>
+                    <p>
+                        <q>I'm <i>not</i> cleaning that up.</q>
+                    </p>
+                    <p>
+                        <q>We never saw a thing.</q> You hear hurried footsteps as the maids scurry away from their nasty discovery around the corner and through some door hidden from your sight.
                     </p>
                 </div>
               </details>
               <details>
-                <summary>Pay your respects at the altar</summary>
+                <summary>Examine the prison cells</summary>
                 <div class="list-p">
                     <p>
 
@@ -202,7 +220,7 @@
               </details>
         </div>
     </div>
-        <img src="./assets/img/map.jpg">
+        <img src="./assets/img/map.png">
     <div>
     <div class="p-low">
         <ul class="ul-map">

@@ -29,7 +29,7 @@
         body {
             cursor: url('./assets/img/cursor-img.png'), auto;
             font-family: libre baskerville; /* FIrst letter or each page parchment? Tai img */
-            background-image: url(./assets/img/study1.jpg);
+            background-image: url(./assets/img/study1.png);
             background-repeat: no-repeat; /* Do not repeat the image */
             background-position: right top; /* Aligns the background image to the top-right */
             background-size: 47vw;
@@ -91,8 +91,9 @@
             margin-left: 120px;
         }
         .div-lower {
-            width: 500px;
-            margin-left: 100px;
+            margin-top: 30px;
+            width: 600px;
+            margin-left: 170px;
         }
         .grid-item-right {
             margin-top: 55px;
@@ -126,23 +127,24 @@
         }
 
         /* Custom scrollbar for WebKit browsers */
-        ::-webkit-scrollbar {
-            width: 12px; 
+        *::-webkit-scrollbar {
+            width: 14px; /* Width of the scrollbar */
         }
 
-        ::-webkit-scrollbar-track {
-            background: #e4dfd2; 
-            border: 3px solid #000000; 
+        *::-webkit-scrollbar-track {
+            background: #e4dfd2; /* Color of the track */
+            border: 3px solid #000000; /* Space around the thumb */
+            border-radius: 30px; /* Rounded corners */
         }
 
-        ::-webkit-scrollbar-thumb {
-            background-color: #8d1212; 
-            border-radius: 30px; 
-            border: 3px solid #000000; 
+        *::-webkit-scrollbar-thumb {
+            background-color: #E5B6D6; /* Color of the thumb (scroll handle) */
+            border-radius: 30px; /* Rounded corners */
+            border: 3px solid #000000; /* Space around the thumb */
         }
 
-        ::-webkit-scrollbar-thumb:hover {
-            background-color: #c87d7d; 
+        *::-webkit-scrollbar-thumb:hover {
+            background-color: #000000; /* Color when hovering over the thumb */
         }
     </style>
 </head>
@@ -150,26 +152,56 @@
 <body>
 
     <div class="div-upper">
-        <h2>THE STUDY</h2>
+        <h2>THE LIBRARY</h2>
         <p class="first-p">
             You were instructed to find the records of sightings of the <i>Argynnis adippe</i> at the library by the the University professor who had arranged your visit to the castle with an old connection of hers. In your understanding, the late baron was a keen supporter of the natural sciences and would frequently aid cutting-edge research with generous donations to the University, <i>bless his soul.</i>
         </p>
+        <p>A large window looks over the courtyard lighting the room with golden streaks of the rising sun. It is a room of calm atmosphere and comfortable armchairs perfect for reading. You are certain you'd make groundbreaking discoveries in entomology had you only an office in such a tranquil setting. The library at the University is always a little too busy for perfect concentration.</p>
         <p>
-            You are not alone at the library. A man in his fourties is going through what looks like a pile of old records and other documents at a desk in the corner. He jumps at the sight of you and adjusts the pile of papers in his hands.
+            You are not alone at the castle library. A man in his fourties is going through what looks like a pile of old records and other documents at a desk in the corner. He jumps at the sight of you and adjusts the papers in his hands.
         </p>
+    </div>
+
+    <div class="div-lower">
+    
         <details>
             <summary>Talk to the man</summary>
             <div>
                 <p>
-
+                    <q>Lovely morning. I hope I'm not interrupting with anything?</q>
                 </p>
+                <p>
+                    The man starts putting the papers away back into their respective folders. <q>This is nothing, just some old family records.</q> The man peers at you. <q>Who are you?</q>
+                </p>
+                <p>
+                    <q>I'm from the University, department of entomology, here collect some documents-</q>
+                </p>
+                <p>
+                    <q>I'll leave you to it, then. <i>Adieu.</i> The man raises his hat politely and makes his leave.</q>
+                </p>
+                <p>You don't think a staff member would go through family documents in the library so casally. Or be dressed in such a stylish manner. <i>He must be a close relation or a family friend?</i></p>
             </div>
             </details>
             <details>
             <summary>Study the collections</summary>
             <div class="list-p">
                 <p>
-
+                    It is an absolute treat to have an access to all the rare books at the Sainsbury library. <i>It won't hurt just to take a little look around.</i>
+                </p>
+                <p>
+                    The bookshelves have been dusted regularly, but the dust particles at the lower rim of the books reveal most of them haven't been moved in years. You carefully slide a book on spanish architecture from it's place to skim through some pages. You could spend weeks at the library just to peruse all the hidden jems of work the place has to offer. You move on to the section of medieval cattle breeding techniques and notice some of the books on the lower shelves have been moved recently. There is no dust built at the bottom of the books. It stirs your curiosity for some reason. Perhaps someone at the castle has interested in the old ways of farmlife.
+                </p>
+                <p>
+                    You grab an especially thick volume to examine it more closely, and are met with a surprise. The middle of the book is carved empty and filled with hand-written letters instead of pages. A terrible thing to do to a book of such interesting subject matter. A closer study reveals the letters to be a correspondence between two <i>lovers</i>. One of them with a neat cursive and the other with larger and a bit more hasty style of handwriting.
+                </p>
+                <p>
+                    <i>The letters are from non other that the late baron himself and some Dorothy? Why does Dorothy sound so familiar.</i> You almost drop the book from your hands as you remember reading news of one miss Dorothy Chatsworth disappearing on the night of murder of the late Sainsbury baron. The governess of the family.
+                </p>
+                <p>
+                    They were lovers, the two of them. What a scandal, one that would stir commotion in the family and throughout the local community upon reveal. A marriage between the two would have implications to the inheritance of the Sainsbury family members, not to mention if a child was born. You shudder to think whether such an affair would act as a motive for some of the sinister deeds inside the castle walls.
+                </p>
+                <p>
+                    You think it migth be for the best to put the letters back where you found them for now. <i>Best not to get involved.</i>
                 </p>
             </div>
             </details>
@@ -183,7 +215,7 @@
         </details>
     </div>
     <div>
-        <img src="./assets/img/map.jpg">
+        <img src="./assets/img/map.png">
     </div>
     <div class="p-low">
         <ul class="ul-map">
