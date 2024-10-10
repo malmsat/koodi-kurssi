@@ -128,6 +128,6 @@ function resetGame() {
 }
 
 // Start spawning objects every 10 seconds
-spawnInterval = setInterval(createObject, 60000);
+spawnInterval = setInterval(createObject, 7000);
 
 
