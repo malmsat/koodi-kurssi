@@ -1,0 +1,195 @@
+<!DOCTYPE html>  
+<html lang="fi">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viikko 6</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            } 
+        }
+        a {
+            color: rgb(255, 255, 255); 
+        }
+        a:visited {
+            color: rgb(130, 189, 181); 
+        }
+        a:hover {
+            color: rgb(226, 161, 210); 
+        }
+        a:activate {
+            color: rgb(228, 77, 190); 
+        }
+        img {
+            display:block;
+            max-width: 100%;
+            width: 50%;
+            height: 50%;
+            margin: 0 auto;
+            
+            /* margin: 0 auto on sama kuin
+            margin-top:0;
+            margin-bottom:0;
+            margin-left:auto;
+            margin-right:auto; 
+            */
+        }
+
+        .black_header {
+            text-align: center;
+            background: #000000;
+            color: #ffffff;
+            width: 100%;
+            height: 100%;
+            padding-top: 10%;
+            padding-bottom: 10%;
+        }
+
+        h1 {
+                font-size: 10rem;
+        }
+        h2 {
+                font-size: 1.5rem;
+        }
+        .body_title {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        .body_container {
+            text-align: left;
+            color: #000000;
+            width: 100%;
+            height: 100%;
+            padding: 5%;
+            width: 60%;
+            border: 2px solid #000000;
+            margin: 0 auto;
+            border-radius: 50px;
+            margin-top: 80px;
+        }
+
+        .inline-text-img {
+            display:inline;
+        }
+
+        p {
+            font-size: 1.2rem;
+        }
+        li {
+            font-size: 1.2rem;
+        }
+        #footer-id{
+            margin-top: 50px;
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+        .button {
+            background-color: #131313; /* Background color */
+            color: white; /* Text color */
+            padding: 10px 20px; /* Padding */
+            border: none; /* Remove default border */
+            border-radius: 5px; /* Rounded corners */
+            font-size: 1.2rem; /* Font size */
+            cursor: pointer; /* Pointer cursor on hover */
+
+        }
+
+        .button:hover {
+            background-color: #000000; /* Darker background on hover */
+        }
+
+        .button:active {
+            background-color: #8b1c50; /* Even darker on click */
+        }
+
+        .button:disabled {
+            background-color: #bdc3c7; /* Gray color when disabled */
+            cursor: not-allowed; /* Cursor changes to indicate unclickable */
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-30px);
+            }
+            60% {
+                transform: translateY(-15px);
+            }
+        }
+
+        .button {
+            animation: bounce 1s infinite; /* Bounce animation */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="black_header">
+        <h1>Viikko 6</h1>
+        <h2>Oppimispäiväkirja</h2>
+        <h2>Näyttely ja loppukritiikki</h3>
+    </div>
+
+    <div class="body_container">
+        <p class="body_title">Kurssityöt</p>
+        
+        <p>
+            Vikalla viikolla oli jo työt aika hyvin kasassa muutamaa viimeistelyä lukunottamatta. Hieman jännitti julisteen kanssa, että mitä siitäkin tulisi, mutta loppujen lopuksi tykkäsinkin tuloksesta ja pdf oli printtaantunut oikein kivasti. Oli myös villiä nähdä oma juliste niin isossa koossa. Siinä oli jotain juhlallista.
+        </p>
+        <p>
+            Nettisivujen suhteen ei enää ollut alkuviikosta suuria suunnitelmia. Ajattelin, että viimeistelen homman ja olen siihen tyyvyäinen. Viikon aikana alkoi tulla kuitenkin hirveästi lisää ideoita mitä pidemmälle projekti taas eteni. Joka kerta kun sai yhden idean lisättyä ja ruksattua pois, tilalle syntyi kaksi lisää. Mutta ainakin alkuperäisen suunnitelman mukaisesti sain tehtyä ne asiat mitä halusinkin.
+        </p>
+        <p>
+            Muun muassa perhoset ovat nyt viimein animoituja ja tykkään efektistä hirveästi. Ne ovat nättejä mutta vähän häiristeviä kun sivua yrittää lukea, mikä oli juuri tarkoituskin. Myös sivuun lisäämäni notepad ja suurennuslasikursori tekevät hauskaa ja immersiivistä fiilistä sivun teemaan. Sivua on ainakin omasta mielestä nyt kivempi selailla. Myös värien säätäminen, kuvien optimoiminen ja muu koristelu tekevät sivusta esteettisemmän. Huomasin, että kaksivärinen png oli entisiä low-quality jpg-tiedostoja kaksi tai joskus joka kolme kertaa pienemmän kokoinen, mutta laatu silti näytti paremmalta.
+        </p>
+        <p>
+
+        </p>
+
+        <p class="body_title">Kurssipalautteesta</p>
+        <p>
+            Kaiken kaikkiaan yksi lemppari kursseistani. Sain tehdä mitä halusin ja opin ihan hirveästi. Tästä on hyvä jatkaa eteenpäin koodin kanssa. Tehtävänannot olivat hauskan erikoisia ja huomasin tekeväni tosi kokeilullisia asioita ainakin omiin standardeihin nähden. Kokeilu opetti arvostamaan sitä, että ei ole aina täysin kontrollissa siitä mitä lopputuloksesta tulee ja sen takia ehkä teinkin uudenlaisia valintoja ja uudenlaista tyyliä jota en ennen ole kokeillut. 
+        </p>
+        <p>
+            Yritän jatkossa pitää pienen kokeiluelementin mukana mitä ikinä tekeekin. Vahingoista ehkä syntyykin parhaat innovaatiot, eikä järkeilystä ja suunnittelusta, vaikka niitäkin on hyvä pitää mukana. 
+        </p>
+    </div>
+
+    <div class="body_container">
+        <p class="body_title">Linkit</p>
+        <p>Julistetta voi tarkastella
+            <a href="https://jabbahut69.github.io/koodi-kurssi/oppimispaivakirja/juliste.html">
+            tästä.
+            </a></p>
+            <p>Nettisivua voi tarkastella
+                <a href="https://jabbahut69.github.io/koodi-kurssi/oppimispaivakirja/game.html">
+                tästä.
+                </a></p>
+        </div>
+
+        <div class="black_header" id="footer-id">
+            <a href="viikko5.html">
+                Seuraava viikko
+                </a>
+        </div>
+</body>
+
