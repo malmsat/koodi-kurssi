@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Embedded Page with Links</title>
+    <title>Union prototype</title>
 
     <style>
         @font-face {
@@ -158,17 +158,15 @@
             font-display: swap;
         }
 
-    @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
-
         :root {
-            --color-bg1: rgb(255, 255, 255);
-            --color-bg2: rgb(202, 213, 223);
-            --color1: 18, 113, 255;
-            --color2: 107, 74, 255;
-            --color3: 100, 100, 255;
-            --color4: 50, 160, 220;
-            --color5: 80, 47, 122;
-            --color-interactive: 140, 100, 255;
+            --color-bg1: rgb(22, 22, 22);
+            --color-bg2: rgb(0, 0, 0);
+            --color1: 209, 13, 13;
+            --color2: 209, 13, 13;
+            --color3: 209, 13, 13;
+            --color4: 209, 73, 13;
+            --color5: 25,97,173;
+            --color-interactive: 233, 204, 92;
             --circle-size: 80%;
             --blending: hard-light;
         }
@@ -195,13 +193,12 @@
         }
 
         body {
-            font-family: 'Futura', sans-serif;
+            font-family: 'Futura Lt BT', sans-serif;
         }
 
         h1, h2, h3 {
             font-family: 'Futura', sans-serif;
             font-weight: 500;
-            color: #000000;
         }
         .noise {
             position: fixed;
@@ -223,11 +220,6 @@
         h1 {
             font-size: 2rem;
         }
-
-        p {
-            line-height: 1.6;
-        }
-
 
         @keyframes moveInCircle {
         0% {
@@ -383,98 +375,250 @@
 
             opacity: 0.7;
         }
+
+        .container {
+            display: flex; /* Makes the container a flexbox */
+            justify-content: center; /* Centers grid horizontally */
+            align-items: center; /* Centers grid vertically */
+            flex-direction: column;
+        }
+
         .header-container {
             position: relative;
             display: grid;
             grid-template-columns: 1fr 3fr;
-            max-width: 1920px;
+            max-width: 80%;
             height: 100px;
             z-index: 10;
+            align-items: center;
+            background-color: #ffffff94;
         }
-        .grid-container {
+        .grid-container-4 {
             position: relative;
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr;
-            grid-template-rows: 100px 500px;
-            max-width: 1920px;
+            max-width: 80%;
             z-index: 10;
         }
+        .grid-container-2 {
+            position: relative;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            grid-template-rows: 300px;
+            max-width: 80%;
+            z-index: 10;
+        }
+        .grid-divider-3{
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            width: 80%;
+            height: 100px;
+            z-index: 10;
+        }
+        .grid-container-3{
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            width: 80%;
+            height: 480px;
+            z-index: 10;
+        }
+        .grid-container-contacts{
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            width: 80%;
+            height: 960px;
+            z-index: 10;
+        }
+        .footer-container{
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            width: 80%;
+            z-index: 10;
+        }
+
         .grid-item {
             font-size: 1.2rem;
-            text-align: center;
-            border: 1px solid #000000;
-            color: #000000;
+            border: 1px solid #ffffff;
+            color: #ffffff;
             min-height: 100px;
             display: flex;
-            justify-content: center;
             align-items: center;
+            flex-direction: column; /* Stacks items vertically */
+            justify-content: left;
         }
 
         .grid-item-inside {
-            color: white;
             font-size: 1.2rem;
             text-align: center;
-            border-bottom: 2px solid #000000;
-            color: #000000;
+            border-bottom: 2px solid #ffffff;
             min-height: 100px;
             display: flex;
             justify-content: center;
             align-items: center;
             width: 100%;
         }
+
         .grid-item img {
             width: 100%;
             object-fit: cover;
-            transform: translate(1px, 25px); /* Adjust position to overlap */
         }
+
+        p {
+            font-weight: 100;
+            line-height: 1.6;
+            text-align: left;
+            padding: 20px;
+            font-size: .7rem;
+        }
+        .grid-item-inside h1 {
+            font-weight: 500;
+            line-height: 1.6;
+            text-align: left;
+            padding: 20px;
+        }
+
+        .grid-item h1 {
+            font-weight: 500;
+            line-height: 1.6;
+            text-align: left;
+            padding: 20px;
+        }
+
+        .three-columns {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Creates three equal columns */
+            gap: 10px; /* Optional: spacing between columns */
+            border: 1px solid #ffffff;
+        }
+
+        
+
 
     </style>
 
     <body>
-        <div class="header-container">
-            <div class="grid-item"><img src="./assets/img/Typo-black.png"></div>
-            <div class="grid-item">
-                <h1>FUEL YOUR ENERGY</h1>
+        <div class="container">
+            <div class="header-container">
+                <div class="grid-item"><img src="./assets/img/Typo-white.png"></div>
+                <div class="grid-item">
+                    <h1>FUEL YOUR ENERGY</h1>
+                </div>
             </div>
-        </div>
-        <div class="grid-container">    
-            <div class="grid-item">4</div>
-            <div class="grid-item">5</div>
-            <div class="grid-item">
-                <div class="grid-item-inside">6</div>
+
+            <div class="grid-container-4">    
+                <div class="grid-item">
+                    <img src="./assets/img/union-img1.png">
+                </div>
+                <div class="grid-item">
+                    <div class="grid-item-inside">
+                        <h1>ABOUT US</h1>
+                    </div>
+                    <h1>OUR HISTORY</h1>
+                    <p>
+                        LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS NISI UT ALIQUIP EX EA COMMODO CONSEQUAT.LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS NISI UT ALIQUIP EX EA COMMODO CONSEQUAT.
+                    </p>
+                </div>
+                <div class="grid-item">
+                    <div class="grid-item-inside">
+                        <h1>SERVICES</h1>
+                    </div>
+                    <p>
+                        
+                    </p>
+                </div>
+                <div class="grid-item">
+                    <div class="grid-item-inside">
+                        <h1>CONTACTS</h1>
+                    </div>
+                    <p>
+                        LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS NISI UT ALIQUIP EX EA COMMODO CONSEQUAT.
+                    </p>
+                </div>
             </div>
-            <div class="grid-item">
-                <div class="grid-item-inside">7</div>
+
+            <div class="grid-container-2">  
+                <div class="three-columns">
+                    <p>
+                        LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS NISI UT ALIQUIP EX EA COMMODO CONSEQUAT.LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS NISI UT ALIQUIP EX EA COMMODO CONSEQUAT.
+                    </p>
+                    <p>
+                        LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS NISI UT ALIQUIP EX EA COMMODO CONSEQUAT.LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS NISI UT ALIQUIP EX EA COMMODO CONSEQUAT.
+                    </p>
+                    <p>
+                        LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS NISI UT ALIQUIP EX EA COMMODO CONSEQUAT.LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS NISI UT ALIQUIP EX EA COMMODO CONSEQUAT.
+                    </p>
+                </div>
+                <div class="grid-item"></div>
             </div>
-            <div class="grid-item">
-                <div class="grid-item-inside">8</div>
+
+            <div class="grid-divider-3">
+                <div class="grid-item">
+                    <div class="grid-item-inside">
+                        <h1>ABOUT US</h1>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="grid-item-inside">
+                        <h1>ABOUT US</h1>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="grid-item-inside">
+                        <h1>ABOUT US</h1>
+                    </div>
+                </div>
             </div>
-            <div class="grid-item">9</div>
-            <div class="grid-item">10</div>
-            <div class="grid-item">11</div>
-            <div class="grid-item">12</div>
-            <div class="grid-item">13</div>
-            <div class="grid-item">14</div>
-            <div class="grid-item">15</div>
-            <div class="grid-item">16</div>
-            <div class="grid-item">17</div>
-            <div class="grid-item">18</div>
-            <div class="grid-item">19</div>
-            <div class="grid-item">20</div>
-            <div class="grid-item">21</div>
-            <div class="grid-item">22</div>
-            <div class="grid-item">23</div>
-            <div class="grid-item">24</div>
-            <div class="grid-item">25</div>
-            <div class="grid-item">26</div>
-            <div class="grid-item">27</div>
-            <div class="grid-item">28</div>
-            <div class="grid-item">29</div>
-            <div class="grid-item">30</div>
-            <div class="grid-item">31</div>
-            <div class="grid-item">32</div>
+
+            <div class="grid-container-3">
+                <div class="grid-item">
+                    <h1>CONTACTS</h1>
+                    <p>
+                        LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS NISI UT ALIQUIP EX EA COMMODO CONSEQUAT.
+                    </p>
+                </div>
+                <div class="grid-item">
+                    <img src="./assets/img/union-img1.png">
+                </div>
+                <div class="grid-item">
+                    <h1>CONTACTS</h1>
+                    <p>
+                        LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS NISI UT ALIQUIP EX EA COMMODO CONSEQUAT.
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid-container-3">
+                <div class="grid-item">16</div>
+                <div class="grid-item">17</div>
+                <div class="grid-item">18</div>
+            </div>
+
+            <div class="grid-divider-3">
+                <div class="grid-item">19</div>
+                <div class="grid-item">20</div>
+                <div class="grid-item">21</div>
+            </div>
+
+            <div class="grid-container-contacts">
+                <div class="grid-item">22</div>
+                <div class="grid-item">23</div>
+            </div>
+
+            <div class="footer-container">
+                <div class="grid-item">24</div>
+                <div class="grid-item">25</div>
+                <div class="grid-item">26</div>
+                <div class="grid-item">27</div>
+                <div class="grid-item">28</div>
+                <div class="grid-item">29</div>
+            </div>
         </div>
 
+        <!-- Gradient code-->
         <div class="gradient-bg">
                 <svg 
                     viewBox="0 0 100vw 100vw"
