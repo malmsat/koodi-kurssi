@@ -159,8 +159,8 @@
         }
 
         :root {
-            --color-bg1: rgb(22, 22, 22);
-            --color-bg2: rgb(0, 0, 0);
+            --color-bg1: rgb(27, 27, 27);
+            --color-bg2: rgb(36, 37, 44);
             --color1: 209, 13, 13;
             --color2: 209, 13, 13;
             --color3: 209, 13, 13;
@@ -196,8 +196,10 @@
             font-family: 'Futura Lt BT', sans-serif;
         }
 
+        
+
         h1, h2, h3 {
-            font-family: 'Futura', sans-serif;
+            font-family: 'Futura BdCn BT', sans-serif;
             font-weight: 500;
         }
         .noise {
@@ -376,11 +378,13 @@
             opacity: 0.7;
         }
 
-        .container {
+        .container-1 {
             display: flex; /* Makes the container a flexbox */
             justify-content: center; /* Centers grid horizontally */
             align-items: center; /* Centers grid vertically */
             flex-direction: column;
+            /*overflow: hidden;  Prevent content overflow */
+            /*align-items: stretch;  Prevent shrinking or expanding */
         }
 
         .header-container {
@@ -388,10 +392,17 @@
             display: grid;
             grid-template-columns: 1fr 3fr;
             max-width: 80%;
-            height: 100px;
+            height: 50px;
             z-index: 10;
             align-items: center;
-            background-color: #ffffff94;
+            background-color: #00000094;
+        }
+        .header-img {
+            z-index: 5;
+            object-fit: cover; /* Ensures the image covers the space without distortion */
+            display: block; /* Removes any extra space below the image */
+            width: 80%; 
+            display: block; /* Avoid extra whitespace under image */
         }
         .grid-container-4 {
             position: relative;
@@ -399,6 +410,7 @@
             grid-template-columns: 1fr 1fr 1fr 1fr;
             max-width: 80%;
             z-index: 10;
+            background-color: #00000094;
         }
         .grid-container-2 {
             position: relative;
@@ -407,6 +419,7 @@
             grid-template-rows: 300px;
             max-width: 80%;
             z-index: 10;
+            background-color: #00000094;
         }
         .grid-divider-3{
             position: relative;
@@ -415,6 +428,7 @@
             width: 80%;
             height: 100px;
             z-index: 10;
+            background-color: #00000094;
         }
         .grid-container-3{
             position: relative;
@@ -423,6 +437,7 @@
             width: 80%;
             height: 480px;
             z-index: 10;
+            background-color: #00000094;
         }
         .grid-container-contacts{
             position: relative;
@@ -431,6 +446,7 @@
             width: 80%;
             height: 960px;
             z-index: 10;
+            background-color: #00000094;
         }
         .footer-container{
             position: relative;
@@ -501,13 +517,15 @@
     </style>
 
     <body>
-        <div class="container">
+        <div class="container-1">
+            <div class="header-img"><img src="./assets/img/union-bar.png"></div>
             <div class="header-container">
                 <div class="grid-item"><img src="./assets/img/Typo-white.png"></div>
                 <div class="grid-item">
-                    <h1>FUEL YOUR ENERGY</h1>
+                    
                 </div>
             </div>
+            <div class="header-img"><img src="./assets/img/union-bar.png"></div>
 
             <div class="grid-container-4">    
                 <div class="grid-item">
@@ -527,7 +545,7 @@
                         <h1>SERVICES</h1>
                     </div>
                     <p>
-                        
+                        <!-- Icons -->
                     </p>
                 </div>
                 <div class="grid-item">
