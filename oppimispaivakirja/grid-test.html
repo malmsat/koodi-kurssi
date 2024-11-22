@@ -454,6 +454,8 @@
         width: 80%;
         object-fit: cover;
         display: block;
+        justify-content: center;
+        align-items: center;
       }
 
       /* Bottom block spans full width */
@@ -481,7 +483,6 @@
       .grid-section-2 {
         display: grid;
         grid-template-columns: repeat(3, 1fr); 
-        grid-template-rows: 50px; /* Ensures consistent row height */
         width: 100%; /* Full width */
         border: 1px solid #d10d0d;
       }
@@ -503,6 +504,14 @@
         justify-content: center;
         box-sizing: border-box; /* Ensures padding and border don't affect size */
       }
+      
+      .grid-item-left-border {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        box-sizing: border-box; /* Ensures padding and border don't affect size */
+        border-left: 1px solid #d10d0d;
+      }
 
       .grid-item-header {
         font-size: 1.5rem;
@@ -510,9 +519,40 @@
         color: #d10d0d;
         width: 100%;
         text-align: center;
-        border-bottom: 2px solid #d10d0d;
+        border-bottom: 1px solid #d10d0d;
         font-family: 'Futura';
         padding-bottom: 10%;
+      }
+      .grid-item-header-below {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #d10d0d;
+        width: 100%;
+        text-align: left;
+        border-top: 1px solid #d10d0d;
+        font-family: 'Futura';
+        padding-bottom: 10%;
+        background-color: rgba(0, 0, 0, 0.76);
+        align-items: flex-end;
+        font-family: 'Futura Lt BT';
+        align-self: end;
+      }
+      .grid-item-header-below h1 {
+        font-family: 'Futura Lt BT';
+      }
+
+      .grid-item-header-mid {
+        font-weight: bold;
+        color: #d10d0d;
+        width: 100%;
+        text-align: center;
+        font-family: 'Futura';
+        padding-bottom: 10%;
+        border-right: 1px solid #d10d0d;
+      }
+
+      .grid-item-header-mid h1 {
+        font-size: 5rem;
       }
 
       .grid-item-text {
@@ -523,9 +563,58 @@
 
       /* Scale the images inside grid items to 400px by 400px */
       .grid-item img {
-        width: 100%;
+
         object-fit: cover; /* Ensures the image maintains its aspect ratio and fills the container */
         overflow: hidden;
+      }
+
+
+
+            /* Top block spans full width */
+            .top-footer-block {
+        height: 10px; /* Fixed height */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #d10d0d;
+      }
+
+      .top-footer-block img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* Middle block for content */
+      .middle-footer-block {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: 1fr 1fr;
+        border-left: 1px solid #d10d0d;
+        background-color: rgba(0, 0, 0, 0.76);
+      }
+
+      .middle-footer-block img {
+        width: 80%;
+        object-fit: cover;
+        display: block;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* Bottom block spans full width */
+      .bottom-footer-block {
+        height: 10px; /* Fixed height */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .bottom-footer-block img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
 
   </style>
@@ -551,7 +640,7 @@
         <div class="grid-item-text">LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS NISI UT ALIQUIP EX EA COMMODO CONSEQUAT.LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA.</div>
       </div>
       <div class="grid-item">
-        <div class="grid-item-header"><h1>SHOP</h1></div>
+        <div class="grid-item-header"><h1>COLLECTIONS</h1></div>
         <div class="grid-item-no-border"><img src="./assets/img/test-img.jpg" alt="Union Bar"></div>
       </div>
       <div class="grid-item">
@@ -586,61 +675,88 @@
           DOLL IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS NISI UT ALIQUIP EX EA COMMODO CONSEQUAT.LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA.
         </div>
     </div>
-      <div class="grid-item-no-border"><img src="./assets/img/test-img.jpg" alt="Union Bar"></div>
+      <div class="grid-item-left-border"><img src="./assets/img/test-img.jpg" alt="Union Bar"></div>
     </div>
 
     <!-- New Grid Section 2 (Side by Side Items) -->
     <div class="grid-section-2">
-      <div class="middle-header-block">
-        <img src="./assets/img/Typo-red.png" alt="Union Bar">
+      <div class="grid-item-header-mid">
+        <h1>FUEL.</h1>
       </div>
-      <div class="middle-header-block">
-        <img src="./assets/img/Typo-red.png" alt="Union Bar">
+      <div class="grid-item-header-mid">
+        <h1>YOUR.</h1>
       </div>
-      <div class="middle-header-block">
-        <img src="./assets/img/Typo-red.png" alt="Union Bar">
-      </div>
-    </div>
-
-    <!-- New Grid Section 2 (Side by Side Items) -->
-    <div class="grid-section-2">
-      <div class="grid-item">
-        <div class="grid-item-text">This is.</div>
-      </div>
-      <div class="grid-item">
-        <div class="grid-item-text">This is.</div>
-      </div>
-      <div class="grid-item">
-        <div class="grid-item-text">This is.</div>
+      <div class="grid-item-header-mid">
+        <h1>ENERGY.</h1>
       </div>
     </div>
 
     <!-- New Grid Section 2 (Side by Side Items) -->
     <div class="grid-section-2">
-      <div class="grid-item">
-        <div class="grid-item-text">This is.</div>
+      <div class="grid-item-no-border">
+        <div>
+          <h1>COLLABORATION</h1>
+        </div>
+        <div class="grid-item-text">
+          LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS NISI UT ALIQUIP EX EA COMMODO CONSEQUAT.LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA.
+        </div>
+
+        <div class="grid-item-header-below"><h1>COMMUNITY MEMBERS</h1></div>
+    </div>
+      <div class="grid-item-left-border">
+        
       </div>
-      <div class="grid-item">
-        <div class="grid-item-text">This is.</div>
+      <div class="grid-item-left-border">
+        <div>
+          <h1></h1>
+        </div>
+        <div class="grid-item-text">
+          LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS NISI UT ALIQUIP EX EA COMMODO CONSEQUAT. LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. 
+        </div>
+        <div class="grid-item-header-below"><h1>COMMUNITY MEMBERS</h1></div>
       </div>
-      <div class="grid-item">
-        <div class="grid-item-text">This is.</div>
+    </div>
+
+    <!-- New Grid Section 2 (Side by Side Items) -->
+    <div class="grid-section-2">
+      <div class="grid-item-no-border">
+        <div>
+          <h1>NOWADAYS</h1>
+        </div>
+        <div class="grid-item-text">
+          LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS NISI UT ALIQUIP EX EA COMMODO CONSEQUAT.LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA.
+        </div>
+    </div>
+      <div class="grid-item-left-border">
+        <div>
+          <h1>NOWADAYS</h1>
+        </div>
+        <div class="grid-item-text">
+          LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS NISI UT ALIQUIP EX EA COMMODO CONSEQUAT.LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA.
+        </div>
+      </div>
+      <div class="grid-item-left-border">
+        <div>
+          <h1>NOWADAYS</h1>
+        </div>
+        <div class="grid-item-text">
+          LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS NISI UT ALIQUIP EX EA COMMODO CONSEQUAT.LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA.
+        </div>
       </div>
     </div>
     
-    <!-- New Grid Section 2 (Side by Side Items) -->
-    <div class="grid-section-2">
-      <div class="middle-header-block">
-        <img src="./assets/img/Typo-red.png" alt="Union Bar">
-      </div>
-      <div class="middle-header-block">
-        <img src="./assets/img/Typo-red.png" alt="Union Bar">
-      </div>
-      <div class="middle-header-block">
-        <img src="./assets/img/Typo-red.png" alt="Union Bar">
+    <div class="top-footer-block">
+      <img src="./assets/img/union-bar.png" alt="Union Bar">
+    </div>
+    <div class="middle-footer-block">
+      <img src="./assets/img/Typo-red.png" alt="Union Bar">
+      <div class="grid-item-text">
+        BOTTOM NAVIGATION MENU & COPYRIGHTS
       </div>
     </div>
-
+    <div class="bottom-footer-block">
+      <img src="./assets/img/union-bar.png" alt="Union Bar">
+    </div>
   </div>
 
 
