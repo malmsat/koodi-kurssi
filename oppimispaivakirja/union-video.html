@@ -3,30 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Example</title>
-</head>
-<style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-  }
+    <title>Fullscreen Video</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full viewport height */
+            background-color: black; /* Optional, to hide any whitespace */
+            overflow: hidden; /* Prevent scrolling */
+        }
 
-  .video-div {
-        width: 100%;
-        object-fit: cover;
-        display: block;
-        justify-content: center;
-        align-items: center;
-      }
-      
-</style>
+        video {
+            height: 100vh; /* Full height of the viewport */
+            object-fit: contain; /* Ensures video maintains aspect ratio */
+        }
+    </style>
+</head>
 <body>
-  <div class="video-div">
-    <video width="1080" height="1920" controls>
+    <video loop controls>
         <source src="./assets/img/video-v1.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
-  </div>
 </body>
 </html>
