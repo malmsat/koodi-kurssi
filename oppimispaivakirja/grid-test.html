@@ -397,7 +397,7 @@
             padding-top: 10%;
             padding-left: 10%;
             padding-right: 10%;
-            min-height: 75px;
+            min-height: 86px;
         }
 
       /* Reset margins and background */
@@ -479,6 +479,19 @@
         grid-template-columns: repeat(4, 1fr); /* Ensures 4 equal columns */
         width: 100%; /* Full width */
         border-left: 1px solid #d10d0d;
+        max-height: 550px;
+        overflow: hidden;
+        border-bottom: 1px solid #d10d0d;
+      }
+
+      .grid-section-1-2 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* Ensures 4 equal columns */
+        width: 100%; /* Full width */
+        border-left: 1px solid #d10d0d;
+        max-height: 400px;
+        overflow: hidden;
+        border-bottom: 1px solid #d10d0d;
       }
 
       .grid-section-2 {
@@ -490,26 +503,32 @@
 
       /* Grid item styling */
       .grid-item {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: left;
+        border-right: 1px solid #d10d0d;
+        border-bottom: 1px solid #d10d0d;
+        border-top: 1px solid #d10d0d;
+      }
+
+      .grid-item-img {
+        align-self: center;
         border-right: 1px solid #d10d0d;
         border-bottom: 1px solid #d10d0d;
         border-top: 1px solid #d10d0d;
       }
 
       .grid-item-no-border {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        display: grid;
         box-sizing: border-box; /* Ensures padding and border don't affect size */
+
       }
       
       .grid-item-left-border {
+        border-left: 1px solid #d10d0d;
+        align-self: end;
+      }
+
+      .grid-item-left-border-img{
         display: flex;
         flex-direction: column;
-        justify-content: center;
         box-sizing: border-box; /* Ensures padding and border don't affect size */
         border-left: 1px solid #d10d0d;
       }
@@ -523,7 +542,17 @@
         border-bottom: 1px solid #d10d0d;
         font-family: 'Futura';
         padding-bottom: 10%;
+        background-color: rgba(0, 0, 0, 0.76);
       }
+
+      .grid-item-header h1 {
+        font-family: 'Futura Lt BT';
+      }
+
+      .grid-item-header:hover {
+        background-color: #d10d0d96;
+        }
+
       .grid-item-header-below {
         font-size: 1.5rem;
         font-weight: bold;
@@ -534,10 +563,13 @@
         font-family: 'Futura';
         padding-bottom: 10%;
         background-color: rgba(0, 0, 0, 0.76);
-        align-items: flex-end;
         font-family: 'Futura Lt BT';
         align-self: end;
       }
+      .grid-item-header-below:hover {
+        background-color: #d10d0d96;
+        }
+
       .grid-item-header-below h1 {
         font-family: 'Futura Lt BT';
       }
@@ -562,11 +594,25 @@
         padding: 10%;
       }
 
-      /* Scale the images inside grid items to 400px by 400px */
       .grid-item img {
-
         object-fit: cover; /* Ensures the image maintains its aspect ratio and fills the container */
         overflow: hidden;
+      }
+
+      .footer-menu {
+        align-self: start; /* Aligns the item to the top */
+        font-size: 1rem;
+        text-align: left;
+        padding: 10%;
+        margin-top: 30%;
+        margin-bottom: 30%;
+      }
+
+      .footer-menu h1 {
+
+        text-align: left;
+        padding: 0%;
+
       }
 
 
@@ -591,7 +637,7 @@
         display: grid;
         justify-content: center;
         align-items: center;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 300px 300px;
         border-left: 1px solid #d10d0d;
         background-color: rgba(0, 0, 0, 0.76);
       }
@@ -634,7 +680,7 @@
 
     <!-- New Grid Section -->
     <div class="grid-section-1">
-      <div class="grid-item"><img src="./assets/img/test-img.jpg" alt="Union Bar"></div>
+      <div class="grid-item-img"><img src="./assets/img/keep1.png" alt="Union Bar"></div>
       <div class="grid-item">
         <div class="grid-item-header"><h1>ABOUT US</h1></div>
         <div><h1>OUR HISTORY</h1></div>
@@ -642,7 +688,7 @@
       </div>
       <div class="grid-item">
         <div class="grid-item-header"><h1>COLLECTIONS</h1></div>
-        <div class="grid-item-no-border"><img src="./assets/img/test-img.jpg" alt="Union Bar"></div>
+        <div class="grid-item-no-border"><img src="./assets/img/bg-end1.png" alt="Union Bar"></div>
       </div>
       <div class="grid-item">
         <div class="grid-item-header"><h1>COMMUNITY</h1></div>
@@ -651,7 +697,7 @@
       </div>
     </div>
 
-    <div class="grid-section-1">
+    <div class="grid-section-1-2">
       <div class="grid-item-no-border">
         <div>
           <h1>NOWADAYS</h1>
@@ -676,7 +722,7 @@
           DOLL IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS NISI UT ALIQUIP EX EA COMMODO CONSEQUAT.LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA.
         </div>
     </div>
-      <div class="grid-item-left-border"><img src="./assets/img/test-img.jpg" alt="Union Bar"></div>
+      <div class="grid-item-left-border-img"><img src="./assets/img/test-img.jpg" alt="Union Bar"></div>
     </div>
 
     <!-- New Grid Section 2 (Side by Side Items) -->
@@ -704,17 +750,17 @@
 
         <div class="grid-item-header-below"><h1>COMMUNITY MEMBERS</h1></div>
     </div>
-      <div class="grid-item-left-border">
-        
+      <div class="grid-item-left-border-img">
+        <img src="./assets/img/test-img.jpg" alt="Union Bar">
       </div>
-      <div class="grid-item-left-border">
+      <div class="grid-item-no-border">
         <div>
-          <h1></h1>
+          <h1>WELCOME</h1>
         </div>
         <div class="grid-item-text">
           LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS NISI UT ALIQUIP EX EA COMMODO CONSEQUAT. LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. 
         </div>
-        <div class="grid-item-header-below"><h1>COMMUNITY MEMBERS</h1></div>
+        <div class="grid-item-header-below"><h1>JOIN US</h1></div>
       </div>
     </div>
 
@@ -733,7 +779,7 @@
           <h1>NOWADAYS</h1>
         </div>
         <div class="grid-item-text">
-          LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS NISI UT ALIQUIP EX EA COMMODO CONSEQUAT.LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA.
+          LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS NISI UT ALIQUIP EX EA COMMODO CONSEQUAT.LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA.
         </div>
       </div>
       <div class="grid-item-left-border">
@@ -741,7 +787,7 @@
           <h1>NOWADAYS</h1>
         </div>
         <div class="grid-item-text">
-          LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS NISI UT ALIQUIP EX EA COMMODO CONSEQUAT.LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA.
+          LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS NISI UT ALIQUIP EX EA COMMODO CONSEQUAT.
         </div>
       </div>
     </div>
@@ -751,8 +797,19 @@
     </div>
     <div class="middle-footer-block">
       <img src="./assets/img/Typo-red.png" alt="Union Bar">
-      <div class="grid-item-text">
-        BOTTOM NAVIGATION MENU & COPYRIGHTS
+      <div class="footer-menu">
+        <h1>MENU</h1>
+        SHOP ALL<br>
+        ABOUT US<br>
+        COMMUNITY
+      </div>
+      <div class="footer-menu">
+        <h1>SUPPORT</h1>
+        SHIPPING & RETURN<br>
+        HELP & FAQ<br>
+        TERMS & CONDITIONS<br>
+        PRIVACY POLICY<br>
+        CONTACT
       </div>
     </div>
     <div class="bottom-footer-block">
