@@ -158,8 +158,8 @@
         }
 
         :root {
-            --color-bg1: rgb(27, 27, 27);
-            --color-bg2: rgb(24, 94, 73);
+            --color-bg1: rgb(255, 255, 255);
+            --color-bg2: rgb(255, 255, 255);
             --color1: 209, 13, 13;
             --color2: 209, 13, 13;
             --color3: 209, 13, 13;
@@ -178,7 +178,7 @@
             list-style:none;
             text-decoration:none;
             box-sizing:border-box;
-            color:#d10d0d;
+
             background: transparent;
             border:none;
         }
@@ -367,6 +367,7 @@
         /* Custom scrollbar for WebKit browsers */
         *::-webkit-scrollbar {
             width: 20px; /* Width of the scrollbar */
+            background-color: rgba(0, 0, 0, 0.918);
         }
 
         *::-webkit-scrollbar-track {
@@ -415,7 +416,6 @@
       /* Container grid, sticking to the top */
       .container {
         width: 100%; /* Width of container */
-        background-color: rgba(0, 0, 0, 0.76); /**/
         background-image: url(./assets/img/pixel-texture-opacity.png);
         position: fixed; /* Makes the grid stick to the top */
         top: 0; /* Aligns it to the top of the viewport */
@@ -426,51 +426,43 @@
         z-index: 10;
       }
 
-      /* Top block spans full width */
-      .top-header-block {
-        height: 10px; /* Fixed height */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: 1px solid #d10d0d;
-      }
-
-      .top-header-block img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-
       /* Middle block for content */
       .middle-header-block {
         display: grid;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         grid-template-columns: 1fr 3fr;
         border-left: 1px solid #d10d0d;
-        background-color: rgba(0, 0, 0, 0.76);
+        background-color: rgba(0, 0, 0, 0.918);
+        height: 140px;
       }
 
       .middle-header-block img {
-        width: 80%;
+        width: 150%;
         object-fit: cover;
         display: block;
-        justify-content: center;
-        align-items: center;
       }
 
-      /* Bottom block spans full width */
-      .bottom-header-block {
-        height: 10px; /* Fixed height */
+      .icon {
         display: flex;
-        justify-content: center;
         align-items: center;
+        justify-content: right;
+        margin-right: 5%;
       }
 
-      .bottom-header-block img {
-        width: 100%;
-        height: 100%;
+      .icon img{
         object-fit: cover;
+        width: 2%;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+      }
+
+      .icon p{
+        color: #d10d0d;
+        font-family: 'Futura';
+        font-size: 1.3rem;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
       }
 
       /* New grid section */
@@ -479,7 +471,7 @@
         grid-template-columns: repeat(4, 1fr); /* Ensures 4 equal columns */
         width: 100%; /* Full width */
         border-left: 1px solid #d10d0d;
-        max-height: 550px;
+        max-height: 470px;
         overflow: hidden;
         border-bottom: 1px solid #d10d0d;
       }
@@ -492,6 +484,7 @@
         max-height: 400px;
         overflow: hidden;
         border-bottom: 1px solid #d10d0d;
+        align-items: start;
       }
 
       .grid-section-2 {
@@ -501,18 +494,35 @@
         border: 1px solid #d10d0d;
       }
 
+      .grid-section-2-2 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        width: 100%; /* Full width */
+        border: 1px solid #d10d0d;
+        align-items: start;
+      }
+
+      .grid-section-2 img{
+        height: 100%;
+        object-fit: cover;
+        justify-self: center;
+      }
+
       /* Grid item styling */
       .grid-item {
         border-right: 1px solid #d10d0d;
         border-bottom: 1px solid #d10d0d;
         border-top: 1px solid #d10d0d;
+        max-width: 480;
+        overflow: hidden;
       }
 
       .grid-item-img {
-        align-self: center;
+        align-self: start;
         border-right: 1px solid #d10d0d;
         border-bottom: 1px solid #d10d0d;
         border-top: 1px solid #d10d0d;
+
       }
 
       .grid-item-no-border {
@@ -523,14 +533,15 @@
       
       .grid-item-left-border {
         border-left: 1px solid #d10d0d;
+        border-right: 1px solid #d10d0d;
         align-self: end;
       }
 
       .grid-item-left-border-img{
-        display: flex;
-        flex-direction: column;
         box-sizing: border-box; /* Ensures padding and border don't affect size */
         border-left: 1px solid #d10d0d;
+        max-width: 480;
+        overflow: hidden;
       }
 
       .grid-item-header {
@@ -541,12 +552,12 @@
         text-align: center;
         border-bottom: 1px solid #d10d0d;
         font-family: 'Futura';
-        padding-bottom: 10%;
-        background-color: rgba(0, 0, 0, 0.76);
+        background-color: rgba(0, 0, 0, 0.918);
       }
 
       .grid-item-header h1 {
         font-family: 'Futura Lt BT';
+        padding: 5%;
       }
 
       .grid-item-header:hover {
@@ -561,10 +572,11 @@
         text-align: left;
         border-top: 1px solid #d10d0d;
         font-family: 'Futura';
-        padding-bottom: 10%;
-        background-color: rgba(0, 0, 0, 0.76);
+        padding-bottom: 3%;
+        background-color: rgba(0, 0, 0, 0.918);
         font-family: 'Futura Lt BT';
         align-self: end;
+
       }
       .grid-item-header-below:hover {
         background-color: #d10d0d96;
@@ -572,6 +584,8 @@
 
       .grid-item-header-below h1 {
         font-family: 'Futura Lt BT';
+        text-align: center;
+        padding-top: 5%;
       }
 
       .grid-item-header-mid {
@@ -586,6 +600,7 @@
       .grid-item-header-mid h1 {
         font-size: 5rem;
         padding: 0%;
+        color: #d10d0d;
       }
 
       .grid-item-text {
@@ -597,6 +612,7 @@
       .grid-item img {
         object-fit: cover; /* Ensures the image maintains its aspect ratio and fills the container */
         overflow: hidden;
+
       }
 
       .footer-menu {
@@ -604,12 +620,13 @@
         font-size: 1rem;
         text-align: left;
         padding: 10%;
-        margin-top: 30%;
-        margin-bottom: 30%;
+        margin-top: 15%;
+        margin-bottom: 20%;
+        color: #d10d0d;
       }
 
       .footer-menu h1 {
-
+        font-family: 'Futura Lt BT';
         text-align: left;
         padding: 0%;
 
@@ -624,6 +641,7 @@
         justify-content: center;
         align-items: center;
         border: 1px solid #d10d0d;
+        background-color: rgba(0, 0, 0, 0.918);
       }
 
       .top-footer-block img {
@@ -639,7 +657,7 @@
         align-items: center;
         grid-template-columns: 1fr 300px 300px;
         border-left: 1px solid #d10d0d;
-        background-color: rgba(0, 0, 0, 0.76);
+        background-color: rgba(0, 0, 0, 0.918);
       }
 
       .middle-footer-block img {
@@ -668,19 +686,21 @@
 </head>
 <body>
   <div class="container">
-    <div class="top-header-block">
-      <img src="./assets/img/union-bar.png" alt="Union Bar">
-    </div>
+
     <div class="middle-header-block">
       <img src="./assets/img/Typo-red.png" alt="Union Bar">
+      <div class="icon">
+        <p>EN</p>
+        <img src="./assets/img/union search.png" alt="Union Bar">
+        <img src="./assets/img/union login.png" alt="Union Bar">
+        <img src="./assets/img/union shopping cart.png" alt="Union Bar">
+      </div>
     </div>
-    <div class="bottom-header-block">
-      <img src="./assets/img/union-bar.png" alt="Union Bar">
-    </div>
+
 
     <!-- New Grid Section -->
     <div class="grid-section-1">
-      <div class="grid-item-img"><img src="./assets/img/keep1.png" alt="Union Bar"></div>
+      <div class="grid-item-img"><img src="./assets/img/union2.png" alt="Union Bar"></div>
       <div class="grid-item">
         <div class="grid-item-header"><h1>ABOUT US</h1></div>
         <div><h1>OUR HISTORY</h1></div>
@@ -688,7 +708,7 @@
       </div>
       <div class="grid-item">
         <div class="grid-item-header"><h1>COLLECTIONS</h1></div>
-        <div class="grid-item-no-border"><img src="./assets/img/bg-end1.png" alt="Union Bar"></div>
+        <div class="grid-item-no-border"><img src="./assets/img/union3.png" alt="Union Bar"></div>
       </div>
       <div class="grid-item">
         <div class="grid-item-header"><h1>COMMUNITY</h1></div>
@@ -696,7 +716,7 @@
         <div class="grid-item-text">LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS NISI UT ALIQUIP EX EA COMMODO.</div>
       </div>
     </div>
-
+    
     <div class="grid-section-1-2">
       <div class="grid-item-no-border">
         <div>
@@ -722,50 +742,49 @@
           DOLL IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS NISI UT ALIQUIP EX EA COMMODO CONSEQUAT.LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA.
         </div>
     </div>
-      <div class="grid-item-left-border-img"><img src="./assets/img/test-img.jpg" alt="Union Bar"></div>
+      <div class="grid-item-left-border-img"><img src="./assets/img/union1.png" alt="Union Bar"></div>
     </div>
 
     <!-- New Grid Section 2 (Side by Side Items) -->
     <div class="grid-section-2">
-      <div class="grid-item-header-mid">
-        <h1>FUEL.</h1>
-      </div>
-      <div class="grid-item-header-mid">
-        <h1>YOUR.</h1>
-      </div>
-      <div class="grid-item-header-mid">
-        <h1>ENERGY.</h1>
-      </div>
+      <img src="./assets/img/fuel.png" alt="Union Bar">
+      <img src="./assets/img/your.png" alt="Union Bar">
+      <img src="./assets/img/energy.png" alt="Union Bar">
     </div>
 
     <!-- New Grid Section 2 (Side by Side Items) -->
     <div class="grid-section-2">
       <div class="grid-item-no-border">
-        <div>
+
           <h1>COLLABORATION</h1>
-        </div>
+
         <div class="grid-item-text">
           LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS NISI UT ALIQUIP EX EA COMMODO CONSEQUAT.LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA.
+          LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS NISI UT ALIQUIP EX EA COMMODO CONSEQUAT.
         </div>
 
         <div class="grid-item-header-below"><h1>COMMUNITY MEMBERS</h1></div>
     </div>
       <div class="grid-item-left-border-img">
-        <img src="./assets/img/test-img.jpg" alt="Union Bar">
+        <img src="./assets/img/union4.png" alt="Union Bar">
       </div>
       <div class="grid-item-no-border">
-        <div>
+
           <h1>WELCOME</h1>
-        </div>
+
         <div class="grid-item-text">
-          LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS NISI UT ALIQUIP EX EA COMMODO CONSEQUAT. LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. 
+          LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS NISI UT ALIQUIP EX EA COMMODO CONSEQUAT. LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS NISI UT ALIQUIP EX EA COMMODO CONSEQUAT.
         </div>
         <div class="grid-item-header-below"><h1>JOIN US</h1></div>
       </div>
     </div>
 
-    <!-- New Grid Section 2 (Side by Side Items) -->
-    <div class="grid-section-2">
+    <div class="top-footer-block">
+      <img src="./assets/img/union-bar.png" alt="Union Bar">
+    </div>
+
+    <!-- New Grid Section 2 (Side by Side Items) 
+    <div class="grid-section-2-2">
       <div class="grid-item-no-border">
         <div>
           <h1>NOWADAYS</h1>
@@ -782,7 +801,7 @@
           LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS NISI UT ALIQUIP EX EA COMMODO CONSEQUAT.LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA.
         </div>
       </div>
-      <div class="grid-item-left-border">
+      <div class="grid-item-no-border">
         <div>
           <h1>NOWADAYS</h1>
         </div>
@@ -790,11 +809,8 @@
           LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS NISI UT ALIQUIP EX EA COMMODO CONSEQUAT.
         </div>
       </div>
-    </div>
+    </div> -->
     
-    <div class="top-footer-block">
-      <img src="./assets/img/union-bar.png" alt="Union Bar">
-    </div>
     <div class="middle-footer-block">
       <img src="./assets/img/Typo-red.png" alt="Union Bar">
       <div class="footer-menu">
@@ -812,16 +828,13 @@
         CONTACT
       </div>
     </div>
-    <div class="bottom-footer-block">
-      <img src="./assets/img/union-bar.png" alt="Union Bar">
-    </div>
   </div>
 
 
 
 
-          <!-- Gradient code-->
-          <div class="gradient-bg">
+    <!-- Gradient code-->
+    <div class="gradient-bg">
             <svg 
                 viewBox="0 0 100vw 100vw"
                 xmlns='http://www.w3.org/2000/svg'
