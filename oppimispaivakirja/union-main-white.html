@@ -367,7 +367,7 @@
         /* Custom scrollbar for WebKit browsers */
         *::-webkit-scrollbar {
             width: 20px; /* Width of the scrollbar */
-            background-color: rgba(255, 255, 255, 0.918);
+            background-color: ddddd5;
         }
 
         *::-webkit-scrollbar-track {
@@ -380,7 +380,7 @@
         }
 
         *::-webkit-scrollbar-thumb:hover {
-            background-color: #d10d0d; /* Color when hovering over the thumb */
+          background-color: #d10d0d96; /* Color when hovering over the thumb */
         }
 
 
@@ -389,7 +389,7 @@
 
 
         h1 {
-            font-size: 2rem;
+            color: #d10d0d;
         }
         
         h1, h2, h3 {
@@ -398,7 +398,6 @@
             padding-top: 10%;
             padding-left: 10%;
             padding-right: 10%;
-            min-height: 86px;
         }
 
       /* Reset margins and background */
@@ -433,12 +432,12 @@
         align-items: center;
         grid-template-columns: 1fr 3fr;
         border-left: 1px solid #d10d0d;
-        background-color: rgba(255, 255, 255, 0.918);
-        height: 140px;
+        background-color: ddddd5;
+        height: 110px;
       }
 
       .middle-header-block img {
-        width: 150%;
+        width: 100%;
         object-fit: cover;
         display: block;
       }
@@ -452,7 +451,7 @@
 
       .icon img{
         object-fit: cover;
-        width: 2%;
+        width: 1.5%;
         margin-left: 2.5%;
         margin-right: 2.5%;
       }
@@ -515,7 +514,7 @@
         border-top: 1px solid #d10d0d;
         max-width: 480;
         overflow: hidden;
-        color: rgba(255, 255, 255, 0.918);
+        color: ddddd5;
       }
 
       .grid-item-img {
@@ -529,7 +528,7 @@
       .grid-item-no-border {
         display: grid;
         box-sizing: border-box; /* Ensures padding and border don't affect size */
-        color: rgba(255, 255, 255, 0.918);
+        color: ddddd5;
 
       }
       
@@ -550,45 +549,48 @@
       .grid-item-header {
         font-size: 1.5rem;
         font-weight: bold;
-        color: #d10d0d;
         width: 100%;
         text-align: center;
         border-bottom: 1px solid #d10d0d;
         font-family: 'Futura';
-        background-color: rgba(255, 255, 255, 0.918);
+        background-color: ddddd5;
+        background-color: #d10d0d96;
       }
 
       .grid-item-header h1 {
         font-family: 'Futura Lt BT';
         padding: 5%;
+        color: black;
+        font-size: 1.5rem;
       }
 
       .grid-item-header:hover {
-        background-color: #d10d0d96;
+        background-color: #d10d0d00;
+        color: black;
         }
 
       .grid-item-header-below {
-        font-size: 1.5rem;
+        font-size: .9rem;
         font-weight: bold;
-        color: #d10d0d;
         width: 100%;
         text-align: left;
         border-top: 1px solid #d10d0d;
         font-family: 'Futura';
         padding-bottom: 3%;
-        background-color: rgba(255, 255, 255, 0.918);
+        background-color: #d10d0d96;
         font-family: 'Futura Lt BT';
         align-self: end;
 
       }
       .grid-item-header-below:hover {
-        background-color: #d10d0d96;
+        background-color: #d10d0d00;
         }
 
       .grid-item-header-below h1 {
         font-family: 'Futura Lt BT';
         text-align: center;
-        padding-top: 5%;
+        padding-top: 4%;
+        color: black;
       }
 
       .grid-item-header-mid {
@@ -607,10 +609,10 @@
       }
 
       .grid-item-text {
-        font-size: 1rem;
+        font-size: .8rem;
         text-align: left;
         padding: 10%;
-        color: rgba(255, 255, 255, 0.918);
+        color: ddddd5;
       }
 
       .grid-item img {
@@ -645,7 +647,7 @@
         justify-content: center;
         align-items: center;
         border: 1px solid #d10d0d;
-        background-color: rgba(255, 255, 255, 0.918);
+        background-color: ddddd5;
       }
 
       .top-footer-block img {
@@ -661,7 +663,7 @@
         align-items: center;
         grid-template-columns: 1fr 300px 300px;
         border-left: 1px solid #d10d0d;
-        background-color: rgba(255, 255, 255, 0.918);
+        background-color: ddddd5;
       }
 
       .middle-footer-block img {
@@ -686,6 +688,10 @@
         object-fit: cover;
       }
 
+      .div-86px {
+        min-height: 86px;
+      }
+
   </style>
 </head>
 <body>
@@ -707,7 +713,7 @@
       <div class="grid-item-img"><img src="./assets/img/union2.png" alt="Union Bar"></div>
       <div class="grid-item">
         <div class="grid-item-header"><h1>ABOUT US</h1></div>
-        <div><h1>OUR HISTORY</h1></div>
+        <div class="div-86px"><h1>OUR HISTORY</h1></div>
         <div class="grid-item-text">FROM PUMPING FUEL TO IGNITING ENERGY, OUR STORY BEGAN AS A HUMBLE GAS STATION CHAIN IN FINLAND. ROOTED IN THE SPIRIT OF HARD WORK AND INNOVATION, WE GREW TO BECOME A SYMBOL OF RESILIENCE AND POSSIBILITY. AS THE WORLD EVOLVED, SO DID WE—TRANSFORMING FROM SERVING ROADSIDE TRAVELERS TO EQUIPPING ADVENTURERS READY TO EXPLORE NEW HORIZONS.</div>
       </div>
       <div class="grid-item">
@@ -716,14 +722,15 @@
       </div>
       <div class="grid-item">
         <div class="grid-item-header"><h1>COMMUNITY</h1></div>
-        <h1> </h1>
+
+        <div class="div-86px"> </div>
         <div class="grid-item-text">TODAY, OUR BRAND IS ABOUT MORE THAN CLOTHING—IT'S ABOUT FUELING YOUR ENERGY AND SPARKING INNOVATION IN EVERYTHING YOU DO. WE DESIGN FOR THOSE WHO CHASE CHALLENGES, EMBRACE COMMUNITY, AND PUSH BEYOND LIMITS. WITH EVERY PIECE WE CREATE, WE CARRY FORWARD OUR HERITAGE OF EMPOWERING PEOPLE TO TURN THE EVERYDAY INTO THE EXTRAORDINARY.</div>
       </div>
     </div>
     
     <div class="grid-section-1-2">
       <div class="grid-item-no-border">
-        <div>
+        <div class="div-86px">
           <h1>NOWADAYS</h1>
         </div>
         <div class="grid-item-text">
@@ -731,7 +738,7 @@
         </div>
     </div>
       <div class="grid-item-no-border">
-        <div>
+        <div class="div-86px">
           <h1> </h1>
         </div>
         <div class="grid-item-text">
@@ -739,7 +746,7 @@
         </div>
     </div>
       <div class="grid-item-no-border">
-        <div>
+        <div class="div-86px">
           <h1> </h1>
         </div>
         <div class="grid-item-text">
@@ -769,7 +776,7 @@
         <div class="grid-item-header-below"><h1>COMMUNITY MEMBERS</h1></div>
     </div>
       <div class="grid-item-left-border-img">
-        <img src="./assets/img/union4.png" alt="Union Bar">
+        <img src="./assets/img/union4-1.png" alt="Union Bar">
       </div>
       <div class="grid-item-no-border">
 
