@@ -484,7 +484,7 @@
         border-left: 1px solid #d10d0d;
         max-height: 600px;
         overflow: hidden;
-        border-bottom: 1px solid #d10d0d;
+
       }
 
       .grid-section-1-1 {
@@ -509,28 +509,31 @@
       /* Grid item styling */
       .grid-item {
         border-right: 1px solid #d10d0d;
-        border-bottom: 1px solid #d10d0d;
         border-top: 1px solid #d10d0d;
         max-width: 480;
         overflow: hidden;
       }
 
-      .grid-item-img {
-        align-self: start;
-        border-right: 1px solid #d10d0d;
-        border-bottom: 1px solid #d10d0d;
-        border-top: 1px solid #d10d0d;
-
-      }
-
-      .grid-item-no-border {
-        max-width: 480;
-        overflow: hidden;
+      .image-container {
+        width: 480;
         align-items: end;
+        background-size: cover;
+        background-position: center;
+        transition: background-image 0.3s ease-in-out;
+        background-image: url('./assets/img/union-clothes-1.png'); /* Initial background image */
       }
-      .grid-item-no-border img{
-        border-bottom: 1px solid #d10d0d;
+
+      .text-container {
+        width: 480;
+        align-items: end;
+        background-size: cover;
+        background-position: center;
       }
+
+      .image-container:hover {
+        background-image: url('./assets/img/union-clothes-2.png'); /* Change to the hover image */
+      }
+
       
       .grid-item-left-border {
         border-left: 1px solid #d10d0d;
@@ -549,22 +552,9 @@
         color: #d10d0d;
         width: 100%;
         text-align: center;
+        border-top: 1px solid #d10d0d;
       }
 
-      .grid-item-header-mid {
-        font-weight: bold;
-        color: #d10d0d;
-        width: 100%;
-        text-align: center;
-        font-family: 'Futura';
-        border-right: 1px solid #d10d0d;
-      }
-      
-      .grid-item-header-mid h1 {
-        font-size: .5rem;
-        padding: 0%;
-        color: #d10d0d;
-      }
 
       .grid-item-text {
         font-size: 1rem;
@@ -659,7 +649,7 @@
       <div class="grid-item">
         <img src="./assets/img/union-collections.png" alt="Union Bar">
       </div>
-      <div class="grid-item-no-border">
+      <div class="text-container">
         <div><h1>POW[D]ER]</h1></div>
         <div class="grid-item-text">LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS NISI UT ALIQUIP EX EA COMMODO CONSEQUAT.LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA.</div>
       </div>
@@ -668,81 +658,81 @@
     <!-- New Grid Section -->
     <div class="grid-section-1">
       <div class="grid-item">
-        <div class="grid-item-no-border"><img src="./assets/img/union-clothes-1.png" alt="Union Bar"></div>
+        <div class="image-container"><img src="./assets/img/union-clothes-0.png" ></div>
         <div class="grid-item-header"><h1>XFRT 1452</h1></div>
       </div>
       <div class="grid-item">
-        <div class="grid-item-no-border"><img src="./assets/img/union-clothes-2.png" alt="Union Bar"></div>
+        <div class="image-container"><img src="./assets/img/union-clothes-0.png" alt="Union Bar"></div>
         <div class="grid-item-header"><h1>XFRT 1452</h1></div>
       </div>
       <div class="grid-item">
-        <div class="grid-item-no-border"><img src="./assets/img/union-clothes-3.png" alt="Union Bar"></div>
+        <div class="image-container"><img src="./assets/img/union-clothes-0.png" alt="Union Bar"></div>
         <div class="grid-item-header"><h1>XFRT 1452</h1></div>
       </div>
       <div class="grid-item">
-        <div class="grid-item-no-border"><img src="./assets/img/union-clothes-4.png" alt="Union Bar"></div>
+        <div class="image-container"><img src="./assets/img/union-clothes-0.png" alt="Union Bar"></div>
         <div class="grid-item-header"><h1>XFRT 1452</h1></div>
       </div>
       <div class="grid-item">
-        <div class="grid-item-no-border"><img src="./assets/img/union-clothes-5.png" alt="Union Bar"></div>
+        <div class="image-container"><img src="./assets/img/union-clothes-0.png" alt="Union Bar"></div>
         <div class="grid-item-header"><h1>XFRT 1452</h1></div>
       </div>
       <div class="grid-item">
-        <div class="grid-item-no-border"><img src="./assets/img/union-clothes-6.png" alt="Union Bar"></div>
-        <div class="grid-item-header"><h1>XFRT 1452</h1></div>
-      </div>
-    </div>
-
-    <div class="grid-section-1">
-      <div class="grid-item">
-        <div class="grid-item-no-border"><img src="./assets/img/union-clothes-2.png" alt="Union Bar"></div>
-        <div class="grid-item-header"><h1>XFRT 1452</h1></div>
-      </div>
-      <div class="grid-item">
-        <div class="grid-item-no-border"><img src="./assets/img/union-clothes-4.png" alt="Union Bar"></div>
-        <div class="grid-item-header"><h1>XFRT 1452</h1></div>
-      </div>
-      <div class="grid-item">
-        <div class="grid-item-no-border"><img src="./assets/img/union-clothes-1.png" alt="Union Bar"></div>
-        <div class="grid-item-header"><h1>XFRT 1452</h1></div>
-      </div>
-      <div class="grid-item">
-        <div class="grid-item-no-border"><img src="./assets/img/union-clothes-6.png" alt="Union Bar"></div>
-        <div class="grid-item-header"><h1>XFRT 1452</h1></div>
-      </div>
-      <div class="grid-item">
-        <div class="grid-item-no-border"><img src="./assets/img/union-clothes-3.png" alt="Union Bar"></div>
-        <div class="grid-item-header"><h1>XFRT 1452</h1></div>
-      </div>
-      <div class="grid-item">
-        <div class="grid-item-no-border"><img src="./assets/img/union-clothes-5.png" alt="Union Bar"></div>
+        <div class="image-container"><img src="./assets/img/union-clothes-0.png" alt="Union Bar"></div>
         <div class="grid-item-header"><h1>XFRT 1452</h1></div>
       </div>
     </div>
 
     <div class="grid-section-1">
       <div class="grid-item">
-        <div class="grid-item-no-border"><img src="./assets/img/union-clothes-6.png" alt="Union Bar"></div>
+        <div class="image-container"><img src="./assets/img/union-clothes-0.png" alt="Union Bar"></div>
         <div class="grid-item-header"><h1>XFRT 1452</h1></div>
       </div>
       <div class="grid-item">
-        <div class="grid-item-no-border"><img src="./assets/img/union-clothes-4.png" alt="Union Bar"></div>
+        <div class="image-container"><img src="./assets/img/union-clothes-0.png" alt="Union Bar"></div>
         <div class="grid-item-header"><h1>XFRT 1452</h1></div>
       </div>
       <div class="grid-item">
-        <div class="grid-item-no-border"><img src="./assets/img/union-clothes-2.png" alt="Union Bar"></div>
+        <div class="image-container"><img src="./assets/img/union-clothes-0.png" alt="Union Bar"></div>
         <div class="grid-item-header"><h1>XFRT 1452</h1></div>
       </div>
       <div class="grid-item">
-        <div class="grid-item-no-border"><img src="./assets/img/union-clothes-5.png" alt="Union Bar"></div>
+        <div class="image-container"><img src="./assets/img/union-clothes-0.png" alt="Union Bar"></div>
         <div class="grid-item-header"><h1>XFRT 1452</h1></div>
       </div>
       <div class="grid-item">
-        <div class="grid-item-no-border"><img src="./assets/img/union-clothes-1.png" alt="Union Bar"></div>
+        <div class="image-container"><img src="./assets/img/union-clothes-0.png" alt="Union Bar"></div>
         <div class="grid-item-header"><h1>XFRT 1452</h1></div>
       </div>
       <div class="grid-item">
-        <div class="grid-item-no-border"><img src="./assets/img/union-clothes-3.png" alt="Union Bar"></div>
+        <div class="image-container"><img src="./assets/img/union-clothes-0.png" alt="Union Bar"></div>
+        <div class="grid-item-header"><h1>XFRT 1452</h1></div>
+      </div>
+    </div>
+
+    <div class="grid-section-1">
+      <div class="grid-item">
+        <div class="image-container"><img src="./assets/img/union-clothes-0.png" alt="Union Bar"></div>
+        <div class="grid-item-header"><h1>XFRT 1452</h1></div>
+      </div>
+      <div class="grid-item">
+        <div class="image-container"><img src="./assets/img/union-clothes-0.png" alt="Union Bar"></div>
+        <div class="grid-item-header"><h1>XFRT 1452</h1></div>
+      </div>
+      <div class="grid-item">
+        <div class="image-container"><img src="./assets/img/union-clothes-0.png" alt="Union Bar"></div>
+        <div class="grid-item-header"><h1>XFRT 1452</h1></div>
+      </div>
+      <div class="grid-item">
+        <div class="image-container"><img src="./assets/img/union-clothes-0.png" alt="Union Bar"></div>
+        <div class="grid-item-header"><h1>XFRT 1452</h1></div>
+      </div>
+      <div class="grid-item">
+        <div class="image-container"><img src="./assets/img/union-clothes-0.png" alt="Union Bar"></div>
+        <div class="grid-item-header"><h1>XFRT 1452</h1></div>
+      </div>
+      <div class="grid-item">
+        <div class="image-container"><img src="./assets/img/union-clothes-0.png" alt="Union Bar"></div>
         <div class="grid-item-header"><h1>XFRT 1452</h1></div>
       </div>
     </div>
