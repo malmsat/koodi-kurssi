@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Union Landing Page</title>
+  <style>
+        @font-face {
+            font-family: 'Futura';
+            src: url('./assets/fonts/Futura-Bold.woff2') format('woff2');
+            font-weight: 500;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Futura MdCn BT';
+            src: url('./assets/fonts/FuturaBT-MediumCondensed.woff2') format('woff2');
+            font-weight: 500;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Futura Hv BT';
+            src: url('./assets/fonts/FuturaBT-HeavyItalic.woff2') format('woff2');
+            font-weight: 900;
+            font-style: italic;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Futura Md BT';
+            src: url('./assets/fonts/FuturaBT-MediumItalic.woff2') format('woff2');
+            font-weight: 500;
+            font-style: italic;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Futura Hv BT';
+            src: url('./assets/fonts/FuturaBT-Heavy.woff2') format('woff2');
+            font-weight: 900;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Futura XBlkCnIt BT';
+            src: url('./assets/fonts/FuturaBT-ExtraBlackCondItalic.woff2') format('woff2');
+            font-weight: 900;
+            font-style: italic;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Futura';
+            src: url('./assets/fonts/Futura-Bold.woff2') format('woff2');
+            font-weight: bold;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Futura Md BT';
+            src: url('./assets/fonts/FuturaBT-BoldItalic.woff2') format('woff2');
+            font-weight: bold;
+            font-style: italic;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Futura XBlk BT';
+            src: url('./assets/fonts/FuturaBT-ExtraBlack.woff2') format('woff2');
+            font-weight: 900;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Futura BdCn BT';
+            src: url('./assets/fonts/FuturaBT-BoldCondensed.woff2') format('woff2');
+            font-weight: bold;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Futura XBlk BT';
+            src: url('./assets/fonts/FuturaBT-ExtraBlack.woff2') format('woff2');
+            font-weight: 900;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Futura Bk BT';
+            src: url('./assets/fonts/FuturaBT-BookItalic.woff2') format('woff2');
+            font-weight: normal;
+            font-style: italic;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Futura';
+            src: url('./assets/fonts/Futura-Black-Bold.woff2') format('woff2');
+            font-weight: bold;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Futura';
+            src: url('./assets/fonts/Futura-CondensedLight.woff2') format('woff2');
+            font-weight: 300;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Futura LtCn BT';
+            src: url('./assets/fonts/FuturaBT-LightCondensed.woff2') format('woff2');
+            font-weight: 300;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Futura Lt BT';
+            src: url('./assets/fonts/FuturaBT-Light.woff2') format('woff2');
+            font-weight: 300;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Futura Bk BT';
+            src: url('./assets/fonts/FuturaBT-Book.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Futura Md BT';
+            src: url('./assets/fonts/FuturaBT-Medium.woff2') format('woff2');
+            font-weight: 500;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Futura Lt BT';
+            src: url('./assets/fonts/FuturaBT-LightItalic.woff2') format('woff2');
+            font-weight: 300;
+            font-style: italic;
+            font-display: swap;
+        }
+
+        :root {
+            --color-bg1: rgb(255, 255, 255);
+            --color-bg2: rgb(255, 255, 255);
+            --color1: 25,97,173;
+            --color2: 59, 129, 110;
+            --color3: 38, 143, 129;
+            --color4: 209, 13, 13;
+            --color5: 209, 13, 13;
+            --color-interactive: 233, 204, 92;
+            --circle-size:150%;
+            --blending: hard-light;
+        }
+
+
+        * {
+            margin:0;
+            padding:0;
+            outline:none;
+            list-style:none;
+            text-decoration:none;
+            box-sizing:border-box;
+
+            background: transparent;
+            border:none;
+        }
+
+        html, body {
+            font-family: 'Futura', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Futura Lt BT', sans-serif;
+        }
+
+        .noise {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 1;
+            opacity: 0.1;
+        }
+
+        .content {
+            position: fixed;
+            z-index: 2;
+            text-shadow: -3px 0px 2px rgba(0,0,0,0.1);
+        }
+
+        @keyframes moveInCircle {
+        0% {
+            transform: rotate(0deg);
+        }
+        50% {
+            transform: rotate(180deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+        }
+
+        @keyframes moveVertical {
+        0% {
+            transform: translateY(-50%);
+        }
+        50% {
+            transform: translateY(50%);
+        }
+        100% {
+            transform: translateY(-50%);
+        }
+        }
+
+        @keyframes moveHorizontal {
+        0% {
+            transform: translateX(-50%) translateY(-10%);
+        }
+        50% {
+            transform: translateX(50%) translateY(10%);
+        }
+        100% {
+            transform: translateX(-50%) translateY(-10%);
+        }
+        }
+
+        .gradient-bg {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        overflow: hidden;
+        background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
+        top: 0;
+        left: 0;
+        }
+
+        .svgBlur {
+            display: none;
+        }
+
+        .noiseBg {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            mix-blend-mode: soft-light;
+            opacity: 0.3;
+        }
+        .gradients-container {
+            filter: url(#goo) blur(40px) ;
+            width: 100%;
+            height: 100%;
+        }
+
+        .g1 {
+            position: absolute;
+            background: radial-gradient(circle at center, rgba(var(--color1), 0.8) 0, rgba(var(--color1), 0) 50%) no-repeat;
+            mix-blend-mode: var(--blending);
+
+            width: var(--circle-size);
+            height: var(--circle-size);
+            top: calc(50% - var(--circle-size) / 2);
+            left: calc(50% - var(--circle-size) / 2);
+
+            transform-origin: center center;
+            animation: moveVertical 30s ease infinite;
+
+            opacity: 1;
+        }
+        .g2 {
+            position: absolute;
+            background: radial-gradient(circle at center, rgba(var(--color2), 0.8) 0, rgba(var(--color2), 0) 50%) no-repeat;
+            mix-blend-mode: var(--blending);
+
+            width: var(--circle-size);
+            height: var(--circle-size);
+            top: calc(50% - var(--circle-size) / 2);
+            left: calc(50% - var(--circle-size) / 2);
+
+            transform-origin: calc(50% - 400px);
+            animation: moveInCircle 20s reverse infinite;
+
+            opacity: 1;
+        }
+        .g3 {
+            position: absolute;
+            background: radial-gradient(circle at center, rgba(var(--color3), 0.8) 0, rgba(var(--color3), 0) 50%) no-repeat;
+            mix-blend-mode: var(--blending);
+
+            width: var(--circle-size);
+            height: var(--circle-size);
+            top: calc(50% - var(--circle-size) / 2 + 200px);
+            left: calc(50% - var(--circle-size) / 2 - 500px);
+
+            transform-origin: calc(50% + 400px);
+            animation: moveInCircle 40s linear infinite;
+
+            opacity: 1;
+        }
+        .g4 {
+            position: absolute;
+            background: radial-gradient(circle at center, rgba(var(--color4), 0.8) 0, rgba(var(--color4), 0) 50%) no-repeat;
+            mix-blend-mode: var(--blending);
+
+            width: var(--circle-size);
+            height: var(--circle-size);
+            top: calc(50% - var(--circle-size) / 2);
+            left: calc(50% - var(--circle-size) / 2);
+
+            transform-origin: calc(50% - 200px);
+            animation: moveHorizontal 40s ease infinite;
+
+            opacity: 0.7;
+        }
+        .g5 {
+            position: absolute;
+            background: radial-gradient(circle at center, rgba(var(--color5), 0.8) 0, rgba(var(--color5), 0) 50%) no-repeat;
+            mix-blend-mode: var(--blending);
+
+            width: calc(var(--circle-size) * 2);
+            height: calc(var(--circle-size) * 2);
+            top: calc(50% - var(--circle-size));
+            left: calc(50% - var(--circle-size));
+
+            transform-origin: calc(50% - 800px) calc(50% + 200px);
+            animation: moveInCircle 20s ease infinite;
+
+            opacity: 1;
+        }
+
+        .interactive {
+            position: fixed;
+            background: radial-gradient(circle at center, rgba(var(--color-interactive), 0.8) 0, rgba(var(--color-interactive), 0) 50%) no-repeat;
+            mix-blend-mode: var(--blending);
+
+            width: 100%;
+            height: 100%;
+            top: -50%;
+            left: -50%;
+
+            opacity: 0.7;
+        }
+
+        /* Custom scrollbar for WebKit browsers */
+        *::-webkit-scrollbar {
+            width: 20px; /* Width of the scrollbar */
+            background-color: rgba(255, 255, 255, 0.918);
+        }
+
+        *::-webkit-scrollbar-track {
+            border: 1px solid #d10d0d; /* Space around the thumb */
+        }
+
+        *::-webkit-scrollbar-thumb {
+            background-color: #d10d0d00; /* Color of the thumb (scroll handle) */
+            border: 1px solid #d10d0d; /* Space around the thumb */
+        }
+
+        *::-webkit-scrollbar-thumb:hover {
+            background-color: #d10d0d; /* Color when hovering over the thumb */
+        }
+
+
+
+
+
+
+        h1 {
+            font-size: 2rem;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Futura';
+            font-weight: 500;
+            padding-top: 10%;
+            padding-left: 10%;
+            padding-right: 10%;
+            min-height: 86px;
+        }
+
+      /* Reset margins and background */
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center; /* Centers the container horizontally */
+        align-items: flex-start; /* Aligns the container to the top */
+        height: 100vh;
+        overflow: hidden;
+        z-index: 10;
+      }
+
+      /* Container grid, sticking to the top */
+      .container {
+        width: 100%; /* Width of container */
+        background-image: url(./assets/img/pixel-texture-opacity.png);
+        position: fixed; /* Makes the grid stick to the top */
+        top: 0; /* Aligns it to the top of the viewport */
+        /*border: 2px solid #d10d0d;*/
+        height: 100vh; /* Fills the entire viewport height */
+        overflow: auto; /* Ensures content is scrollable if needed */
+        box-sizing: border-box;
+        z-index: 10;
+      }
+
+      /* Middle block for content */
+      .middle-header-block {
+        display: grid;
+        justify-content: space-between;
+        align-items: center;
+        grid-template-columns: 1fr 3fr;
+        border-left: 1px solid #d10d0d;
+        background-color: rgba(255, 255, 255, 0.918);
+        height: 140px;
+      }
+
+      .middle-header-block img {
+        width: 150%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .icon {
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        margin-right: 5%;
+      }
+
+      .icon img{
+        object-fit: cover;
+        width: 2%;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+      }
+
+      .icon p{
+        color: #d10d0d;
+        font-family: 'Futura';
+        font-size: 1.3rem;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+      }
+
+      /* New grid section */
+      .grid-section-1 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* Ensures 4 equal columns */
+        width: 100%; /* Full width */
+        border-left: 1px solid #d10d0d;
+        max-height: 470px;
+        overflow: hidden;
+        border-bottom: 1px solid #d10d0d;
+      }
+
+      .grid-section-1-2 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* Ensures 4 equal columns */
+        width: 100%; /* Full width */
+        border-left: 1px solid #d10d0d;
+        max-height: 400px;
+        overflow: hidden;
+        border-bottom: 1px solid #d10d0d;
+        align-items: start;
+      }
+
+      .grid-section-2 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        width: 100%; /* Full width */
+        border: 1px solid #d10d0d;
+      }
+
+      .grid-section-2-2 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        width: 100%; /* Full width */
+        border: 1px solid #d10d0d;
+        align-items: start;
+      }
+
+      .grid-section-2 img{
+        height: 100%;
+        object-fit: cover;
+        justify-self: center;
+      }
+
+      /* Grid item styling */
+      .grid-item {
+        border-right: 1px solid #d10d0d;
+        border-bottom: 1px solid #d10d0d;
+        border-top: 1px solid #d10d0d;
+        max-width: 480;
+        overflow: hidden;
+        color: rgba(255, 255, 255, 0.918);
+      }
+
+      .grid-item-img {
+        align-self: start;
+        border-right: 1px solid #d10d0d;
+        border-bottom: 1px solid #d10d0d;
+        border-top: 1px solid #d10d0d;
+
+      }
+
+      .grid-item-no-border {
+        display: grid;
+        box-sizing: border-box; /* Ensures padding and border don't affect size */
+        color: rgba(255, 255, 255, 0.918);
+
+      }
+      
+      .grid-item-left-border {
+        border-left: 1px solid #d10d0d;
+        border-right: 1px solid #d10d0d;
+        align-self: end;
+      }
+
+      .grid-item-left-border-img{
+        box-sizing: border-box; /* Ensures padding and border don't affect size */
+        border-left: 1px solid #d10d0d;
+        border-right: 1px solid #d10d0d;
+        max-width: 480;
+        overflow: hidden;
+      }
+
+      .grid-item-header {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #d10d0d;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #d10d0d;
+        font-family: 'Futura';
+        background-color: rgba(255, 255, 255, 0.918);
+      }
+
+      .grid-item-header h1 {
+        font-family: 'Futura Lt BT';
+        padding: 5%;
+      }
+
+      .grid-item-header:hover {
+        background-color: #d10d0d96;
+        }
+
+      .grid-item-header-below {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #d10d0d;
+        width: 100%;
+        text-align: left;
+        border-top: 1px solid #d10d0d;
+        font-family: 'Futura';
+        padding-bottom: 3%;
+        background-color: rgba(255, 255, 255, 0.918);
+        font-family: 'Futura Lt BT';
+        align-self: end;
+
+      }
+      .grid-item-header-below:hover {
+        background-color: #d10d0d96;
+        }
+
+      .grid-item-header-below h1 {
+        font-family: 'Futura Lt BT';
+        text-align: center;
+        padding-top: 5%;
+      }
+
+      .grid-item-header-mid {
+        font-weight: bold;
+        color: #d10d0d;
+        width: 100%;
+        text-align: center;
+        font-family: 'Futura';
+        border-right: 1px solid #d10d0d;
+      }
+      
+      .grid-item-header-mid h1 {
+        font-size: 5rem;
+        padding: 0%;
+        color: #d10d0d;
+      }
+
+      .grid-item-text {
+        font-size: 1rem;
+        text-align: left;
+        padding: 10%;
+        color: rgba(255, 255, 255, 0.918);
+      }
+
+      .grid-item img {
+        object-fit: cover; /* Ensures the image maintains its aspect ratio and fills the container */
+        overflow: hidden;
+
+      }
+
+      .footer-menu {
+        align-self: start; /* Aligns the item to the top */
+        font-size: 1rem;
+        text-align: left;
+        padding: 10%;
+        margin-top: 15%;
+        margin-bottom: 20%;
+        color: #d10d0d;
+      }
+
+      .footer-menu h1 {
+        font-family: 'Futura Lt BT';
+        text-align: left;
+        padding: 0%;
+
+      }
+
+
+
+            /* Top block spans full width */
+            .top-footer-block {
+        height: 10px; /* Fixed height */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #d10d0d;
+        background-color: rgba(255, 255, 255, 0.918);
+      }
+
+      .top-footer-block img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* Middle block for content */
+      .middle-footer-block {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: 1fr 300px 300px;
+        border-left: 1px solid #d10d0d;
+        background-color: rgba(255, 255, 255, 0.918);
+      }
+
+      .middle-footer-block img {
+        width: 80%;
+        object-fit: cover;
+        display: block;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* Bottom block spans full width */
+      .bottom-footer-block {
+        height: 10px; /* Fixed height */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .bottom-footer-block img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="middle-header-block">
+      <img src="./assets/img/Typo-red.png" alt="Union Bar">
+      <div class="icon">
+        <p>EN</p>
+        <img src="./assets/img/union search.png" alt="Union Bar">
+        <img src="./assets/img/union login.png" alt="Union Bar">
+        <img src="./assets/img/union shopping cart.png" alt="Union Bar">
+      </div>
+    </div>
+
+
+    <!-- New Grid Section -->
+    <div class="grid-section-1">
+      <div class="grid-item-img"><img src="./assets/img/union2.png" alt="Union Bar"></div>
+      <div class="grid-item">
+        <div class="grid-item-header"><h1>ABOUT US</h1></div>
+        <div><h1>OUR HISTORY</h1></div>
+        <div class="grid-item-text">FROM PUMPING FUEL TO IGNITING ENERGY, OUR STORY BEGAN AS A HUMBLE GAS STATION CHAIN IN FINLAND. ROOTED IN THE SPIRIT OF HARD WORK AND INNOVATION, WE GREW TO BECOME A SYMBOL OF RESILIENCE AND POSSIBILITY. AS THE WORLD EVOLVED, SO DID WE—TRANSFORMING FROM SERVING ROADSIDE TRAVELERS TO EQUIPPING ADVENTURERS READY TO EXPLORE NEW HORIZONS.</div>
+      </div>
+      <div class="grid-item">
+        <div class="grid-item-header"><h1>COLLECTIONS</h1></div>
+        <div class="grid-item-no-border"><img src="./assets/img/union3.png" alt="Union Bar"></div>
+      </div>
+      <div class="grid-item">
+        <div class="grid-item-header"><h1>COMMUNITY</h1></div>
+        <h1> </h1>
+        <div class="grid-item-text">TODAY, OUR BRAND IS ABOUT MORE THAN CLOTHING—IT'S ABOUT FUELING YOUR ENERGY AND SPARKING INNOVATION IN EVERYTHING YOU DO. WE DESIGN FOR THOSE WHO CHASE CHALLENGES, EMBRACE COMMUNITY, AND PUSH BEYOND LIMITS. WITH EVERY PIECE WE CREATE, WE CARRY FORWARD OUR HERITAGE OF EMPOWERING PEOPLE TO TURN THE EVERYDAY INTO THE EXTRAORDINARY.</div>
+      </div>
+    </div>
+    
+    <div class="grid-section-1-2">
+      <div class="grid-item-no-border">
+        <div>
+          <h1>NOWADAYS</h1>
+        </div>
+        <div class="grid-item-text">
+          OUR MISSION IS TO FUEL ENERGY, CREATIVITY, AND THE SPIRIT OF ADVENTURE IN EVERYONE WHO WEARS OUR GEAR. WE BELIEVE LIFE IS A JOURNEY MEANT TO BE EMBRACED WITH BOLDNESS AND PURPOSE. FROM CITY STREETS TO UNTAMED LANDSCAPES, WE DESIGN CLOTHING THAT EMPOWERS INDIVIDUALS TO MOVE FREELY, EXPLORE DEEPLY, AND CONNECT MEANINGFULLY WITH THE WORLD AROUND THEM. EVERY STITCH WE CREATE REFLECTS OUR COMMITMENT TO INNOVATION AND DURABILITY.
+        </div>
+    </div>
+      <div class="grid-item-no-border">
+        <div>
+          <h1> </h1>
+        </div>
+        <div class="grid-item-text">
+          TODAY, WE STRIVE TO BUILD A COMMUNITY OF ADVENTURERS WHO ARE UNAFRAID TO PUSH LIMITS AND EMBRACE NEW CHALLENGES. OUR BRAND IS MORE THAN JUST APPAREL; IT'S A MOVEMENT FOR THOSE WHO LIVE WITH HIGH ENERGY AND PURPOSE. WE WORK TO ENSURE THAT OUR PRODUCTS NOT ONLY MEET THE DEMANDS OF THE OUTDOORS BUT ALSO SUPPORT A SUSTAINABLE AND INCLUSIVE FUTURE. EVERY DECISION WE MAKE CENTERS ON IMPACT, INTEGRITY, AND CONNECTION.
+        </div>
+    </div>
+      <div class="grid-item-no-border">
+        <div>
+          <h1> </h1>
+        </div>
+        <div class="grid-item-text">
+          LOOKING AHEAD, WE ENVISION A FUTURE WHERE OUR BRAND IS A BEACON FOR INNOVATION AND POSITIVITY. WE AIM TO EXPAND OUR REACH, EMBRACING NEW TECHNOLOGIES AND PARTNERSHIPS THAT HELP US SERVE A GLOBAL COMMUNITY OF EXPLORERS. OUR GOAL IS TO INSPIRE THE NEXT GENERATION TO SEE LIMITLESS POSSIBILITIES, TO LEAD WITH COURAGE, AND TO SHAPE A WORLD WHERE ADVENTURE AND WELL-BEING GO HAND IN HAND.
+        </div>
+    </div>
+      <div class="grid-item-left-border-img"><img src="./assets/img/union1.png" alt="Union Bar"></div>
+    </div>
+
+    <!-- New Grid Section 2 (Side by Side Items) -->
+    <div class="grid-section-2">
+      <img src="./assets/img/fuel.png" alt="Union Bar">
+      <img src="./assets/img/your.png" alt="Union Bar">
+      <img src="./assets/img/energy.png" alt="Union Bar">
+    </div>
+
+    <!-- New Grid Section 2 (Side by Side Items) -->
+    <div class="grid-section-2">
+      <div class="grid-item-no-border">
+
+          <h1>COLLABORATION</h1>
+
+        <div class="grid-item-text">
+          OUR BRAND BELIEVES IN THE POWER OF AUTHENTIC CONNECTIONS AND LOCAL IMPACT. THAT’S WHY WE PARTNER WITH MICRO-INFLUENCERS WHO EMBODY THE SPIRIT OF ADVENTURE AND COMMUNITY. THESE CREATORS MAY HAVE SMALLER AUDIENCES, BUT THEIR VOICES RESONATE DEEPLY WITH ENGAGED FOLLOWERS WHO TRUST THEIR STORIES. THROUGH COLLABORATIONS, WE EQUIP THESE INFLUENCERS WITH OUR GEAR, SUPPORT THEIR JOURNEYS, AND SHOWCASE HOW OUR BRAND FITS SEAMLESSLY INTO THEIR LIVES—FROM CITY COMMUTES TO MOUNTAIN SUMMITS. BY WORKING WITH INDIVIDUALS WHO SHARE OUR VALUES OF EXPLORATION, ENERGY, AND INNOVATION, WE CREATE A NETWORK OF AMBASSADORS WHO INSPIRE OTHERS TO EMBRACE THEIR OWN PATHS.
+        </div>
+
+        <div class="grid-item-header-below"><h1>COMMUNITY MEMBERS</h1></div>
+    </div>
+      <div class="grid-item-left-border-img">
+        <img src="./assets/img/union4.png" alt="Union Bar">
+      </div>
+      <div class="grid-item-no-border">
+
+          <h1>WELCOME</h1>
+
+        <div class="grid-item-text">
+          SPONSORSHIP IS ABOUT MORE THAN BRAND RECOGNITION—IT’S ABOUT BUILDING RELATIONSHIPS AND EMPOWERING THE NEXT WAVE OF CREATORS. OUR BRAND ACTIVELY SPONSORS MICRO-INFLUENCERS THROUGH CUSTOMIZED PACKAGES THAT SUPPORT THEIR ADVENTURES, PROJECTS, AND DREAMS. THIS INCLUDES PROVIDING APPAREL, FINANCIAL BACKING, AND ACCESS TO RESOURCES THAT HELP THEM CREATE MEANINGFUL CONTENT. IN RETURN, THESE INFLUENCERS BRING OUR STORY TO LIFE IN WAYS THAT FEEL GENUINE AND RELATABLE TO THEIR COMMUNITIES.
+          BY FOCUSING ON MICRO-INFLUENCERS, WE CELEBRATE THE BEAUTY OF DIVERSE PERSPECTIVES AND LOCALIZED IMPACT.
+        </div>
+        <div class="grid-item-header-below"><h1>JOIN US</h1></div>
+      </div>
+    </div>
+
+    <div class="top-footer-block">
+      <img src="./assets/img/union-bar.png" alt="Union Bar">
+    </div>
+
+    <!-- New Grid Section 2 (Side by Side Items) 
+    <div class="grid-section-2-2">
+      <div class="grid-item-no-border">
+        <div>
+          <h1>NOWADAYS</h1>
+        </div>
+        <div class="grid-item-text">
+          LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS NISI UT ALIQUIP EX EA COMMODO CONSEQUAT.LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA.
+        </div>
+    </div>
+      <div class="grid-item-left-border">
+        <div>
+          <h1>NOWADAYS</h1>
+        </div>
+        <div class="grid-item-text">
+          LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS NISI UT ALIQUIP EX EA COMMODO CONSEQUAT.LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA.
+        </div>
+      </div>
+      <div class="grid-item-no-border">
+        <div>
+          <h1>NOWADAYS</h1>
+        </div>
+        <div class="grid-item-text">
+          LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS NISI UT ALIQUIP EX EA COMMODO CONSEQUAT.
+        </div>
+      </div>
+    </div> -->
+    
+    <div class="middle-footer-block">
+      <img src="./assets/img/Typo-red.png" alt="Union Bar">
+      <div class="footer-menu">
+        <h1>MENU</h1>
+        SHOP ALL<br>
+        ABOUT US<br>
+        COMMUNITY
+      </div>
+      <div class="footer-menu">
+        <h1>SUPPORT</h1>
+        SHIPPING & RETURN<br>
+        HELP & FAQ<br>
+        TERMS & CONDITIONS<br>
+        PRIVACY POLICY<br>
+        CONTACT
+      </div>
+    </div>
+  </div>
+
+
+
+
+    <!-- Gradient code-->
+    <div class="gradient-bg">
+            <svg 
+                viewBox="0 0 100vw 100vw"
+                xmlns='http://www.w3.org/2000/svg'
+                class="noiseBg"
+                >
+            <filter id='noiseFilterBg'>
+                <feTurbulence 
+                            type='fractalNoise'
+                            baseFrequency='0.6'
+                            stitchTiles='stitch' />
+            </filter>
+        
+            <rect
+                    width='100%'
+                    height='100%'
+                    preserveAspectRatio="xMidYMid meet"
+                    filter='url(#noiseFilterBg)' />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="svgBlur">
+            <defs>
+                <filter id="goo">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
+                <feBlend in="SourceGraphic" in2="goo" />
+                </filter>
+            </defs>
+            </svg>
+            <div class="gradients-container">
+            <div class="g1"></div>
+            <div class="g2"></div>
+            <div class="g3"></div>
+            <div class="g4"></div>
+            <div class="g5"></div>
+            <div class="interactive"></div>
+            </div>
+    </div>
+
+    <script>
+            document.addEventListener('DOMContentLoaded', () => {
+            const interBubble = document.querySelector('.interactive');
+            let curX = 0;
+            let curY = 0;
+            let tgX = 0;
+            let tgY = 0;
+
+            const move = () => {
+                curX += (tgX - curX) / 20;
+                curY += (tgY - curY) / 20;
+                interBubble.style.transform = `translate(${Math.round(curX)}px, ${Math.round(curY)}px)`;
+                requestAnimationFrame(move);
+            };
+
+            window.addEventListener('mousemove', (event) => {
+                tgX = event.clientX;
+                tgY = event.clientY;
+            });
+
+            move();
+        });
+    </script>
+</body>
+</html>
